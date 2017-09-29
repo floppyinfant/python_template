@@ -52,12 +52,12 @@ __description__ = ''
 
 # -------------------------------------------------------------------------------------------
 
-### Python Distributions
+### Python Distributions:
 #
 ## Anaconda
 
 
-### Package Management
+### Package Management:
 ## conda
 # https://conda.io/docs/user-guide/overview.html
 # https://conda.io/docs/_downloads/conda-cheatsheet.pdf
@@ -91,7 +91,7 @@ __description__ = ''
 ## distutils
 
 
-### Virtual Environments
+### Virtual Environments:
 # https://conda.io/docs/commands.html#conda-vs-pip-vs-virtualenv-commands
 #
 ## virtualenv
@@ -112,61 +112,69 @@ __description__ = ''
 
 # -------------------------------------------------------------------------------------------
 
-### IDEs
+### IDEs:
 ## PyCharm
 ## Eclipse PyDev
-## Python Tolls for Visual Studio (PTVS): xlrd, xlwt
+## Python Tools for Visual Studio (PTVS): xlrd, xlwt
 
 # -------------------------------------------------------------------------------------------
 
-### PyInstaller
+### PyInstaller:
 # http://www.pyinstaller.org/, https://pyinstaller.readthedocs.io/en/stable/, https://github.com/pyinstaller/pyinstaller
+# uses:
 # (pefile)
 # (PyWin32: http://sourceforge.net/projects/pywin32/files/)
 # UDX
 # PyCrypto: https://www.dlitz.net/software/pycrypto/
 
+# Installation:
+# pip install pyinstaller
+# on error: pip install future --upgrade
+
 # Usage: https://pyinstaller.readthedocs.io/en/stable/usage.html
-# pyinstaller --onefile /path/to/yourscript.py
+# pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
 # -------------------------------------------------------------------------------------------
 
 # pip install -r requirements.txt
 
+# -------------------------
+
 import sys
 import os
 import os.path
 import time
-import re
+import datetime
 
 import argparse
 import getopt
 
 # -------------------------
 
-# HPC (High Performance Computing)
-# Parallel Python: threading, processes, asynchronous IO (Twisted), asyncio (Python 3)
-from threading import Thread
-
-# -------------------------
-
-# Logging
+# Logging:
 # https://docs.python.org/2/howto/logging.html
 # https://docs.python.org/2/library/logging.html
 import logging
 
-# Terminal
+# Terminal:
+# https://de.wikipedia.org/wiki/ANSI-Escapesequenz
+# https://de.wikipedia.org/wiki/Terminalemulation
 from termcolor import colored, cprint
-# alternative: Colorama https://pypi.python.org/pypi/colorama
+#
+# Colorama https://pypi.python.org/pypi/colorama
+# from colorama import init
+# init()
+# print('\033[31m' + 'some red text')
+# print('\033[30m') # reset to default color
 
+# ASCII-Art:
 # Leetspeak: https://de.wikipedia.org/wiki/Leetspeak, http://www.1337.me/
-# ASCII-Art
 # FIGlet https://pypi.python.org/pypi/pyfiglet, http://www.figlet.org/
 from pyfiglet import Figlet
 
 # -------------------------
 
-# WebScraping
+# WebScraping:
 import socket
 import httplib
 import htmllib
@@ -189,23 +197,35 @@ from selenium import webdriver
 
 # -------------------------
 
-# parsing fileformats
+# Parser | Fileformats:
 import re
 import json
 import csv
 
 # -------------------------
 
-# Webdesign
+# Webdesign:
 # Flask
 # Django
 
+# DB | CRUD:
+# SQlite
+# MySQL
+# SQLAlchemy
+
 # -------------------------
 
-# GUI
+# GUI:
+
 # Tkinter
-from Tkinter import * # Python 2
+from Tkinter import *  # Python 2
 #from tkinter import * # Python 3
+
+# Kivy
+# https://kivy.org/
+#from kivy.app import App
+#from kivy.uix.button import Button
+
 # PyQt4
 from PyQt4.QtGui import *
 #import PyQt4.QtCore
@@ -214,26 +234,43 @@ from PyQt4.QtGui import *
 #from PySide.QtGui import QApplication, QLabel
 #from PySide.QtSql import *
 
-# DB, CRUD
-# SQlite
-# MySQL
+# -------------------------
+
+# Game | Creative Coding | Physical Computing | IoT:
 
 # Pygame (OpenGL, Canvas, MIDI, Sound)
+# https://www.pygame.org/docs/
+# https://inventwithpython.com/pygame/chapters/
 # pip install pygame --user
 import pygame
-# Fluidsynth
+
+# pybox2d (Physics)
+# https://github.com/pybox2d/pybox2d/wiki/manual
+# conda install -c https://conda.anaconda.org/kne pybox2d
+
+# pylibpd (Pure Data), pyaudio (PortAudio)
+
+# pyfluidsynth (Soundfont Synthesizer, sf2)
+
+# cwiid (Wiimote)
+# RPi.GPIO (Raspberry Pi)
+# WiringPi
 
 # -------------------------
 
-# Image Processing
+# Image Processing:
+
+# PIL
 #import PIL
+
 # OpenCV
 #import cv2
 
 # -------------------------
 
-# Pentesting
+# Pentesting:
 # https://github.com/dloss/python-pentest-tools
+
 # Scapy
 
 # PeePDP
@@ -244,14 +281,31 @@ import pygame
 
 # -------------------------
 
-# Data Science, Maschine Learning, Deep Learning, Datamining
+# HPC (High Performance Computing):
+
+# Parallel Python: threading, processes, asynchronous IO (Twisted), asyncio (Python 3)
+from threading import Thread
+
+# Cython
+# Numba
+# SWIG (Wrapper, Bindings)
+
+# -------------------------
+
+# Data Science, Maschine Learning, Deep Learning, Datamining:
+
 # Anaconda (conda)
 # IPython/ Jupyter Notebook (IPython --pylab)
+
 # Numpy, SciPy, Pandas
-# Scikit-learn (sklearn), Theano, Tensorflow, ...
+
+# Scikit-learn (sklearn), Theano, Tensorflow
+
 # Matplotlib
+
 # Bokeh (interactive graphics)
 # https://bokeh.pydata.org/en/latest/
+
 # NLTK (Natural Languages Toolkit)
 # http://www.nltk.org/
 

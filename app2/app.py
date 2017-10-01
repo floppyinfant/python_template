@@ -156,21 +156,72 @@ import getopt
 # https://docs.python.org/2/library/logging.html
 import logging
 
+# Software Engineering, TDD:
+# unittest
+# nose
+
+# -------------------------
+
 # Terminal:
 # https://de.wikipedia.org/wiki/ANSI-Escapesequenz
 # https://de.wikipedia.org/wiki/Terminalemulation
-from termcolor import colored, cprint
 #
-# Colorama https://pypi.python.org/pypi/colorama
-# from colorama import init
+# Termcolor
+# https://pypi.python.org/pypi/termcolor
+from termcolor import colored, cprint
+# Text colors: grey, red, green, yellow, blue, magenta, cyan, white
+# Text highlights: on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white
+# Attributes: bold, dark, underline, blink, reverse, concealed
+#
+# Examples:
+# print(colored('Hello, World!', 'red', attrs=['reverse', 'blink']))
+# cprint('Hello, World!', 'green', 'on_red')
+#
+# Colorama
+# https://pypi.python.org/pypi/colorama
+#from colorama import init as coloramainit
+#from colorama import Fore, Back, Style
+#
+# Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+# Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+# Style: DIM, NORMAL, BRIGHT, RESET_ALL
+#
+# FOREGROUND:
+# ESC [ 30 m      # black
+# ESC [ 31 m      # red
+# ESC [ 32 m      # green
+# ESC [ 33 m      # yellow
+# ESC [ 34 m      # blue
+# ESC [ 35 m      # magenta
+# ESC [ 36 m      # cyan
+# ESC [ 37 m      # white
+# ESC [ 39 m      # reset
+#
+# BACKGROUND:
+# ESC [ 40 m      # black
+# ...
+# MULTIPLE PARAMS:
+# ESC [ 36 ; 45 ; 1 m
+#
+# Examples:
 # init()
 # print('\033[31m' + 'some red text')
-# print('\033[30m') # reset to default color
+# print('\033[39m') # reset to default color
+# print(Fore.RED + 'some red text' + Fore.RESET)
+# print(Style.RESET_ALL) # back to normal
 
 # ASCII-Art:
-# Leetspeak: https://de.wikipedia.org/wiki/Leetspeak, http://www.1337.me/
-# FIGlet https://pypi.python.org/pypi/pyfiglet, http://www.figlet.org/
+# Leetspeak
+# https://de.wikipedia.org/wiki/Leetspeak
+# http://www.1337.me/
+
+# FIGlet
+# https://pypi.python.org/pypi/pyfiglet
+# https://github.com/pwaller/pyfiglet
+# http://www.figlet.org/
 from pyfiglet import Figlet
+# fonts: lean, mini, banner
+# favorite fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
 
 # -------------------------
 
@@ -678,13 +729,16 @@ def banner():
     #print "\n********************************"
     #print "*  *" # TODO banner()
     #print "********************************"
-	
-	# @see http://www.figlet.org/
-	f = Figlet(font='banner')
-	print(f.renderText('Python Template'))
-	
-	# @see https://pypi.python.org/pypi/termcolor
-	cprint('[ * ] Hello World!', 'green')
+
+    f = Figlet(font='cosmic')  # fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
+    print('\033[34m')
+    print(f.renderText('Totman'))
+    print('\033[39m')
+
+    # termcolor
+    cprint('[  *  ] Hello World!', 'red')
+    print('[  ' + colored('*', 'red') + '  ] Hello termcolor')  # use termcolor function colored()
+    print('[  \033[31m*\033[39m  ] Hello VT100')                # use CSI Escape Sequence directly
 
 
 def usage():
@@ -694,50 +748,54 @@ def usage():
 
 
 def cui():
-    c = raw_input("Please input something")
+    """ Commandline User Interface
+    """
+
+    banner()
+
+    c = raw_input(">> ")
 
     # @see http://www.python-kurs.eu/python3_formatierte_ausgabe.php
-    print("You typed ", c)
+    print("You typed", c)
     print("You typed %s" % (c))
     print("You typed {}".format(c))
 
 
-def main():
-    pass  # TODO main()
+def main(args):
+    #createGuiTk()
+    #createGuiQtSimple()
+    #createGuiQtTextEditor()
+    cui()
 
 
 # -------------------------------------------------------------------------------------------
 
 if __name__ == "__main__":
 
-    #createGuiTk()
-    #createGuiQtSimple()
-    createGuiQtTextEditor()
-
-
-    """
-    # TODO parse sys.argv
+    # parse sys.argv
     try:
-        banner()
 
+        """
         # manually parse sys.argv[1:]
         if len(sys.argv) < 1:
             usage()
             sys.exit()
 
-        #
+        # example
         try:
             (url, username, password) = sys.argv[1:]
         except ValueError:
             usage()
+        """
 
-
+        """
         # argparse
         parser = argparse.ArgumentParser(description='WebScraper url')
         parser.add_argument('--url', action="store", dest="url", required=True)
         args = parser.parse_args()
+        """
 
-
+        """
         # optargs (C-Style)
         try:
             opts, args = getopt.getopt(sys.argv, "w:f:t:c:")
@@ -754,7 +812,10 @@ if __name__ == "__main__":
                 threads = arg
             elif opt == '-c':
                 hidecode = arg
+        """
 
+        # commandline arguments
+        args = sys.argv[1:]
 
         # start application
         DEBUG = 1
@@ -765,4 +826,3 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print(sys.argv[0] + "interrupted by user, killing all threads!")
 
-    """

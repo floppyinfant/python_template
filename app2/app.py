@@ -271,6 +271,11 @@ import csv
 # Tkinter
 from Tkinter import *  # Python 2
 #from tkinter import * # Python 3
+# Core Widgets:
+# Label, Button, Entry, Checkbutton, Radiobutton, Spinbox, Listbox, Text, Canvas, Bitmap, Image
+# Toplevel, Frame, Menu, Menubutton, Scrollbar, OptionMenu, LabelFrame, Message, PanedWindow, Scale
+# Geometry Managers:
+# pack, grid, place
 
 # Kivy
 # https://kivy.org/
@@ -430,10 +435,10 @@ class Environment(object):
 
     def __init__(self):
         pass
-    
+
     def openBrowser(self, url):
         webbrowser.open(url)
-        
+
     def runProgram(self, prog):
         os.system(prog)
         #os.popen(prog)
@@ -446,6 +451,7 @@ def createGuiTk():
 
     # Widgets
     label = Label(root, text = "Hello World!")
+    # Geometry Managers: pack, grid, place
     label.pack()
 
     root.mainloop()
@@ -699,7 +705,7 @@ def createCanvasWithPygame():
                 elif event.key == K_s:
                     # move DOWN
                 elif event.key == K_e:
-                    # change tool                
+                    # change tool
             elif event.type == MOUSEBUTTONUP:
                 if event.pos == (lastMouseDownX, lastMouseDownY):
                     # This event is a mouse click, not the end of a mouse drag.
@@ -710,7 +716,7 @@ def createCanvasWithPygame():
                         snd.play()
                 else:
                     # this is the end of a mouse drag
-                    
+
             elif event.type == MOUSEBUTTONDOWN:
                 # this is the start of a mouse click or mouse drag
                 lastMouseDownX, lastMouseDownY = event.pos
@@ -719,7 +725,7 @@ def createCanvasWithPygame():
 
         pygame.display.update()
         FPSCLOCK.tick(FPS)
-    
+
     """
 
 
@@ -825,4 +831,3 @@ if __name__ == "__main__":
 
     except KeyboardInterrupt:
         print(sys.argv[0] + "interrupted by user, killing all threads!")
-

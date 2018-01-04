@@ -19,7 +19,6 @@
 #
 # https://docs.python.org/3/library/builtins.html
 # https://docs.python.org/3/library/__future__.html
-#
 from __future__ import print_function
 from __future__ import division
 from __future__ import unicode_literals
@@ -52,10 +51,39 @@ __description__ = ''
 
 # -------------------------------------------------------------------------------------------
 
+"""
 ### Python Distributions:
 #
 ## Anaconda
+# https://www.anaconda.com/what-is-anaconda/
+## Enthought
+# https://www.enthought.com/product/enthought-python-distribution/
+## ActivePython
+# https://www.activestate.com/activepython
+## Python.org
+# https://www.python.org/
 
+# -------------------------------------------------------------------------------------------
+
+### Virtual Environments:
+# https://conda.io/docs/commands.html#conda-vs-pip-vs-virtualenv-commands
+
+## virtualenv
+# https://virtualenv.pypa.io/en/stable/
+# # list environments
+# lsvirtualenv
+# cd $ENV_BASE_DIR; virtualenv $ENVIRONMENT_NAME
+# source $ENV_BASE_DIR/$ENVIRONMENT_NAME/bin/activate
+# deactivate
+
+## conda
+# # list all environments
+# conda info --envs
+# conda create --name $ENVIRONMENT_NAME python
+# source activate $ENVIRONMENT_NAME
+# source deactivate
+
+# -------------------------------------------------------------------------------------------
 
 ### Package Management:
 ## conda
@@ -90,34 +118,29 @@ __description__ = ''
 ## easy_install
 ## distutils
 
-
-### Virtual Environments:
-# https://conda.io/docs/commands.html#conda-vs-pip-vs-virtualenv-commands
-#
-## virtualenv
-# https://virtualenv.pypa.io/en/stable/
-# # list environments
-# lsvirtualenv
-# cd $ENV_BASE_DIR; virtualenv $ENVIRONMENT_NAME
-# source $ENV_BASE_DIR/$ENVIRONMENT_NAME/bin/activate
-# deactivate
-#
-#
-## conda
-# # list all environments
-# conda info --envs
-# conda create --name $ENVIRONMENT_NAME python
-# source activate $ENVIRONMENT_NAME
-# source deactivate
-
 # -------------------------------------------------------------------------------------------
 
 ### IDEs:
-## PyCharm
-## Eclipse PyDev
-## Python Tools for Visual Studio (PTVS): xlrd, xlwt
+# https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
+# https://www.pythoncentral.io/comparison-of-python-ides-development/
 
-# -------------------------------------------------------------------------------------------
+## IDLE
+## IPython | Jupyter Notebook
+## PyCharm
+# http://www.jetbrains.com/pycharm/
+## Wing IDE
+# http://wingware.com/
+## Eclipse PyDev
+# http://pydev.org/
+## Python Tools for Visual Studio (PTVS): xlrd, xlwt
+# https://marketplace.visualstudio.com/items?itemName=donjayamanne.python
+# https://microsoft.github.io/PTVS/
+## Netbeans
+# http://wiki.netbeans.org/Python
+## Komodo IDE
+# http://www.activestate.com/komodo-ide
+## Atom Editor
+
 
 ### PyInstaller:
 # http://www.pyinstaller.org/, https://pyinstaller.readthedocs.io/en/stable/, https://github.com/pyinstaller/pyinstaller
@@ -134,9 +157,31 @@ __description__ = ''
 # Usage: https://pyinstaller.readthedocs.io/en/stable/usage.html
 # pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
+
+### py2exe:
+# http://www.py2exe.org/
+# http://www.py2exe.org/index.cgi/Tutorial
+#
+# create a setup.py file
+from distutils.core import setup
+import py2exe
+setup(console=['hello.py'])
+# run the file in DOS Command Window
+python setup.py py2exe
+
+
+### Installer Builders
+## NSIS
+# http://nsis.sourceforge.net/Main_Page
+## Inno Setup
+# http://www.jrsoftware.org/isinfo.php
+
+"""
+
 # -------------------------------------------------------------------------------------------
 
 # pip install -r requirements.txt
+# create file with: 'conda list --export' or 'pip freeze'
 
 # -------------------------
 
@@ -151,32 +196,33 @@ import getopt
 
 # -------------------------
 
+"""
+# Software Engineering, TDD:
+# http://pythontesting.net/start-here
+# pytest
+# unittest
+# http://pythontesting.net/framework/unittest/unittest-introduction/
+# nose
+# http://pythontesting.net/framework/nose/nose-introduction/
+"""
+#import unittest
+
+"""
 # Logging:
 # https://docs.python.org/2/howto/logging.html
 # https://docs.python.org/2/library/logging.html
+"""
 import logging
-
-# Software Engineering, TDD:
-# unittest
-# nose
 
 # -------------------------
 
-# Terminal:
+"""
+# Terminal (VT100 Emulation):
 # https://de.wikipedia.org/wiki/ANSI-Escapesequenz
 # https://de.wikipedia.org/wiki/Terminalemulation
-#
-# Termcolor
-# https://pypi.python.org/pypi/termcolor
-from termcolor import colored, cprint
-# Text colors: grey, red, green, yellow, blue, magenta, cyan, white
-# Text highlights: on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white
-# Attributes: bold, dark, underline, blink, reverse, concealed
-#
-# Examples:
-# print(colored('Hello, World!', 'red', attrs=['reverse', 'blink']))
-# cprint('Hello, World!', 'green', 'on_red')
-#
+
+# --------
+
 # Colorama
 # https://pypi.python.org/pypi/colorama
 #from colorama import init as coloramainit
@@ -210,18 +256,37 @@ from termcolor import colored, cprint
 # print(Fore.RED + 'some red text' + Fore.RESET)
 # print(Style.RESET_ALL) # back to normal
 
-# ASCII-Art:
-# Leetspeak
-# https://de.wikipedia.org/wiki/Leetspeak
-# http://www.1337.me/
+# --------
 
+# Termcolor
+# https://pypi.python.org/pypi/termcolor
+#
+# Text colors: grey, red, green, yellow, blue, magenta, cyan, white
+# Text highlights: on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white
+# Attributes: bold, dark, underline, blink, reverse, concealed
+#
+# Examples:
+# print(colored('Hello, World!', 'red', attrs=['reverse', 'blink']))
+# cprint('Hello, World!', 'green', 'on_red')
+"""
+from termcolor import colored, cprint
+
+"""
 # FIGlet
 # https://pypi.python.org/pypi/pyfiglet
 # https://github.com/pwaller/pyfiglet
 # http://www.figlet.org/
-from pyfiglet import Figlet
 # fonts: lean, mini, banner
 # favorite fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
+
+# --------
+
+# ASCII-Art:
+# Leetspeak
+# https://de.wikipedia.org/wiki/Leetspeak
+# http://www.1337.me/
+"""
+from pyfiglet import Figlet
 
 # -------------------------
 
@@ -367,7 +432,6 @@ from threading import Thread
 
 # -------------------------------------------------------------------------------------------
 
-
 class Scraper(object):
     """ TODO: Scraper
     Scrapy, urllib2, httplib
@@ -443,7 +507,6 @@ class Environment(object):
         os.system(prog)
         #os.popen(prog)
 
-
 # -------------------------------------------------------------------------------------------
 
 def createGuiTk():
@@ -455,7 +518,6 @@ def createGuiTk():
     label.pack()
 
     root.mainloop()
-
 
 # -----------------------------------------
 
@@ -728,7 +790,6 @@ def createCanvasWithPygame():
 
     """
 
-
 # -------------------------------------------------------------------------------------------
 
 def banner():
@@ -773,9 +834,9 @@ def main(args):
     #createGuiQtTextEditor()
     cui()
 
-
 # -------------------------------------------------------------------------------------------
 
+# code entry point
 if __name__ == "__main__":
 
     # parse sys.argv
@@ -831,3 +892,4 @@ if __name__ == "__main__":
 
     except KeyboardInterrupt:
         print(sys.argv[0] + "interrupted by user, killing all threads!")
+

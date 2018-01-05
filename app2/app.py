@@ -336,6 +336,8 @@ import csv
 # Tkinter
 from Tkinter import *  # Python 2
 #from tkinter import * # Python 3
+# Python Shell:
+# help(Tkinter.<Tab>)
 # Core Widgets:
 # Label, Button, Entry, Checkbutton, Radiobutton, Spinbox, Listbox, Text, Canvas, Bitmap, Image
 # Toplevel, Frame, Menu, Menubutton, Scrollbar, OptionMenu, LabelFrame, Message, PanedWindow, Scale
@@ -510,14 +512,14 @@ class Environment(object):
 # -------------------------------------------------------------------------------------------
 
 def createGuiTk():
-    root = Tk()
+    win = Tk()
 
     # Widgets
-    label = Label(root, text = "Hello World!")
+    label = Label(win, text = "Hello World!")
     # Geometry Managers: pack, grid, place
     label.pack()
 
-    root.mainloop()
+    win.mainloop()
 
 # -----------------------------------------
 

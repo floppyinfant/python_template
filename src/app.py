@@ -51,6 +51,36 @@ __description__ = ''
 
 # -------------------------------------------------------------------------------------------
 
+# comments
+
+"""
+VCS, SCM
+Git (vs. hg, svn)
+
+# GitHub
+# create repository online without any files
+# (if you created files (e.g. .gitignore, README.md) do git pull (merge) before git push)
+cd app/
+git init
+git add *
+# anytime
+git status
+git commit -m "comment"
+# once
+git remote add origin https://github.com/floppyinfant/python_template.git
+git push origin master
+
+# on a new machine
+clone https://github.com/floppyinfant/python_template.git
+# update local repository (merge)
+git pull origin master
+# workflow cycle: edit, commit changes, push files to server
+
+# 2. workflow: feature branch
+
+# 3. workflow: pull requests
+"""
+
 """
 ### Python Distributions:
 #
@@ -144,18 +174,29 @@ __description__ = ''
 
 ### PyInstaller:
 # http://www.pyinstaller.org/, https://pyinstaller.readthedocs.io/en/stable/, https://github.com/pyinstaller/pyinstaller
-# uses:
+# Libraries:
 # (pefile)
 # (PyWin32: http://sourceforge.net/projects/pywin32/files/)
 # UDX
 # PyCrypto: https://www.dlitz.net/software/pycrypto/
-
+#
 # Installation:
 # pip install pyinstaller
 # on error: pip install future --upgrade
-
+#
 # Usage: https://pyinstaller.readthedocs.io/en/stable/usage.html
-# pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
+# -D, --onedir
+# -F, --onefile
+# -c, --console, --nowindowed
+# -w, --windowed, --noconsole
+# -i, --icon <FILE.ico or FILE.exe,ID or FILE.icns>
+# --upx-dir UPX_DIR
+# ^ Windows Line Delimiter
+# \ Linux Line Delimiter
+#
+# Exampes:
+pyinstaller --onefile --noconsole --icon=icon.ico --upx-dir=..\PyInstaller-3.2\upx app.py
+pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
 
 ### py2exe:
@@ -371,13 +412,17 @@ import pygame
 # https://github.com/pybox2d/pybox2d/wiki/manual
 # conda install -c https://conda.anaconda.org/kne pybox2d
 
-# pylibpd (Pure Data), pyaudio (PortAudio)
+# Audio | Music:
+# pylibpd (Pure Data)
+# pyaudio (PortAudio)
+# pyfluidsynth (Soundfont sf2)
 
-# pyfluidsynth (Soundfont Synthesizer, sf2)
-
+# Raspberry Pi:
+#import RPi.GPIO as GPIO
+# WiringPi2
+# picamera
 # cwiid (Wiimote)
-# RPi.GPIO (Raspberry Pi)
-# WiringPi
+# mcpi (Minecraft Pi Edition)
 
 # -------------------------
 
@@ -411,10 +456,12 @@ from threading import Thread
 
 # Cython
 # Numba
+
 # SWIG (Wrapper, Bindings)
 
 # -------------------------
 
+"""
 # Data Science, Maschine Learning, Deep Learning, Datamining:
 
 # Anaconda (conda)
@@ -431,6 +478,7 @@ from threading import Thread
 
 # NLTK (Natural Languages Toolkit)
 # http://www.nltk.org/
+"""
 
 # -------------------------------------------------------------------------------------------
 
@@ -533,7 +581,7 @@ class MainWindow(QMainWindow):
     def initGUI(self):
         # Window (QMainWindow, QWidget)
         self.setWindowTitle("A Simple Text Editor")
-        self.setWindowIcon(QIcon('appicon.png'))
+        self.setWindowIcon(QIcon('../res/img/appicon.png'))
         self.setGeometry(100, 100, 800, 600)
         self.setMinimumHeight(200)
         self.setMinimumWidth(280)
@@ -550,17 +598,17 @@ class MainWindow(QMainWindow):
         # -----------------------------------------
 
         # Actions (trigger Functions)
-        self.newAction = QAction( QIcon('img/new.png'), '&New', self, shortcut = QKeySequence.New, statusTip = "Create a New File", triggered = self.newFile)
-        self.openAction = QAction( QIcon('img/open.png'), 'O&pen', self, shortcut = QKeySequence.Open, statusTip = "Open an existing file", triggered = self.openFile)
-        self.saveAction = QAction( QIcon('img/save.png'), '&Save', self, shortcut = QKeySequence.Save, statusTip = "Save the current file to disk", triggered = self.saveFile)
-        self.exitAction = QAction( QIcon('img/exit.png'), 'E&xit', self, shortcut = "Ctrl+Q", statusTip = "Exit the Application", triggered = self.exitFile)
-        self.cutAction = QAction( QIcon('img/cut.png'), 'C&ut', self, shortcut = QKeySequence.Cut, statusTip = "Cut the current selection to clipboard", triggered = self.textEdit.cut)
-        self.copyAction = QAction( QIcon('img/copy.png'), 'C&opy', self, shortcut = QKeySequence.Copy, statusTip = "Copy the current selection to clipboard", triggered = self.textEdit.copy)
-        self.pasteAction = QAction( QIcon('img/paste.png'), '&Paste', self, shortcut = QKeySequence.Paste, statusTip = "Paste the clipboard's content in current location", triggered = self.textEdit.paste)
-        self.selectAllAction = QAction( QIcon('img/selectAll.png'), 'Select All', self, statusTip = "Select All", triggered = self.textEdit.selectAll)
-        self.redoAction = QAction( QIcon('img/redo.png'),'Redo', self, shortcut = QKeySequence.Redo, statusTip = "Redo previous action", triggered = self.textEdit.redo)
-        self.undoAction = QAction( QIcon('img/undo.png'),'Undo', self, shortcut = QKeySequence.Undo, statusTip = "Undo previous action", triggered = self.textEdit.undo)
-        self.aboutAction = QAction( QIcon('img/about.png'), 'A&bout', self, statusTip = "Displays info about text editor", triggered = self.aboutHelp)
+        self.newAction = QAction( QIcon('../res/img/new.png'), '&New', self, shortcut = QKeySequence.New, statusTip = "Create a New File", triggered = self.newFile)
+        self.openAction = QAction( QIcon('../res/img/open.png'), 'O&pen', self, shortcut = QKeySequence.Open, statusTip = "Open an existing file", triggered = self.openFile)
+        self.saveAction = QAction( QIcon('../res/img/save.png'), '&Save', self, shortcut = QKeySequence.Save, statusTip = "Save the current file to disk", triggered = self.saveFile)
+        self.exitAction = QAction( QIcon('../res/img/exit.png'), 'E&xit', self, shortcut = "Ctrl+Q", statusTip = "Exit the Application", triggered = self.exitFile)
+        self.cutAction = QAction( QIcon('../res/img/cut.png'), 'C&ut', self, shortcut = QKeySequence.Cut, statusTip = "Cut the current selection to clipboard", triggered = self.textEdit.cut)
+        self.copyAction = QAction( QIcon('../res/img/copy.png'), 'C&opy', self, shortcut = QKeySequence.Copy, statusTip = "Copy the current selection to clipboard", triggered = self.textEdit.copy)
+        self.pasteAction = QAction( QIcon('../res/img/paste.png'), '&Paste', self, shortcut = QKeySequence.Paste, statusTip = "Paste the clipboard's content in current location", triggered = self.textEdit.paste)
+        self.selectAllAction = QAction( QIcon('../res/img/selectAll.png'), 'Select All', self, statusTip = "Select All", triggered = self.textEdit.selectAll)
+        self.redoAction = QAction( QIcon('../res/img/redo.png'),'Redo', self, shortcut = QKeySequence.Redo, statusTip = "Redo previous action", triggered = self.textEdit.redo)
+        self.undoAction = QAction( QIcon('../res/img/undo.png'),'Undo', self, shortcut = QKeySequence.Undo, statusTip = "Undo previous action", triggered = self.textEdit.undo)
+        self.aboutAction = QAction( QIcon('../res/img/about.png'), 'A&bout', self, statusTip = "Displays info about text editor", triggered = self.aboutHelp)
 
         # -----------------------------------------
 
@@ -796,7 +844,7 @@ def createCanvasWithPygame():
 
 def banner():
     #print "\n********************************"
-    #print "*  *" # TODO banner()
+    #print "*  *"
     #print "********************************"
 
     f = Figlet(font='cosmic')  # fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
@@ -805,9 +853,9 @@ def banner():
     print('\033[39m')
 
     # termcolor
-    cprint('[  *  ] Hello World!', 'red')
-    print('[  ' + colored('*', 'red') + '  ] Hello termcolor')  # use termcolor function colored()
-    print('[  \033[31m*\033[39m  ] Hello VT100')                # use CSI Escape Sequence directly
+    #cprint('[  *  ] Hello World!', 'red')
+    #print('[  ' + colored('*', 'red') + '  ] Hello termcolor')  # use termcolor function colored()
+    #print('[  \033[31m*\033[39m  ] Hello VT100')                # use CSI Escape Sequence directly
 
 
 def usage():
@@ -822,12 +870,24 @@ def cui():
 
     banner()
 
+    #usage()
+
+    print("Type '1' for Qt-GUI Simple Editor")
+    print("Type '2' for Tk-GUI")
+    print("Type '3' for Pygame-OpenGL-Canvas")
     c = raw_input(">> ")
 
-    # @see http://www.python-kurs.eu/python3_formatierte_ausgabe.php
-    print("You typed", c)
-    print("You typed %s" % (c))
-    print("You typed {}".format(c))
+    if '1' in c:
+        createGuiQtTextEditor()
+    elif '2' in c:
+        createGuiTk()
+    elif '3' in c:
+        createCanvasWithPygame()
+    else:
+        # @see http://www.python-kurs.eu/python3_formatierte_ausgabe.php
+        print("You typed", c)
+        print("You typed %s" % (c))
+        print("You typed {}".format(c))
 
 
 def main(args):

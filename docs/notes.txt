@@ -1,0 +1,49 @@
+My Templates in Python
+
+
+wget, curl, sftp, scp, (Browser)
+conda (Anaconda)
+pip
+apt-get (Linux Debian)
+git, hg, svn
+
+- - -
+
+Anaconda Python 2.7
+
+PyInstaller, UPX; pip install future --upgrade
+pip install pyinstaller
+
+(pywin32)
+https://sourceforge.net/projects/pywin32/
+
+SWIG
+
+
+- - -
+
+packages:
+
+- - -
+
+Files and Directories:
+
+src
+
+res
+
+swig
+
+make_exec.bat --> pyinstaller
+(uses dirctories build, dist)
+
+README.md
+
+INSTALL.md --> Distribution, py2exe, pyinstaller, udp
+prerequisites.txt
+
+- - -
+
+setup.py with py2exe
+
+

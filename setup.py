@@ -5,7 +5,7 @@ sys.argv.append("py2exe")
 
 setup(
     options = {'py2exe': {'bundle_files': 1}},
-	windows = [{'script': "app.py"}],
+	windows = [{'script': "main.py"}],
 	zipfile = None,
 
 )

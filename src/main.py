@@ -374,9 +374,8 @@ import csv
 
 # GUI:
 
+"""
 # Tkinter
-from Tkinter import *  # Python 2
-#from tkinter import * # Python 3
 # Python Shell:
 # help(Tkinter.<Tab>)
 # Core Widgets:
@@ -384,11 +383,23 @@ from Tkinter import *  # Python 2
 # Toplevel, Frame, Menu, Menubutton, Scrollbar, OptionMenu, LabelFrame, Message, PanedWindow, Scale
 # Geometry Managers:
 # pack, grid, place
+"""
+from Tkinter import *  # Python 2
+#from tkinter import * # Python 3
 
-# Kivy
-# https://kivy.org/
-#from kivy.app import App
-#from kivy.uix.button import Button
+
+"""
+Kivy
+https://kivy.org/
+
+Kivy can be run by QPython on Android Devices and Deployed using Buildozer VM from Kivy Website (create *.apk):
+- put code in file name 'main.py'
+- include the next line as a comment in your script for QPython:
+#qpy:kivy
+"""
+from kivy.app import App
+from kivy.uix.button import Button as KButton
+
 
 # PyQt4
 from PyQt4.QtGui import *
@@ -571,10 +582,11 @@ def createGuiTk():
 
 # -----------------------------------------
 
-class MainWindow(QMainWindow):
+# Qt
+class QtMainWindow(QMainWindow):
 
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(QtMainWindow, self).__init__()
         self.initGUI()
 
 
@@ -682,6 +694,20 @@ class MainWindow(QMainWindow):
         QMessageBox.about(self, "About Simple Text Editor", "A Simple Text Editor where you can edit and save files")
 
 
+def createGuiQtTextEditor():
+    # Application
+    app = QApplication(sys.argv)
+
+    # class s.o.
+    mainWindow = QtMainWindow()
+
+    app.exec_()
+    sys.exit()
+
+
+# -----------------------------------------
+
+# Qt
 def createGuiQtSimple():
     # Application
     app = QApplication(sys.argv)
@@ -697,18 +723,22 @@ def createGuiQtSimple():
     sys.exit()
 
 
-def createGuiQtTextEditor():
-    # Application
-    app = QApplication(sys.argv)
+# -----------------------------------------
 
-    # class s.o.
-    mainWindow = MainWindow()
+# Kivy
+class KivyApp(App):
+    def build(self):
+        return KButton(text="Hello Kivy")
 
-    app.exec_()
-    sys.exit()
+
+def createGuiKivy():
+    app = KivyApp()  # instance
+    app.run()
+
 
 # -----------------------------------------
 
+# Pygame
 def createCanvasWithPygame():
     """
     global FPSCLOCK, DISPLAYSURF
@@ -859,6 +889,11 @@ def banner():
 
 
 def usage():
+    """ Print commandline usage
+    Invoked if wrong number or type of arguments
+    :return:
+    """
+
     print("Usage: ")
     print("    -h: help (this message)")
     print("example: ")  # TODO usage() example
@@ -872,28 +907,43 @@ def cui():
 
     #usage()
 
-    print("Type '1' for Qt-GUI Simple Editor")
-    print("Type '2' for Tk-GUI")
-    print("Type '3' for Pygame-OpenGL-Canvas")
-    c = raw_input(">> ")
+    """ printf()-like output:
+    # @see http://www.python-kurs.eu/python3_formatierte_ausgabe.php
+    print("You typed", c)
+    print("You typed %s" % (c))
+    print("You typed {}".format(c))
+    """
 
-    if '1' in c:
-        createGuiQtTextEditor()
-    elif '2' in c:
-        createGuiTk()
-    elif '3' in c:
-        createCanvasWithPygame()
-    else:
-        # @see http://www.python-kurs.eu/python3_formatierte_ausgabe.php
-        print("You typed", c)
-        print("You typed %s" % (c))
-        print("You typed {}".format(c))
+    while True:
+        print("Type '1' for Qt-GUI Editor")
+        print("Type '2' for Tk-GUI")
+        print("Type '3' for Kivy App")
+        print("Type '4' for Pygame OpenGL Canvas")
+        print("Type '0' to exit")
+        c = raw_input(">> ")
+
+        if '1' in c:
+            createGuiQtTextEditor()
+        elif '2' in c:
+            createGuiTk()
+        elif '3' in c:
+            createGuiKivy()
+        elif '4' in c:
+            createCanvasWithPygame()
+        elif '5' in c:
+            createGuiQtSimple()
+        elif '0' in c:
+            sys.exit(0)
+        else:
+            pass
 
 
 def main(args):
     #createGuiTk()
     #createGuiQtSimple()
     #createGuiQtTextEditor()
+    #createGuiKivy()
+    #createCanvasWithPygame()
     cui()
 
 # -------------------------------------------------------------------------------------------
@@ -915,16 +965,16 @@ if __name__ == "__main__":
             (url, username, password) = sys.argv[1:]
         except ValueError:
             usage()
-        """
 
-        """
+        # ---------------------------------------------------
+
         # argparse
         parser = argparse.ArgumentParser(description='WebScraper url')
         parser.add_argument('--url', action="store", dest="url", required=True)
         args = parser.parse_args()
-        """
 
-        """
+        # ---------------------------------------------------
+
         # optargs (C-Style)
         try:
             opts, args = getopt.getopt(sys.argv, "w:f:t:c:")

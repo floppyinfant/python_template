@@ -7,7 +7,7 @@ pyinstaller ^
 --noconsole ^
 --icon=res\icon.ico ^
 --name="PythonApp" ^
-src\app.py
+src\main.py
 
 REM https://de.wikipedia.org/wiki/BAT-Datei
 REM

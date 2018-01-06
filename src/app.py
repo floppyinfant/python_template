@@ -30,7 +30,7 @@ from __future__ import with_statement
 from __future__ import print_function
 
 """
-Author: Thorsten Mauthe, t.mauthe@gmx.de
+Author: Thorsten Mauthe, <email@host>
 Date: 20XX-XX-XX
 Version: 0.1
 
@@ -46,7 +46,7 @@ Copyright (c) 20XX Thorsten Mauthe. All rights reserved.
 
 __author__ = 'TM'
 __date__ = '20170208'
-__version__ = 0.01
+__version__ = 0.1
 __description__ = ''
 
 # -------------------------------------------------------------------------------------------

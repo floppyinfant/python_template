@@ -384,7 +384,8 @@ import csv
 # Geometry Managers:
 # pack, grid, place
 """
-from Tkinter import *  # Python 2
+import Tkinter as tk
+#from Tkinter import * # Python 2
 #from tkinter import * # Python 3
 
 
@@ -398,7 +399,13 @@ Kivy can be run by QPython on Android Devices and Deployed using Buildozer VM fr
 #qpy:kivy
 """
 from kivy.app import App
-from kivy.uix.button import Button as KButton
+from kivy.lang import Builder
+# UI Widgets
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
+from kivy.uix.popup import Popup
+from kivy.uix.label import Label
+from kivy.uix.progressbar import ProgressBar
 
 
 # PyQt4
@@ -463,7 +470,8 @@ import pygame
 # HPC (High Performance Computing):
 
 # Parallel Python: threading, processes, asynchronous IO (Twisted), asyncio (Python 3)
-from threading import Thread
+import threading
+#from threading import Thread
 
 # Cython
 # Numba
@@ -492,6 +500,7 @@ from threading import Thread
 """
 
 # -------------------------------------------------------------------------------------------
+
 
 class Scraper(object):
     """ TODO: Scraper
@@ -568,29 +577,48 @@ class Environment(object):
         os.system(prog)
         #os.popen(prog)
 
+
 # -------------------------------------------------------------------------------------------
 
+
 def createGuiTk():
-    win = Tk()
+    win = tk.Tk()
 
     # Widgets
-    label = Label(win, text = "Hello World!")
+    label = tk.Label(win, text="Hello World!")
     # Geometry Managers: pack, grid, place
     label.pack()
 
     win.mainloop()
 
+
 # -----------------------------------------
 
 # Qt
-class QtMainWindow(QMainWindow):
+def createGuiQtSimple():
+    # Application
+    app = QApplication(sys.argv)
+
+    # Widget
+    w = QWidget()
+    w.setWindowTitle('Simple')
+    w.resize(250, 150)
+    w.move(300, 300)
+    w.show()
+
+    app.exec_()
+    # sys.exit()
+
+
+# -----------------------------------------
+
+# Qt
+class MyQMainWindow(QMainWindow):
 
     def __init__(self):
-        super(QtMainWindow, self).__init__()
-        self.initGUI()
+        super(MyQMainWindow, self).__init__()
 
-
-    def initGUI(self):
+        # init GUI
         # Window (QMainWindow, QWidget)
         self.setWindowTitle("A Simple Text Editor")
         self.setWindowIcon(QIcon('../res/img/appicon.png'))
@@ -610,17 +638,17 @@ class QtMainWindow(QMainWindow):
         # -----------------------------------------
 
         # Actions (trigger Functions)
-        self.newAction = QAction( QIcon('../res/img/new.png'), '&New', self, shortcut = QKeySequence.New, statusTip = "Create a New File", triggered = self.newFile)
-        self.openAction = QAction( QIcon('../res/img/open.png'), 'O&pen', self, shortcut = QKeySequence.Open, statusTip = "Open an existing file", triggered = self.openFile)
-        self.saveAction = QAction( QIcon('../res/img/save.png'), '&Save', self, shortcut = QKeySequence.Save, statusTip = "Save the current file to disk", triggered = self.saveFile)
-        self.exitAction = QAction( QIcon('../res/img/exit.png'), 'E&xit', self, shortcut = "Ctrl+Q", statusTip = "Exit the Application", triggered = self.exitFile)
-        self.cutAction = QAction( QIcon('../res/img/cut.png'), 'C&ut', self, shortcut = QKeySequence.Cut, statusTip = "Cut the current selection to clipboard", triggered = self.textEdit.cut)
-        self.copyAction = QAction( QIcon('../res/img/copy.png'), 'C&opy', self, shortcut = QKeySequence.Copy, statusTip = "Copy the current selection to clipboard", triggered = self.textEdit.copy)
-        self.pasteAction = QAction( QIcon('../res/img/paste.png'), '&Paste', self, shortcut = QKeySequence.Paste, statusTip = "Paste the clipboard's content in current location", triggered = self.textEdit.paste)
-        self.selectAllAction = QAction( QIcon('../res/img/selectAll.png'), 'Select All', self, statusTip = "Select All", triggered = self.textEdit.selectAll)
-        self.redoAction = QAction( QIcon('../res/img/redo.png'),'Redo', self, shortcut = QKeySequence.Redo, statusTip = "Redo previous action", triggered = self.textEdit.redo)
-        self.undoAction = QAction( QIcon('../res/img/undo.png'),'Undo', self, shortcut = QKeySequence.Undo, statusTip = "Undo previous action", triggered = self.textEdit.undo)
-        self.aboutAction = QAction( QIcon('../res/img/about.png'), 'A&bout', self, statusTip = "Displays info about text editor", triggered = self.aboutHelp)
+        self.newAction = QAction(QIcon('../res/img/new.png'), '&New', self, shortcut=QKeySequence.New, statusTip="Create a New File", triggered=self.newFile)
+        self.openAction = QAction(QIcon('../res/img/open.png'), 'O&pen', self, shortcut=QKeySequence.Open, statusTip="Open an existing file", triggered=self.openFile)
+        self.saveAction = QAction(QIcon('../res/img/save.png'), '&Save', self, shortcut=QKeySequence.Save, statusTip="Save the current file to disk", triggered=self.saveFile)
+        self.exitAction = QAction(QIcon('../res/img/exit.png'), 'E&xit', self, shortcut="Ctrl+Q", statusTip="Exit the Application", triggered=self.exitFile)
+        self.cutAction = QAction(QIcon('../res/img/cut.png'), 'C&ut', self, shortcut=QKeySequence.Cut, statusTip="Cut the current selection to clipboard", triggered=self.textEdit.cut)
+        self.copyAction = QAction(QIcon('../res/img/copy.png'), 'C&opy', self, shortcut=QKeySequence.Copy, statusTip="Copy the current selection to clipboard", triggered=self.textEdit.copy)
+        self.pasteAction = QAction(QIcon('../res/img/paste.png'), '&Paste', self, shortcut=QKeySequence.Paste, statusTip="Paste the clipboard's content in current location", triggered=self.textEdit.paste)
+        self.selectAllAction = QAction(QIcon('../res/img/selectAll.png'), 'Select All', self, statusTip="Select All", triggered=self.textEdit.selectAll)
+        self.redoAction = QAction(QIcon('../res/img/redo.png'), 'Redo', self, shortcut=QKeySequence.Redo, statusTip="Redo previous action", triggered=self.textEdit.redo)
+        self.undoAction = QAction(QIcon('../res/img/undo.png'), 'Undo', self, shortcut=QKeySequence.Undo, statusTip="Undo previous action", triggered=self.textEdit.undo)
+        self.aboutAction = QAction(QIcon('../res/img/about.png'), 'A&bout', self, statusTip="Displays info about text editor", triggered=self.aboutHelp)
 
         # -----------------------------------------
 
@@ -698,41 +726,96 @@ def createGuiQtTextEditor():
     # Application
     app = QApplication(sys.argv)
 
-    # class s.o.
-    mainWindow = QtMainWindow()
+    # instance
+    mainWindow = MyQMainWindow()
 
     app.exec_()
-    sys.exit()
+    # sys.exit()
 
 
 # -----------------------------------------
 
-# Qt
-def createGuiQtSimple():
-    # Application
-    app = QApplication(sys.argv)
-
-    # Widget
-    w = QWidget()
-    w.setWindowTitle('Simple')
-    w.resize(250, 150)
-    w.move(300, 300)
-    w.show()
-
-    app.exec_()
-    sys.exit()
-
-
-# -----------------------------------------
-
-# Kivy
+# Kivy using objects to create widgets
 class KivyApp(App):
     def build(self):
-        return KButton(text="Hello Kivy")
+        return Button(text="Hello Kivy")
+
+
+# Kivy using KV-language to create widget
+# embedded string (or separated file *.kv)
+Builder.load_string('''
+<MyInterface>:
+    orientation: "vertical"
+
+    Label:
+        text: "Hello Kivy"
+
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            id: variable
+            hint_text: "Enter your username"
+        MyButton:
+            user_input: variable.text
+            text: "Attack"
+            on_release: self.do_action()
+
+    Label:
+
+    BoxLayout:
+        TextInput:
+            size_hint: (0.5, 0.5)
+            id: variable2
+            hint_text: "Enter your password"
+            password: True
+        MyButton2:
+            size_hint: (0.5, 0.5)
+            user_input2: variable2.text
+            text: "Write to SD"
+            on_release: self.do_action()
+
+    Label:
+        text: "For educational purpose only, use on your own risk!"
+
+''')
+
+
+class MyInterface(BoxLayout):
+    pass
+
+
+class MyButton(Button):
+    def progbar(self):
+        pb = ProgressBar()
+        popup = Popup(title='Brute Forcing ...', content=pb, size_hint=(0.7, 0.3))
+        popup.open()
+        # update ProgressBar in Loop
+        pb.value = 25
+
+    def do_action(self, *args):
+        threading.Thread(target=self.progbar).start()
+        print('log from Kivy')
+        return
+
+
+class MyButton2(Button):
+    def do_action(self, *args):
+        try:
+            file = open("/mnt/extSdCard/test.txt", 'w')
+            file.write(self.user_input2)
+        except:
+            pass
+        return
+
+
+class KivyApp2(App):
+    def build(self):
+        return MyInterface()
 
 
 def createGuiKivy():
-    app = KivyApp()  # instance
+    #app = KivyApp()  # instance
+    app = KivyApp2()  # instance
     app.run()
 
 
@@ -903,10 +986,6 @@ def cui():
     """ Commandline User Interface
     """
 
-    banner()
-
-    #usage()
-
     """ printf()-like output:
     # @see http://www.python-kurs.eu/python3_formatierte_ausgabe.php
     print("You typed", c)
@@ -914,18 +993,24 @@ def cui():
     print("You typed {}".format(c))
     """
 
+    banner()
+
+    #usage()
+
+    # CUI
+    print("Type '1' for Tk-GUI")
+    print("Type '2' for Qt-GUI Editor")
+    print("Type '3' for Kivy App")
+    print("Type '4' for Pygame OpenGL Canvas")
+    print("Type '0' to exit")
+
     while True:
-        print("Type '1' for Qt-GUI Editor")
-        print("Type '2' for Tk-GUI")
-        print("Type '3' for Kivy App")
-        print("Type '4' for Pygame OpenGL Canvas")
-        print("Type '0' to exit")
         c = raw_input(">> ")
 
         if '1' in c:
-            createGuiQtTextEditor()
-        elif '2' in c:
             createGuiTk()
+        elif '2' in c:
+            createGuiQtTextEditor()
         elif '3' in c:
             createGuiKivy()
         elif '4' in c:
@@ -946,13 +1031,15 @@ def main(args):
     #createCanvasWithPygame()
     cui()
 
+
 # -------------------------------------------------------------------------------------------
 
 # code entry point
 if __name__ == "__main__":
 
-    # parse sys.argv
     try:
+        # commandline arguments
+        args = sys.argv[1:]
 
         """
         # manually parse sys.argv[1:]
@@ -993,11 +1080,9 @@ if __name__ == "__main__":
                 hidecode = arg
         """
 
-        # commandline arguments
-        args = sys.argv[1:]
-
         # start application
         DEBUG = 1
+        # logging TODO
         timestart = time.time() #time.clock()
 
         main(args)

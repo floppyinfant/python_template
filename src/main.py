@@ -8,7 +8,7 @@
 # #!/usr/local/bin/python
 # #!/bin/python
 
-"""
+
 # Python 3 and 2 compatibility (these imports must be in the first place):
 # https://docs.python.org/2.7/howto/pyporting.html
 # http://python-future.org/
@@ -19,14 +19,13 @@
 #
 # https://docs.python.org/3/library/builtins.html
 # https://docs.python.org/3/library/__future__.html
-from __future__ import print_function
-from __future__ import division
-from __future__ import unicode_literals
-from __future__ import absolute_import
-from __future__ import nested_scopes
-from __future__ import generators
-from __future__ import with_statement
-"""
+# from __future__ import print_function
+# from __future__ import division
+# from __future__ import unicode_literals
+# from __future__ import absolute_import
+# from __future__ import nested_scopes
+# from __future__ import generators
+# from __future__ import with_statement
 from __future__ import print_function
 
 """
@@ -823,8 +822,11 @@ def createGuiKivy():
 
 # Pygame
 def createCanvasWithPygame():
-    """
+
     global FPSCLOCK, DISPLAYSURF
+    WINDOWWIDTH = 640
+    WINDOWHEIGHT = 480
+    BGCOLOR = (255,0,0)
 
     pygame.init()
     FPSCLOCK = pygame.time.Clock()
@@ -832,6 +834,8 @@ def createCanvasWithPygame():
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
     pygame.display.set_caption('PyGame')
 
+    """
+    # RESSOURCES
 
     # load images
     img = pygame.image.load('cat.png')
@@ -878,12 +882,13 @@ def createCanvasWithPygame():
     finally:
         del midi_out
         pygame.midi.quit()
-
+    """
 
     # the main game loop
     while True:
         DISPLAYSURF.fill(BGCOLOR)
 
+        """
         # draw images
         x = 0
         y = 0
@@ -905,11 +910,11 @@ def createCanvasWithPygame():
             print("...")
             time.wait(1000)
         print("...Finished!")
-
+        """
 
         # event handling loop
         for event in pygame.event.get():
-            if event.type == QUIT:
+            if event.type == QUIT:       # TODO
                 pygame.quit()
                 sys.exit()
             elif event.type == KEYUP:
@@ -923,14 +928,19 @@ def createCanvasWithPygame():
             elif event.type == KEYDOWN:
                 if event.key == K_w:
                     # move UP
+                    pass
                 elif event.key == K_a:
                     # move LEFT
+                    pass
                 elif event.key == K_d:
                     # move RIGHT
+                    pass
                 elif event.key == K_s:
                     # move DOWN
+                    pass
                 elif event.key == K_e:
                     # change tool
+                    pass
             elif event.type == MOUSEBUTTONUP:
                 if event.pos == (lastMouseDownX, lastMouseDownY):
                     # This event is a mouse click, not the end of a mouse drag.
@@ -938,20 +948,19 @@ def createCanvasWithPygame():
                     # check for clicks on buttons
                     if pygame.Rect(74, 16, 111, 30).collidepoint(x, y):
                         # play sound
-                        snd.play()
+                        pass #snd.play()
                 else:
                     # this is the end of a mouse drag
-
+                    pass
             elif event.type == MOUSEBUTTONDOWN:
                 # this is the start of a mouse click or mouse drag
                 lastMouseDownX, lastMouseDownY = event.pos
             elif event.type == pygame.midi.MIDIIN:
                 # @see pygame.midi.midis2events()
-
+                pass
         pygame.display.update()
         FPSCLOCK.tick(FPS)
 
-    """
 
 # -------------------------------------------------------------------------------------------
 

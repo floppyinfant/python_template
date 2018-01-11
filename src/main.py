@@ -129,8 +129,8 @@ git pull origin master
 #
 # conda install <package>
 # conda remove --name $ENVIRONMENT_NAME $PACKAGE_NAME
-#
-#
+
+
 ## pip, PyPI (Python Package Index)
 # https://pip.pypa.io/en/stable/
 # pip search $SEARCH_TERM
@@ -141,37 +141,20 @@ git pull origin master
 # pip install <package>
 # pip install --upgrade $PACKAGE_NAME
 # pip uninstall $PACKAGE_NAME
-#
-#
+
+
+### DEPLOYMENT:
 ## setuptools
+
 ## easy_install
+
 ## distutils
 
-# -------------------------------------------------------------------------------------------
-
-### IDEs:
-# https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
-# https://www.pythoncentral.io/comparison-of-python-ides-development/
-
-## IDLE
-## IPython | Jupyter Notebook
-## PyCharm
-# http://www.jetbrains.com/pycharm/
-## Wing IDE
-# http://wingware.com/
-## Eclipse PyDev
-# http://pydev.org/
-## Python Tools for Visual Studio (PTVS): xlrd, xlwt
-# https://marketplace.visualstudio.com/items?itemName=donjayamanne.python
-# https://microsoft.github.io/PTVS/
-## Netbeans
-# http://wiki.netbeans.org/Python
-## Komodo IDE
-# http://www.activestate.com/komodo-ide
-## Atom Editor
+# egg (2004), wheel (2012):
+# https://packaging.python.org/discussions/wheel-vs-egg/
 
 
-### PyInstaller:
+## PyInstaller:
 # http://www.pyinstaller.org/, https://pyinstaller.readthedocs.io/en/stable/, https://github.com/pyinstaller/pyinstaller
 # Libraries:
 # (pefile)
@@ -198,7 +181,7 @@ pyinstaller --onefile --noconsole --icon=icon.ico --upx-dir=..\PyInstaller-3.2\u
 pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
 
-### py2exe:
+## py2exe:
 # http://www.py2exe.org/
 # http://www.py2exe.org/index.cgi/Tutorial
 #
@@ -210,11 +193,42 @@ setup(console=['hello.py'])
 python setup.py py2exe
 
 
-### Installer Builders
+## Installer Builders:
+
+## Pynsist (based on NSIS)
+# https://pypi.python.org/pypi/pynsist
+# https://pynsist.readthedocs.io/en/latest/
+# https://github.com/takluyver/pynsist/tree/master/examples
+
 ## NSIS
 # http://nsis.sourceforge.net/Main_Page
+
 ## Inno Setup
 # http://www.jrsoftware.org/isinfo.php
+
+
+# -------------------------------------------------------------------------------------------
+
+### IDEs:
+# https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
+# https://www.pythoncentral.io/comparison-of-python-ides-development/
+
+## IDLE
+## IPython | Jupyter Notebook
+## PyCharm
+# http://www.jetbrains.com/pycharm/
+## Wing IDE
+# http://wingware.com/
+## Eclipse PyDev
+# http://pydev.org/
+## Python Tools for Visual Studio (PTVS): xlrd, xlwt
+# https://marketplace.visualstudio.com/items?itemName=donjayamanne.python
+# https://microsoft.github.io/PTVS/
+## Netbeans
+# http://wiki.netbeans.org/Python
+## Komodo IDE
+# http://www.activestate.com/komodo-ide
+## Atom Editor
 
 """
 

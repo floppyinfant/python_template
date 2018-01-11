@@ -424,6 +424,9 @@ from PyQt4.QtGui import *
 # https://inventwithpython.com/pygame/chapters/
 # pip install pygame --user
 import pygame
+#from pygame.locals import *
+import pygame.midi
+#import pygame.mixer_music
 
 # pybox2d (Physics)
 # https://github.com/pybox2d/pybox2d/wiki/manual
@@ -824,9 +827,15 @@ def createGuiKivy():
 def createCanvasWithPygame():
 
     global FPSCLOCK, DISPLAYSURF
-    WINDOWWIDTH = 640
-    WINDOWHEIGHT = 480
-    BGCOLOR = (255,0,0)
+    FPS = 30
+    WINDOWWIDTH = 600
+    WINDOWHEIGHT = 600
+    BGCOLOR = (0, 0, 0)
+    # variables set by mouse event
+    x = 0
+    y = 0
+
+    # --------------------
 
     pygame.init()
     FPSCLOCK = pygame.time.Clock()
@@ -834,15 +843,16 @@ def createCanvasWithPygame():
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
     pygame.display.set_caption('PyGame')
 
-    """
+    # --------------------
+
     # RESSOURCES
 
     # load images
-    img = pygame.image.load('cat.png')
+    img = pygame.image.load('../res/gfx/cat.png')
     #if img.get_size() != (IMAGESIZE, IMAGESIZE):
     #    img = pygame.transform.smoothscale(img, (IMAGESIZE, IMAGESIZE))
 
-
+    """
     # load fonts
     BASICFONT = pygame.font.Font('freesansbold.ttf', 36)
 
@@ -884,17 +894,16 @@ def createCanvasWithPygame():
         pygame.midi.quit()
     """
 
+    # --------------------
+
     # the main game loop
     while True:
         DISPLAYSURF.fill(BGCOLOR)
 
-        """
         # draw images
-        x = 0
-        y = 0
         DISPLAYSURF.blit(img, (x, y))
 
-
+        """
         # draw text
         scoreSurf = BASICFONT.render('Score: ' + str(score), 1, WHITE)
         scoreRect = scoreSurf.get_rect()
@@ -914,34 +923,37 @@ def createCanvasWithPygame():
 
         # event handling loop
         for event in pygame.event.get():
-            if event.type == QUIT:       # TODO
+            if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-            elif event.type == KEYUP:
-                if event.key == K_ESCAPE:
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_ESCAPE:
                     # you could display a confirmation window
                     pygame.quit()
                     sys.exit()
-                elif event.key == K_BACKSPACE:
+                elif event.key == pygame.K_BACKSPACE:
                     # leave function
                     return
-            elif event.type == KEYDOWN:
-                if event.key == K_w:
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_w:
                     # move UP
                     pass
-                elif event.key == K_a:
+                elif event.key == pygame.K_a:
                     # move LEFT
                     pass
-                elif event.key == K_d:
+                elif event.key == pygame.K_d:
                     # move RIGHT
                     pass
-                elif event.key == K_s:
+                elif event.key == pygame.K_s:
                     # move DOWN
                     pass
-                elif event.key == K_e:
+                elif event.key == pygame.K_e:
                     # change tool
                     pass
-            elif event.type == MOUSEBUTTONUP:
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                # this is the start of a mouse click or mouse drag
+                lastMouseDownX, lastMouseDownY = event.pos
+            elif event.type == pygame.MOUSEBUTTONUP:
                 if event.pos == (lastMouseDownX, lastMouseDownY):
                     # This event is a mouse click, not the end of a mouse drag.
                     x, y = event.pos
@@ -952,9 +964,6 @@ def createCanvasWithPygame():
                 else:
                     # this is the end of a mouse drag
                     pass
-            elif event.type == MOUSEBUTTONDOWN:
-                # this is the start of a mouse click or mouse drag
-                lastMouseDownX, lastMouseDownY = event.pos
             elif event.type == pygame.midi.MIDIIN:
                 # @see pygame.midi.midis2events()
                 pass

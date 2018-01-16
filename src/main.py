@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# make file executable in Linux Terminal: 'chmod a+x main.py'
 
 # Alternative Shebangs:
 # #!/usr/bin/env python3
@@ -253,11 +254,27 @@ import getopt
 """
 # Software Engineering, TDD:
 # http://pythontesting.net/start-here
-# pytest
+#
+# pytest (py.test)
+#
 # unittest
+# https://docs.python.org/2/library/unittest.html
+# https://docs.python.org/3/library/unittest.html
 # http://pythontesting.net/framework/unittest/unittest-introduction/
+#
 # nose
 # http://pythontesting.net/framework/nose/nose-introduction/
+#
+# coverage
+#
+# doctest
+#
+# mock
+#
+# hypothesis
+#
+# tox
+#
 """
 #import unittest
 

@@ -27,7 +27,7 @@ mechanize
 selenium
 scrapy
 
-kivy
+kivy, (kivy_examples, kivy.deps... (SDL2, Gstreamer), KivyEnt, KivyEntEd, Kivy-Designer, Kivy-Garden, Buildozer, P4A)
 pygame
 opencv
 

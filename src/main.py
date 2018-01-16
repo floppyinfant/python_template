@@ -420,8 +420,23 @@ import Tkinter as tk
 
 
 """
+Qt-Bindings:
+PyQt4 | PySide
+"""
+from PyQt4.QtGui import *
+#import PyQt4.QtCore
+# PySide
+#from PySide.QtCore import Qt
+#from PySide.QtGui import QApplication, QLabel
+#from PySide.QtSql import *
+
+
+"""
 Kivy
 https://kivy.org/
+https://github.com/kivy/kivy
+https://kivy.org/docs/
+https://media.readthedocs.org/pdf/kivy/latest/kivy.pdf
 
 Kivy can be run by QPython on Android Devices and Deployed using Buildozer VM from Kivy Website (create *.apk):
 - put code in file name 'main.py'
@@ -436,32 +451,58 @@ from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
 from kivy.uix.progressbar import ProgressBar
-
-
-# PyQt4
-from PyQt4.QtGui import *
-#import PyQt4.QtCore
-# PySide
-#from PySide.QtCore import Qt
-#from PySide.QtGui import QApplication, QLabel
-#from PySide.QtSql import *
+"""
+Kivy Sister-Projects:
+https://github.com/kivy/buildozer
+https://github.com/kivy/python-for-android
+https://github.com/kivy/kivy-ios
+https://github.com/kivy/kivy-designer
+https://github.com/kivy-garden
+https://kivy.org/docs/api-kivy.garden.html
+https://github.com/kivy/kivent
+https://github.com/chozabu/KivEntEd
+https://chipmunk-physics.net/forum/viewtopic.php?t=3757
+"""
 
 # -------------------------
 
 # Game | Creative Coding | Physical Computing | IoT:
 
-# Pygame (OpenGL, Canvas, MIDI, Sound)
-# https://www.pygame.org/docs/
-# https://inventwithpython.com/pygame/chapters/
-# pip install pygame --user
+"""
+Pygame (OpenGL, Canvas, MIDI, Sound)
+https://www.pygame.org/docs/
+https://inventwithpython.com/pygame/chapters/
+
+Install: 'pip install pygame --user'
+"""
 import pygame
 #from pygame.locals import *
 import pygame.midi
 #import pygame.mixer_music
 
-# pybox2d (Physics)
-# https://github.com/pybox2d/pybox2d/wiki/manual
-# conda install -c https://conda.anaconda.org/kne pybox2d
+"""
+Physics Engines
+
+Box2D
+pybox2d
+https://github.com/pybox2d/pybox2d/wiki/manual
+conda install -c https://conda.anaconda.org/kne pybox2d
+
+Chipmunks
+https://chipmunk-physics.net/
+
+Pymunk
+http://www.pymunk.org/en/latest/
+https://github.com/viblo/pymunk
+https://pymunk.readthedocs.org/en/latest/
+
+Cymunk
+https://github.com/kivy/cymunk
+http://cymunk.readthedocs.org/en/latest/
+
+Cocos2d
+http://python.cocos2d.org/doc.html
+"""
 
 # Audio | Music:
 # pylibpd (Pure Data)

@@ -1,0 +1,10 @@
+termcolor
+colorama
+pyfiglet
+mechanize
+selenium
+scrapy
+kivy
+pygame
+#opencv
+pyinstaller

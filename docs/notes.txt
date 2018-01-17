@@ -1,28 +1,12 @@
 My Templates in Python
 
 
-README.md (Markdown)
-https://help.github.com/articles/basic-writing-and-formatting-syntax/
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-
-
-README.rst (reStructuredText)
---> Python Docutils
-http://docutils.sourceforge.net/rst.html
-http://docutils.sourceforge.net/docs/user/rst/quickref.html
-
-
-Makefile
-https://www.gnu.org/software/make/manual/make.html
-https://wiki.ubuntuusers.de/Makefile/
-Makefile Beispiel: Kivy
-https://github.com/kivy/kivy/blob/master/Makefile
-
-
 @see
 https://de.wikipedia.org/wiki/Markdown
 https://de.wikipedia.org/wiki/ReStructuredText
 https://de.wikipedia.org/wiki/Make
+
+- - -
 
 - - -
 

@@ -143,16 +143,30 @@ git pull origin master
 # pip install --upgrade $PACKAGE_NAME
 # pip uninstall $PACKAGE_NAME
 
+# -------------------------------------------------------------------------------------------
 
 ### DEPLOYMENT:
-## setuptools
 
-## easy_install
+## setuptools:
 
-## distutils
+## easy_install:
+
+## distutils:
 
 # egg (2004), wheel (2012):
 # https://packaging.python.org/discussions/wheel-vs-egg/
+
+
+## Py2exe:
+# http://www.py2exe.org/
+# http://www.py2exe.org/index.cgi/Tutorial
+#
+# create a setup.py file
+from distutils.core import setup
+import py2exe
+setup(console=['hello.py'])
+# run the file in DOS Command Window
+python setup.py py2exe
 
 
 ## PyInstaller:
@@ -182,16 +196,15 @@ pyinstaller --onefile --noconsole --icon=icon.ico --upx-dir=..\PyInstaller-3.2\u
 pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
 
-## py2exe:
-# http://www.py2exe.org/
-# http://www.py2exe.org/index.cgi/Tutorial
+## Buildozer VM (Kivy, P4A, Plyer)
+# Android *.apk export in a VirtualBox VM
+# https://kivy.org/docs/guide/packaging-android-vm.html
+# http://buildozer.readthedocs.io/en/latest/
+# https://github.com/kivy/buildozer
 #
-# create a setup.py file
-from distutils.core import setup
-import py2exe
-setup(console=['hello.py'])
-# run the file in DOS Command Window
-python setup.py py2exe
+# Terminal:
+# buildozer init  # creates spec-file
+# buildozer android debug deploy run
 
 
 ## Installer Builders:
@@ -199,14 +212,12 @@ python setup.py py2exe
 ## Pynsist (based on NSIS)
 # https://pypi.python.org/pypi/pynsist
 # https://pynsist.readthedocs.io/en/latest/
-# https://github.com/takluyver/pynsist/tree/master/examples
+# https://github.com/takluyver/pynsist/
+# Download NSIS from http://nsis.sourceforge.net/Download
 
-## NSIS
-# http://nsis.sourceforge.net/Main_Page
 
 ## Inno Setup
 # http://www.jrsoftware.org/isinfo.php
-
 
 # -------------------------------------------------------------------------------------------
 

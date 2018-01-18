@@ -372,6 +372,13 @@ from pyfiglet import Figlet
 
 # -------------------------
 
+# Parser | Fileformats:
+import re
+import json
+import csv
+
+# -------------------------
+
 # WebScraping:
 import socket
 import httplib
@@ -393,16 +400,13 @@ from selenium import webdriver
 # https://scrapy.org/
 # https://github.com/scrapy/scrapy
 
-# -------------------------
+# Network:
+# Twisted
 
-# Parser | Fileformats:
-import re
-import json
-import csv
+# Webserver:
+# Tornado
 
-# -------------------------
-
-# Webdesign:
+# Webdesign (Frameworks):
 # Flask
 # Django
 
@@ -531,6 +535,7 @@ http://python.cocos2d.org/doc.html
 
 # Image Processing:
 
+# Pillow
 # PIL
 #import PIL
 
@@ -539,16 +544,19 @@ http://python.cocos2d.org/doc.html
 
 # -------------------------
 
+# Security | Privacy | Forensics | Reverse Engineering | Penetration Testing:
+
 # Pentesting:
 # https://github.com/dloss/python-pentest-tools
 
-# Scapy
+# Scapy (Sniffer)
 
 # PeePDP
 # http://eternal-todo.com/tools/peepdf-pdf-analysis-tool
 
 # Cryptography
 # PyCrypto: https://www.dlitz.net/software/pycrypto/
+# Paramiko (SSH)
 
 # -------------------------
 
@@ -573,7 +581,7 @@ import threading
 
 # Numpy, SciPy, Pandas
 
-# Scikit-learn (sklearn), Theano, Tensorflow
+# Scikit-learn (sklearn), Theano, Tensorflow (Google)
 
 # Matplotlib
 

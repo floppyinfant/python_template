@@ -54,10 +54,16 @@ __description__ = ''
 # comments
 
 """
-VCS, SCM
-Git (vs. hg, svn)
+Version Control System (VCS) | Software Versionsverwaltung
+Source Code Management | Source Control Management (SCM)
+Software Configuration Management (SCM)
+e.g. Git, Mercurial (hg), Subversion (svn) Concurrent Versions System (CVS), ... Microsoft Visual Studio Team Services | Team Foundation Version Control | Visual SourceSafe (1994)
+https://en.wikipedia.org/wiki/List_of_version_control_software
+https://git-scm.com/downloads
+https://atom.io/#github (Atom Editor has Git and Github integration)
 
 # GitHub
+
 # create repository online without any files
 # (if you created files (e.g. .gitignore, README.md) do git pull (merge) before git push)
 cd app/
@@ -74,11 +80,11 @@ git push origin master
 clone https://github.com/floppyinfant/python_template.git
 # update local repository (merge)
 git pull origin master
-# workflow cycle: edit, commit changes, push files to server
 
+# workflow cycles:
+# 1. workflow: pull (update | merge), edit, stage/commit changes, push files to server
 # 2. workflow: feature branch
-
-# 3. workflow: pull requests
+# 3. workflow: pull requests (from forked repository)
 """
 
 """
@@ -226,21 +232,32 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 # https://www.pythoncentral.io/comparison-of-python-ides-development/
 
 ## IDLE
+
 ## IPython | Jupyter Notebook
+# http://jupyter.org/
+# https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
+
+## Atom Editor
+# https://atom.io/#ide
+
 ## PyCharm
 # http://www.jetbrains.com/pycharm/
+
 ## Wing IDE
 # http://wingware.com/
+
 ## Eclipse PyDev
 # http://pydev.org/
+
 ## Python Tools for Visual Studio (PTVS): xlrd, xlwt
 # https://marketplace.visualstudio.com/items?itemName=donjayamanne.python
 # https://microsoft.github.io/PTVS/
+
 ## Netbeans
 # http://wiki.netbeans.org/Python
+
 ## Komodo IDE
 # http://www.activestate.com/komodo-ide
-## Atom Editor
 
 """
 
@@ -1198,4 +1215,3 @@ if __name__ == "__main__":
 
     except KeyboardInterrupt:
         print(sys.argv[0] + "interrupted by user, killing all threads!")
-

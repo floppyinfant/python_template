@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 # -*- coding: utf-8 -*-
 # make file executable in Linux Terminal: 'chmod a+x main.py'
 
@@ -9,6 +10,7 @@
 # #!/usr/local/bin/python
 # #!/bin/python
 
+# -------------------------------------------------------------------------------------------
 
 # Python 3 and 2 compatibility (these imports must be in the first place):
 # https://docs.python.org/2.7/howto/pyporting.html
@@ -28,6 +30,8 @@
 # from __future__ import generators
 # from __future__ import with_statement
 from __future__ import print_function
+
+# -------------------------------------------------------------------------------------------
 
 """
 Author: Thorsten Mauthe, <email@host>
@@ -86,6 +90,8 @@ git pull origin master
 # 2. workflow: feature branch
 # 3. workflow: pull requests (from forked repository)
 """
+
+# -------------------------------------------------------------------------------------------
 
 """
 ### Python Distributions:
@@ -611,7 +617,6 @@ import threading
 
 # -------------------------------------------------------------------------------------------
 
-
 class Scraper(object):
     """ TODO: Scraper
     Scrapy, urllib2, httplib
@@ -689,7 +694,6 @@ class Environment(object):
 
 
 # -------------------------------------------------------------------------------------------
-
 
 def createGuiTk():
     win = tk.Tk()
@@ -1149,13 +1153,25 @@ def cui():
             pass
 
 
+# -------------------------------------------------------------------------------------------
+
 def main(args):
+    # -----------------------------------------
+    # command line 
+    cui()
+    # -----------------------------------------
+    # OpenGL
+    #createCanvasWithPygame()
+    # -----------------------------------------
+    # GUI
     #createGuiTk()
     #createGuiQtSimple()
     #createGuiQtTextEditor()
     #createGuiKivy()
-    #createCanvasWithPygame()
-    cui()
+    # -----------------------------------------
+    # Web
+    #flask/htdocs/main.py       # ???
+    # -----------------------------------------
 
 
 # -------------------------------------------------------------------------------------------
@@ -1164,7 +1180,7 @@ def main(args):
 if __name__ == "__main__":
 
     try:
-        # commandline arguments
+        # parse commandline arguments
         args = sys.argv[1:]
 
         """

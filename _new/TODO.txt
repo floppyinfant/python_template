@@ -1,0 +1,86 @@
+# TODO
+# NEU IMPLEMENTIEREN:
+
+# Webserver
+
+Flask Webserver
+Python Flask
+
+http://flask.pocoo.org/docs/1.0/quickstart/#quickstart
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+# Webscraping
+
+Scrapy 
+Python Scrapy
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+# Datascience Visualisation
+
+Bokeh (interaktive Grafik ala Knime)
+
+#https://bokeh.pydata.org
+#conda install bokeh
+#pip install bokeh
+from bokeh.plotting import figure, show, output_file
+output_file("plot.html")
+p=figure(...)
+p.line(x,y,legend="x")
+show(p)
+
+#git clone https://github.com/bokeh/bokeh.git
+#cd examples/howto
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+# Datascience
+
+#jupyter notebook
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+# Music  | MIDI | ...
+
+pygame/midi.py
+
+MIDO
+
+PortMIDI, RtMIDI
+
+Mingus
+
+pyo (DSP Programming)
+Melopy
+Musickit
+
+Reaper
+PyDAW (=libmodsynth)
+
+pyfluidsynth (sf2)
+
+OSC.py
+
+lilypond, jedit, MuseScore, Sibelius (Proprietary), Finale (Apple)
+
+kxStudio (Linux Distribution)
+DreamStudio
+UbuntuStudio
+
+sonic-pi.net
+github.com/samaaron/sonicpi
+
+
+#@see PythonInMusic
+#@see JUCE
+#@see AudioKit
+#@see Faust als Alternative zu C++, macOS/ iOS
+
+
+-----------------------------------------------------------------------------------------------------------------
+

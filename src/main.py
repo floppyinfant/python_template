@@ -232,6 +232,15 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
 ## Inno Setup
 # http://www.jrsoftware.org/isinfo.php
+# IS Tool (GUI)
+# http://www.istool.org/
+# https://sourceforge.net/projects/istool/
+
+
+## Alternative Installer:
+# Nullsoft Scriptable Install System (NSIS)
+# Windows Installer XML (WiX)
+# Install Shield (proprietary)
 
 # -------------------------------------------------------------------------------------------
 

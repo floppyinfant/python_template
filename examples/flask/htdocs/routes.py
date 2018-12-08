@@ -10,8 +10,8 @@ file ./routes.py
 
 from flask import Flask, render_template, request, session, redirect, url_for
 # import os
-from models import db, User
-from forms import SignupForm
+from examples.flask.htdocs.models import db, User
+from examples.flask.htdocs.forms import SignupForm
 
 # -----------------------------------------
 

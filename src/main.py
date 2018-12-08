@@ -146,10 +146,12 @@ git pull origin master
 
 ## pip, PyPI (Python Package Index)
 # https://pip.pypa.io/en/stable/
+# https://pip.pypa.io/en/stable/user_guide/#requirements-files
 # pip search $SEARCH_TERM
 # pip list
 # # create requirements file
 # pip freeze
+# pip install -r requirements.txt
 #
 # pip install <package>
 # pip install --upgrade $PACKAGE_NAME

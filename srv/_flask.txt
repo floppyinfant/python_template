@@ -1,0 +1,375 @@
+@see <Evernote>/Python Flask
+
+--------------------------------------------------------------------------------
+
+# run app server with "python routes.py"
+# open browser at "localhost:5000"
+# open browser at "localhost:5000/hello"
+# open browser at "localhost:5000/goodbye/<your-name>"
+
+--------------------------------------------------------------------------------
+
+# Code from Rapid Flask [Video], PacktLib
+
+
+from flask import Flask
+from flask import render_template
+from flask import make_response
+from flask import request
+import datetime
+import os
+import json
+import time
+import urllib2
+
+app = Flask(__name__)
+
+def get_weather(city):
+    url = "http://api.openweathermap.org/data/2.5/forecast/daily?q={}&cnt=10&mode=json&units=metric".format(city)
+    response = urllib2.urlopen(url).read()
+    return response
+
+@app.route("/")
+def index():
+    searchcity = request.args.get("searchcity")
+    if not searchcity:
+        searchcity = request.cookies.get("last_city")
+    if not searchcity:
+        searchcity = "London"
+    data = json.loads(get_weather(searchcity))
+    try:
+        city = data['city']['name']
+    except KeyError:
+        return render_template("invalid_city.html")
+    country = data['city']['country']
+    forecast_list = []
+    for d in data.get("list"):
+        day = time.strftime('%d %B', time.localtime(d.get('dt')))
+        mini = d.get("temp").get("min")
+        maxi = d.get("temp").get("max")
+        description = d.get("weather")[0].get("description")
+        forecast_list.append((day,mini,maxi,description))
+    response = make_response(render_template("index.html", forecast_list=forecast_list, city=city, country=country))
+    if request.args.get("remember"):
+        response.set_cookie("last_city","{},{}".format(city, country), expires=datetime.datetime.today() +     datetime.timedelta(days=365))
+    return response
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
+
+-------------
+
+<html>
+    <head>
+        <title>Helios Weather App</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <h1>Helios Weather App</h1>
+         <form>
+            View forecast for city:
+             <input type="text" name="searchcity">
+             <input type="Submit" value="Submit">
+            <input type="checkbox" name="remember" checked="checked"> Remember<br/ >
+         </form>
+        <h1>Weather forecast for {{city}}, {{country}}</h1>
+        <table>
+            <tr>
+                <th>Date</th><th>Min</th><th>Max</tx><th>Description</th>
+            </tr>
+              {% for day in forecast_list %}
+            <tr>
+                <td>{{day[0]}}</td>
+                <td>{{day[1]}}</td>
+                <td>{{day[2]}}</td>
+                <td>{{day[3]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
+
+--------------------------------------------------------------------------------
+
+# Code from Learning Flask, PacktLib
+
+#!/usr/bin/env python
+
+"""file ./routes.py"""
+
+from flask import Flask, render_template, request, session, redirect, url_for
+# import os
+from models import db, User
+from forms import SignupForm
+
+app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/learningflask'
+db.init_app(app)
+
+app.secret_key = "development-key"
+
+@app.route("/")
+def index():
+     return render_template("index.html")
+
+@app.route("/hello")
+def hello():
+    return "Hello World!"
+
+@app.route("/goodbye/<name>")
+def goodbye(name):
+     return "Goodbye %s!" % name
+
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
+    form = SignupForm()
+
+    if request.method == "POST":
+        if form.validate() == False:
+            return render_template('signup.html', form=form)
+        else:
+            newuser = User(form.first_name.data, form.last_name.data, form.email.data, form.password.data)
+            db.session.add(newuser)
+            db.session.commit()
+            return 'Success!'
+
+    elif request.method == "GET":
+        return render_template('signup.html', form=form)
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    form = LoginForm()
+
+    if request.method == "POST":
+        if form.validate() == False:
+            return render_template("login.html", form=form)
+        else:
+            email = form.email.data
+            password = form.password.data
+            user = User.query.filter_by(email=email).first()
+            if user is not None and user.check_password(password):
+                session['email'] = form.email.data
+                return redirect(url_for('home'))
+            else:
+                return redirect(url_for('login'))
+
+    elif request.method == 'GET':
+        return render_template('login.html', form=form)
+
+@app.route("/logout")
+def logout():
+    session.pop('email', None)
+    return redirect(url_for('index'))
+
+@app.route("/home", methods=["GET", "POST"])
+def home():
+    return render_template("home.html")
+
+if __name__ == '__main__':
+      # port = int(os.environ.get('PORT', 5000))
+      # app.run(host='127.0.0.1', port=port, debug=True)
+     app.run(debug=True)
+
+--------------
+
+<!-- file ./templates/index.html  -->
+{% extends "layout.html" %}
+
+{% block content %}
+<main class="hero-section">
+    <div class="container">
+
+        <div class="section-content">
+            <h2>Discover places near you.</h2>
+            <a href="#" class="btn-primary">Sign up</a>
+            <a href="{{ url_for('about') }}" class="btn-secondary">Learn more</a>
+        </div>
+
+        <div class="section-device">
+            <img src="static/img/device.png">
+        </div>
+
+        <div class="clearfix">
+        </div>
+
+    </div>
+</main>
+{% endblock %}
+
+--------------
+
+<!-- file ./templates/layout.html  -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="title">Learning Flask</h1>
+            </div>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>
+
+-------------
+
+""" file ./models.py """
+
+from flask.ext.sqlalchemy import SQLAlchemy
+from werkzeug import generate_password_hash, check_password_hash
+
+db = SQLAlchemy()
+
+class User(db.Model):
+    __tablename__ = 'users'
+    uid = db.Column(db.Integer, primary_key = True)
+    firstname = db.Column(db.String(100))
+    lastname = db.Column(db.String(100))
+    email = db.Column(db.String(120), unique=True)
+    pwdhash = db.Column(db.String(54))
+
+def __init__(self, firstname, lastname, email, password):
+    self.firstname = firstname.title()
+    self.lastname = lastname.title()
+    self.email = email.lower()
+    self.set_password(password)
+
+def set_password(self, password):
+    self.pwdhash = generate_password_hash(password)
+
+def check_password(self, password):
+    return check_password_hash(self.pwdhash, password)
+
+
+""" file ./forms.py """
+
+from flask_wtf import Form
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Email, Length
+
+class SignupForm(Form):
+    first_name = StringField('First name', validators=[DataRequired("Please enter your first name.")])
+    last_name = StringField('Last name', validators=[DataRequired("Please enter your last name.")])
+    email = StringField('Email', validators=[DataRequired("Please enter your email address."), Email("Please     enter your email address.")])
+    password = PasswordField('Password', validators=[DataRequired("Please enter a password."), Length(min=6, message="Passwords must be 6 characters or more.")])
+    submit = SubmitField('Sign up')
+
+
+<!-- file ./templates/signup.html  -->
+{% extends "layout.html" %}
+
+{% block content %}
+<main class="container signup-section">
+    <div class="section-content">
+        <h2>Create an account</h2>
+
+        <form method="POST" action="/signup">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                {{ form.first_name.label }}
+
+                {% if form.first_name.errors %}
+                {% for error in form.first_name.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %}
+                {% endif %}
+
+                {{ form.first_name }}
+            </div>
+
+            <div class="form-group">
+                {{ form.last_name.label }}
+
+                {% if form.last_name.errors %}
+                {% for error in form.last_name.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %}
+                {% endif %}
+
+                {{ form.last_name }}
+            </div>
+
+            <div class="form-group">
+                {{ form.email.label }}
+
+                {% if form.email.errors %}
+                {% for error in form.email.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %}
+                {% endif %}
+
+                {{ form.email }}
+            </div>
+
+            <div class="form-group">
+                {{ form.password.label }}
+
+                {% if form.password.errors %}
+                {% for error in form.password.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %}
+                {% endif %}
+
+                {{ form.password }}
+            </div>
+
+            {{ form.submit(class="btn-primary") }}
+        </form>
+    </div>
+</main>
+{% endblock %}
+
+
+<!-- file ./templates/login.html  -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+<main class="container signup-section">
+    <div class="section-content">
+        <h2>Log in</h2>
+
+        <form method="POST" action="/login">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                {{ form.email.label }}
+                {{ form.email }}
+            </div>
+
+            <div class="form-group">
+                {{ form.password.label }}
+                {{ form.password }}
+            </div>
+
+            {{ form.submit(class="btn-primary") }}
+        </form>
+    </div>
+</main>
+{% endblock %}
+
+
+<!-- file ./templates/home.html  -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+<main class="hero-section">
+    <div class="container">
+
+        <h1>Home</h1>
+
+    </div>
+</main>
+{% endblock %}

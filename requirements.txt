@@ -6,6 +6,8 @@ selenium
 scrapy
 kivy
 pygame
+#PySide | PyQt4
 #opencv
-pyinstaller
 flask
+pyinstaller
+pynsist

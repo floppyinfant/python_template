@@ -615,7 +615,7 @@ import threading
 
 # Numpy, SciPy, Pandas
 
-# Scikit-learn (sklearn), Theano, Tensorflow (Google)
+# Scikit-learn (sklearn), Theano, Keras, Tensorflow (Google)
 
 # Matplotlib
 

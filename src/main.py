@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # -*- coding: utf-8 -*-
+
 # make file executable in Linux Terminal: 'chmod a+x main.py'
 
 # Alternative Shebangs:
@@ -9,27 +10,6 @@
 # #!/usr/bin/python
 # #!/usr/local/bin/python
 # #!/bin/python
-
-# -------------------------------------------------------------------------------------------
-
-# Python 3 and 2 compatibility (these imports must be in the first place):
-# https://docs.python.org/2.7/howto/pyporting.html
-# http://python-future.org/
-#
-# https://docs.python.org/2/library/__future__.html
-# https://docs.python.org/2/library/future_builtins.html
-# https://docs.python.org/2/library/__builtin__.html
-#
-# https://docs.python.org/3/library/builtins.html
-# https://docs.python.org/3/library/__future__.html
-# from __future__ import print_function
-# from __future__ import division
-# from __future__ import unicode_literals
-# from __future__ import absolute_import
-# from __future__ import nested_scopes
-# from __future__ import generators
-# from __future__ import with_statement
-from __future__ import print_function
 
 # -------------------------------------------------------------------------------------------
 
@@ -55,8 +35,6 @@ __description__ = ''
 
 # -------------------------------------------------------------------------------------------
 
-# comments
-
 """
 Version Control System (VCS) | Software Versionsverwaltung
 Source Code Management | Source Control Management (SCM)
@@ -81,7 +59,7 @@ git remote add origin https://github.com/floppyinfant/python_template.git
 git push origin master
 
 # on a new machine
-clone https://github.com/floppyinfant/python_template.git
+git clone https://github.com/floppyinfant/python_template.git
 # update local repository (merge)
 git pull origin master
 
@@ -104,11 +82,19 @@ git pull origin master
 # https://www.activestate.com/activepython
 ## Python.org
 # https://www.python.org/
+"""
 
 # -------------------------------------------------------------------------------------------
 
+"""
 ### Virtual Environments:
 # https://conda.io/docs/commands.html#conda-vs-pip-vs-virtualenv-commands
+
+## venv
+# https://docs.python.org/3/library/venv.html
+# python -m venv .venv
+# source .venv/bin/activate  #Linux
+# .venv\Scripts\activate     #Windows
 
 ## virtualenv
 # https://virtualenv.pypa.io/en/stable/
@@ -125,8 +111,29 @@ git pull origin master
 # source activate $ENVIRONMENT_NAME
 # source deactivate
 
+## uv
+# @see Package Management
+"""
+
+# Shell:
+# create virtual environment in current directory:
+# python -m venv .venv
+
+# Activate virtual environment:
+# source .venv/bin/activate  #Linux
+# .venv\Scripts\activate     #Windows
+
+# Install packages in virtual environment:
+# pip install -r requirements.txt
+
+
+# Alternatives:
+# conda
+# uv
+
 # -------------------------------------------------------------------------------------------
 
+"""
 ### Package Management:
 ## conda
 # https://conda.io/docs/user-guide/overview.html
@@ -157,8 +164,33 @@ git pull origin master
 # pip install --upgrade $PACKAGE_NAME
 # pip uninstall $PACKAGE_NAME
 
+
+## uv
+# https://docs.astral.sh/uv/
+# uv init <project_name>
+# cd <project_name>
+# uv add <package_name>  # creates .venv
+# uv run <script_name>
+# https://docs.astral.sh/uv/guides/projects/
+#
+# uvx <package_name>  # fetch, install, execute in secure environment
+# uvx pycowsay 'Mads, ab ins Bett!'
+#
+# uv tool install <package_name>
+# https://docs.astral.sh/uv/guides/tools/
+"""
+
+# Shell:
+# pip install -r requirements.txt
+
+
+# Alternatives:
+# conda
+# uv
+
 # -------------------------------------------------------------------------------------------
 
+"""
 ### DEPLOYMENT:
 
 ## setuptools:
@@ -241,18 +273,31 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 # Nullsoft Scriptable Install System (NSIS)
 # Windows Installer XML (WiX)
 # Install Shield (proprietary)
+"""
+
+# Alternatives:
+# uvx
+# pipx
+
+# git clone <repository>
+# git release <tag>
 
 # -------------------------------------------------------------------------------------------
 
+"""
 ### IDEs:
 # https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
+# https://wiki.python.org/moin/PythonEditors
 # https://www.pythoncentral.io/comparison-of-python-ides-development/
 
 ## IDLE
 
-## IPython | Jupyter Notebook
+## Jupyter Notebook
 # http://jupyter.org/
 # https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
+
+## IPython
+# https://ipython.org/
 
 ## Atom Editor
 # https://atom.io/#ide
@@ -276,12 +321,58 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 ## Komodo IDE
 # http://www.activestate.com/komodo-ide
 
+## Visual Studio Code
+# https://code.visualstudio.com/
+#
+# Copilot
+# https://code.visualstudio.com/docs/copilot/overview
+#
+# Continue.dev
+# https://www.continue.dev/
+
+## Mu Editor
+# https://codewith.mu/
+
+## Thonny
+# https://thonny.org/
+
+## Sublime Text
+# https://www.sublimetext.com/
+
+## Neovim
+# https://neovim.io/
+
+## Vim
+# https://www.vim.org/
+
+## Emacs
+# https://www.gnu.org/software/emacs/
+
+## Cursor IDE
+# https://cursor.so/
+
 """
 
 # -------------------------------------------------------------------------------------------
 
-# pip install -r requirements.txt
-# create file with: 'conda list --export' or 'pip freeze'
+# Python 3 and 2 compatibility (these imports must be in the first place):
+# https://docs.python.org/2.7/howto/pyporting.html
+# http://python-future.org/
+#
+# https://docs.python.org/2/library/__future__.html
+# https://docs.python.org/2/library/future_builtins.html
+# https://docs.python.org/2/library/__builtin__.html
+#
+# https://docs.python.org/3/library/builtins.html
+# https://docs.python.org/3/library/__future__.html
+# from __future__ import print_function
+# from __future__ import division
+# from __future__ import unicode_literals
+# from __future__ import absolute_import
+# from __future__ import nested_scopes
+# from __future__ import generators
+# from __future__ import with_statement
+from __future__ import print_function
 
 # -------------------------
 
@@ -332,238 +423,10 @@ import logging
 
 # -------------------------
 
-"""
-# Terminal (VT100 Emulation):
-# https://de.wikipedia.org/wiki/ANSI-Escapesequenz
-# https://de.wikipedia.org/wiki/Terminalemulation
-
-# --------
-
-# Colorama
-# https://pypi.python.org/pypi/colorama
-#from colorama import init as coloramainit
-#from colorama import Fore, Back, Style
-#
-# Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
-# Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
-# Style: DIM, NORMAL, BRIGHT, RESET_ALL
-#
-# FOREGROUND:
-# ESC [ 30 m      # black
-# ESC [ 31 m      # red
-# ESC [ 32 m      # green
-# ESC [ 33 m      # yellow
-# ESC [ 34 m      # blue
-# ESC [ 35 m      # magenta
-# ESC [ 36 m      # cyan
-# ESC [ 37 m      # white
-# ESC [ 39 m      # reset
-#
-# BACKGROUND:
-# ESC [ 40 m      # black
-# ...
-# MULTIPLE PARAMS:
-# ESC [ 36 ; 45 ; 1 m
-#
-# Examples:
-# init()
-# print('\033[31m' + 'some red text')
-# print('\033[39m') # reset to default color
-# print(Fore.RED + 'some red text' + Fore.RESET)
-# print(Style.RESET_ALL) # back to normal
-
-# --------
-
-# Termcolor
-# https://pypi.python.org/pypi/termcolor
-#
-# Text colors: grey, red, green, yellow, blue, magenta, cyan, white
-# Text highlights: on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white
-# Attributes: bold, dark, underline, blink, reverse, concealed
-#
-# Examples:
-# print(colored('Hello, World!', 'red', attrs=['reverse', 'blink']))
-# cprint('Hello, World!', 'green', 'on_red')
-"""
-from termcolor import colored, cprint
-
-"""
-# FIGlet
-# https://pypi.python.org/pypi/pyfiglet
-# https://github.com/pwaller/pyfiglet
-# http://www.figlet.org/
-# fonts: lean, mini, banner
-# favorite fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
-
-# --------
-
-# ASCII-Art:
-# Leetspeak
-# https://de.wikipedia.org/wiki/Leetspeak
-# http://www.1337.me/
-"""
-from pyfiglet import Figlet
-
-# -------------------------
-
 # Parser | Fileformats:
 import re
 import json
 import csv
-
-# -------------------------
-
-# WebScraping:
-import socket
-import httplib
-import htmllib
-import urllib
-import urllib2
-import requests
-from lxml import etree
-from io import StringIO, BytesIO
-from base64 import b64encode
-from bs4 import BeautifulSoup
-#from html.parser import HTMLParser
-
-import webbrowser
-import mechanize
-from selenium import webdriver
-
-# Scrapy
-# https://scrapy.org/
-# https://github.com/scrapy/scrapy
-
-# Network:
-# Twisted
-
-# Webserver:
-# Tornado
-
-# Webdesign (Frameworks):
-# Flask
-# Django
-
-# DB | CRUD:
-# SQlite
-# MySQL
-# SQLAlchemy
-
-# -------------------------
-
-# GUI:
-
-"""
-# Tkinter
-# Python Shell:
-# help(Tkinter.<Tab>)
-# Core Widgets:
-# Label, Button, Entry, Checkbutton, Radiobutton, Spinbox, Listbox, Text, Canvas, Bitmap, Image
-# Toplevel, Frame, Menu, Menubutton, Scrollbar, OptionMenu, LabelFrame, Message, PanedWindow, Scale
-# Geometry Managers:
-# pack, grid, place
-"""
-import Tkinter as tk
-#from Tkinter import * # Python 2
-#from tkinter import * # Python 3
-
-
-"""
-Qt-Bindings:
-PyQt4 | PySide
-"""
-from PyQt4.QtGui import *
-#import PyQt4.QtCore
-# PySide
-#from PySide.QtCore import Qt
-#from PySide.QtGui import QApplication, QLabel
-#from PySide.QtSql import *
-
-
-"""
-Kivy
-https://kivy.org/
-https://github.com/kivy/kivy
-https://kivy.org/docs/
-https://media.readthedocs.org/pdf/kivy/latest/kivy.pdf
-
-Kivy can be run by QPython on Android Devices and Deployed using Buildozer VM from Kivy Website (create *.apk):
-- put code in file name 'main.py'
-- include the next line as a comment in your script for QPython:
-#qpy:kivy
-"""
-from kivy.app import App
-from kivy.lang import Builder
-# UI Widgets
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.button import Button
-from kivy.uix.popup import Popup
-from kivy.uix.label import Label
-from kivy.uix.progressbar import ProgressBar
-"""
-Kivy Sister-Projects:
-https://github.com/kivy/buildozer
-https://github.com/kivy/python-for-android
-https://github.com/kivy/kivy-ios
-https://github.com/kivy/kivy-designer
-https://github.com/kivy-garden
-https://kivy.org/docs/api-kivy.garden.html
-https://github.com/kivy/kivent
-https://github.com/chozabu/KivEntEd
-https://chipmunk-physics.net/forum/viewtopic.php?t=3757
-"""
-
-# -------------------------
-
-# Game | Creative Coding | Physical Computing | IoT:
-
-"""
-Pygame (OpenGL, Canvas, MIDI, Sound)
-https://www.pygame.org/docs/
-https://inventwithpython.com/pygame/chapters/
-
-Install: 'pip install pygame --user'
-"""
-import pygame
-#from pygame.locals import *
-import pygame.midi
-#import pygame.mixer_music
-
-"""
-Physics Engines
-
-Box2D
-pybox2d
-https://github.com/pybox2d/pybox2d/wiki/manual
-conda install -c https://conda.anaconda.org/kne pybox2d
-
-Chipmunks
-https://chipmunk-physics.net/
-
-Pymunk
-http://www.pymunk.org/en/latest/
-https://github.com/viblo/pymunk
-https://pymunk.readthedocs.org/en/latest/
-
-Cymunk
-https://github.com/kivy/cymunk
-http://cymunk.readthedocs.org/en/latest/
-
-Cocos2d
-http://python.cocos2d.org/doc.html
-"""
-
-# Audio | Music:
-# pylibpd (Pure Data)
-# pyaudio (PortAudio)
-# pyfluidsynth (Soundfont sf2)
-
-# Raspberry Pi:
-#import RPi.GPIO as GPIO
-# WiringPi2
-# picamera
-# cwiid (Wiimote)
-# mcpi (Minecraft Pi Edition)
 
 # -------------------------
 
@@ -627,6 +490,64 @@ import threading
 """
 
 # -------------------------------------------------------------------------------------------
+
+"""
+Web, Network
+WebScraping
+
+# Requests
+#import requests
+
+# httpx
+
+# Scrapy
+# https://scrapy.org/
+# https://github.com/scrapy/scrapy
+
+# Beutiful Soup (bs4)
+#from bs4 import BeautifulSoup
+
+# Flask
+
+# --------------------------------------------------------------------------
+
+# WebScraping (old):
+import socket
+import httplib
+import htmllib
+import urllib
+import urllib2
+from lxml import etree
+from io import StringIO, BytesIO
+from base64 import b64encode
+#from html.parser import HTMLParser
+
+import mechanize
+from selenium import webdriver
+
+# --------------------------------------------------------------------------
+
+# Network:
+# Twisted
+
+# Webserver:
+# Tornado
+
+# Webdesign (Frameworks):
+# Flask
+# Django
+
+# --------------------------------------------------------------------------
+
+# DB | CRUD:
+# SQlite
+# MySQL
+# SQLAlchemy
+
+"""
+
+import webbrowser
+
 
 class Scraper(object):
     """ TODO: Scraper
@@ -706,6 +627,23 @@ class Environment(object):
 
 # -------------------------------------------------------------------------------------------
 
+# GUI:
+
+"""
+# Tkinter
+# Python Shell:
+# help(Tkinter.<Tab>)
+# Core Widgets:
+# Label, Button, Entry, Checkbutton, Radiobutton, Spinbox, Listbox, Text, Canvas, Bitmap, Image
+# Toplevel, Frame, Menu, Menubutton, Scrollbar, OptionMenu, LabelFrame, Message, PanedWindow, Scale
+# Geometry Managers:
+# pack, grid, place
+"""
+import Tkinter as tk
+#from Tkinter import * # Python 2
+#from tkinter import * # Python 3
+
+
 def createGuiTk():
     win = tk.Tk()
 
@@ -718,6 +656,18 @@ def createGuiTk():
 
 
 # -----------------------------------------
+
+"""
+Qt-Bindings:
+PyQt4 | PySide
+"""
+from PyQt4.QtGui import *
+#import PyQt4.QtCore
+# PySide
+#from PySide.QtCore import Qt
+#from PySide.QtGui import QApplication, QLabel
+#from PySide.QtSql import *
+
 
 # Qt
 def createGuiQtSimple():
@@ -860,6 +810,39 @@ def createGuiQtTextEditor():
 
 # -----------------------------------------
 
+"""
+Kivy
+https://kivy.org/
+https://github.com/kivy/kivy
+https://kivy.org/docs/
+https://media.readthedocs.org/pdf/kivy/latest/kivy.pdf
+
+Kivy can be run by QPython on Android Devices and Deployed using Buildozer VM from Kivy Website (create *.apk):
+- put code in file name 'main.py'
+- include the next line as a comment in your script for QPython:
+#qpy:kivy
+
+Kivy Sister-Projects:
+https://github.com/kivy/buildozer
+https://github.com/kivy/python-for-android
+https://github.com/kivy/kivy-ios
+https://github.com/kivy/kivy-designer
+https://github.com/kivy-garden
+https://kivy.org/docs/api-kivy.garden.html
+https://github.com/kivy/kivent
+https://github.com/chozabu/KivEntEd
+https://chipmunk-physics.net/forum/viewtopic.php?t=3757
+"""
+from kivy.app import App
+from kivy.lang import Builder
+# UI Widgets
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
+from kivy.uix.popup import Popup
+from kivy.uix.label import Label
+from kivy.uix.progressbar import ProgressBar
+
+
 # Kivy using objects to create widgets
 class KivyApp(App):
     def build(self):
@@ -945,6 +928,64 @@ def createGuiKivy():
 
 
 # -----------------------------------------
+
+# Game | Creative Coding | Physical Computing | IoT:
+
+"""
+Pygame (OpenGL, Canvas, MIDI, Sound)
+https://www.pygame.org/docs/
+https://inventwithpython.com/pygame/chapters/
+
+Install: 'pip install pygame --user'
+"""
+import pygame
+#from pygame.locals import *
+import pygame.midi
+#import pygame.mixer_music
+
+"""
+Arcade
+https://arcade.academy/
+"""
+#import arcade
+
+
+"""
+Physics Engines
+
+Box2D
+pybox2d
+https://github.com/pybox2d/pybox2d/wiki/manual
+conda install -c https://conda.anaconda.org/kne pybox2d
+
+Chipmunks
+https://chipmunk-physics.net/
+
+Pymunk
+http://www.pymunk.org/en/latest/
+https://github.com/viblo/pymunk
+https://pymunk.readthedocs.org/en/latest/
+
+Cymunk
+https://github.com/kivy/cymunk
+http://cymunk.readthedocs.org/en/latest/
+
+Cocos2d
+http://python.cocos2d.org/doc.html
+"""
+
+# Audio | Music:
+# pylibpd (Pure Data)
+# pyaudio (PortAudio)
+# pyfluidsynth (Soundfont sf2)
+
+# Raspberry Pi:
+#import RPi.GPIO as GPIO
+# WiringPi2
+# picamera
+# cwiid (Wiimote)
+# mcpi (Minecraft Pi Edition)
+
 
 # Pygame
 def createCanvasWithPygame():
@@ -1096,6 +1137,116 @@ def createCanvasWithPygame():
 
 # -------------------------------------------------------------------------------------------
 
+"""
+TUI
+Text User Interface, Terminal User Interface
+@see oterm, ollmcp for ollama (as examples for modern TUI)
+
+Textual (based on Textualize Rich)
+https://textual.textualize.io/
+https://rich.readthedocs.io/
+
+Typer (from FastAPI)
+https://typer.tiangolo.com/
+
+TerminalTextEffects (TTE)
+https://chrisbuilds.github.io/terminaltexteffects/
+
+@see ASCII-Art
+"""
+
+from terminaltexteffects.effects import effect_rain
+
+def tui():
+    """ Text User Interface
+    """
+    #print("Hello TUI")
+    print(effect_rain("Hello World!"))
+    #print(effect_rain("Hello World!", speed=0.1, color="red"))
+
+# -------------------------------------------------------------------------------------------
+
+"""
+CUI
+Commandline User Interface
+
+CLI
+Commandline Interface
+https://en.wikipedia.org/wiki/Command-line_interface
+
+
+# Terminal (VT100 Emulation):
+# https://de.wikipedia.org/wiki/ANSI-Escapesequenz
+# https://de.wikipedia.org/wiki/Terminalemulation
+"""
+
+"""
+# Colorama
+# https://pypi.python.org/pypi/colorama
+#from colorama import init as coloramainit
+#from colorama import Fore, Back, Style
+#
+# Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+# Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+# Style: DIM, NORMAL, BRIGHT, RESET_ALL
+#
+# FOREGROUND:
+# ESC [ 30 m      # black
+# ESC [ 31 m      # red
+# ESC [ 32 m      # green
+# ESC [ 33 m      # yellow
+# ESC [ 34 m      # blue
+# ESC [ 35 m      # magenta
+# ESC [ 36 m      # cyan
+# ESC [ 37 m      # white
+# ESC [ 39 m      # reset
+#
+# BACKGROUND:
+# ESC [ 40 m      # black
+# ...
+# MULTIPLE PARAMS:
+# ESC [ 36 ; 45 ; 1 m
+#
+# Examples:
+# init()
+# print('\033[31m' + 'some red text')
+# print('\033[39m') # reset to default color
+# print(Fore.RED + 'some red text' + Fore.RESET)
+# print(Style.RESET_ALL) # back to normal
+"""
+
+"""
+# Termcolor
+# https://pypi.python.org/pypi/termcolor
+#
+# Text colors: grey, red, green, yellow, blue, magenta, cyan, white
+# Text highlights: on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white
+# Attributes: bold, dark, underline, blink, reverse, concealed
+#
+# Examples:
+# print(colored('Hello, World!', 'red', attrs=['reverse', 'blink']))
+# cprint('Hello, World!', 'green', 'on_red')
+"""
+from termcolor import colored, cprint
+
+"""
+# ASCII-Art:
+# Leetspeak
+# https://de.wikipedia.org/wiki/Leetspeak
+# http://www.1337.me/
+"""
+
+"""
+# FIGlet
+# https://pypi.python.org/pypi/pyfiglet
+# https://github.com/pwaller/pyfiglet
+# http://www.figlet.org/
+# fonts: lean, mini, banner
+# favorite fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
+"""
+from pyfiglet import Figlet
+
+
 def banner():
     #print "\n********************************"
     #print "*  *"
@@ -1127,11 +1278,17 @@ def cui():
     """ Commandline User Interface
     """
 
-    """ printf()-like output:
+    """
+    printf()-like output:
     # @see http://www.python-kurs.eu/python3_formatierte_ausgabe.php
+
     print("You typed", c)
     print("You typed %s" % (c))
     print("You typed {}".format(c))
+
+    # f-srings (@since Python 3.6):
+    # https://docs.python.org/3/reference/lexical_analysis.html#f-strings
+    print(f"You typed {c}")
     """
 
     banner()
@@ -1143,6 +1300,8 @@ def cui():
     print("Type '2' for Qt-GUI Editor")
     print("Type '3' for Kivy App")
     print("Type '4' for Pygame OpenGL Canvas")
+    print("Type '5' for Qt-GUI Simple")
+    print("Type '6' for TUI (Text / Terminal User Interface)")
     print("Type '0' to exit")
 
     while True:
@@ -1158,6 +1317,8 @@ def cui():
             createCanvasWithPygame()
         elif '5' in c:
             createGuiQtSimple()
+        elif '6' in c:
+            tui()
         elif '0' in c:
             sys.exit(0)
         else:
@@ -1170,6 +1331,7 @@ def main(args):
     # -----------------------------------------
     # command line 
     cui()
+    #tui()
     # -----------------------------------------
     # OpenGL
     #createCanvasWithPygame()

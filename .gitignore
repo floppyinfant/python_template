@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Windows specific files
+Thumbs.db
+*.code-workspace
+*.url
+*.lnk

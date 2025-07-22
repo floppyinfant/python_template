@@ -74,14 +74,14 @@ git pull origin master
 """
 ### Python Distributions:
 #
+## Python.org
+# https://www.python.org/
 ## Anaconda
 # https://www.anaconda.com/what-is-anaconda/
 ## Enthought
 # https://www.enthought.com/product/enthought-python-distribution/
 ## ActivePython
 # https://www.activestate.com/activepython
-## Python.org
-# https://www.python.org/
 """
 
 # -------------------------------------------------------------------------------------------
@@ -135,6 +135,7 @@ git pull origin master
 
 """
 ### Package Management:
+
 ## conda
 # https://conda.io/docs/user-guide/overview.html
 # https://conda.io/docs/_downloads/conda-cheatsheet.pdf
@@ -152,8 +153,11 @@ git pull origin master
 
 
 ## pip, PyPI (Python Package Index)
+# https://pypi.org/
 # https://pip.pypa.io/en/stable/
 # https://pip.pypa.io/en/stable/user_guide/#requirements-files
+# https://packaging.python.org/tutorials/packaging-projects/
+#
 # pip search $SEARCH_TERM
 # pip list
 # # create requirements file
@@ -167,17 +171,56 @@ git pull origin master
 
 ## uv
 # https://docs.astral.sh/uv/
-# uv init <project_name>
-# cd <project_name>
-# uv add <package_name>  # creates .venv
-# uv run <script_name>
+# https://docs.astral.sh/uv/getting-started/features/
+#
+# Python Versions:
+# uv python list
+#
+# Scripts:
+ä uv run <script_name>
+#
+# Projects:
 # https://docs.astral.sh/uv/guides/projects/
+# uv init <project_name>  # pyproject.toml
+# cd <project_name>
+# uv add <package_name>   # creates .venv
+# uv sync                 # install packages in .venv
+# uv tree                 # show package tree
+# uv build                # build package
+# uv publish              # publish package to a package index
 #
-# uvx <package_name>  # fetch, install, execute in secure environment
-# uvx pycowsay 'Mads, ab ins Bett!'
-#
-# uv tool install <package_name>
+# Tools:
 # https://docs.astral.sh/uv/guides/tools/
+# uvx <package_name>      # run in a temporary environment
+# uv tool run <package>   # run in a temporary environment (=uvx)
+# uv tool install <package_name>
+# uv tool list
+# uv tool update-shell
+#
+# Pip Interface:
+# https://docs.astral.sh/uv/pip/environments/
+# uv venv                 # create virtual environment .venv
+# https://docs.astral.sh/uv/pip/packages/
+# uv pip install <package_name>  # install package in .venv
+# .venv\Scripts\activate  # Windows: make packages of .venv available
+# deactivate              # exit virtual environment
+# uv pip install -e .     # install current project as an editable package
+# uv pip install -r requirements.txt
+# uv pip install -r pyproject.toml
+# uv pip list
+# uv pip tree
+# uv pip freeze
+# uv pip check
+# https://docs.astral.sh/uv/pip/compile/
+# uv pip compile pyproject.toml -o requirements.txt
+# uv pip sync requirements.txt
+#
+# Utility:
+# uv cache dir
+# uv cache clear
+# uv tool dir
+# uv python dir
+# uv self update
 """
 
 # Shell:
@@ -1370,13 +1413,6 @@ if __name__ == "__main__":
 
         # ---------------------------------------------------
 
-        # argparse
-        parser = argparse.ArgumentParser(description='WebScraper url')
-        parser.add_argument('--url', action="store", dest="url", required=True)
-        args = parser.parse_args()
-
-        # ---------------------------------------------------
-
         # optargs (C-Style)
         try:
             opts, args = getopt.getopt(sys.argv, "w:f:t:c:")
@@ -1393,6 +1429,14 @@ if __name__ == "__main__":
                 threads = arg
             elif opt == '-c':
                 hidecode = arg
+
+        # ---------------------------------------------------
+
+        # argparse
+        parser = argparse.ArgumentParser(description='WebScraper url')
+        parser.add_argument('--url', action="store", dest="url", required=True)
+        args = parser.parse_args()
+
         """
 
         # start application

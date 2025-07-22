@@ -1,14 +1,17 @@
 README
 
-# Markdown
+
+# Learn
+
+## Markdown
 https://de.wikipedia.org/wiki/Markdown  
-https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax  
+https://docs.github.com/de/get-started/writing-on-github/  getting-started-with-writing-and-formatting-on-github/  basic-writing-and-formatting-syntax  
 https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet  
 
-# Python
+## Python
 https://docs.python.org/3/  
 
-## IDEs
+### IDEs
 VScode  
 https://code.visualstudio.com/  
 https://vscode.dev (Online Editor)  
@@ -32,7 +35,7 @@ https://www.jetbrains.com/pycharm/
 MuCode  
 https://codewith.mu/  
 
-## Tutorials
+### Tutorials
 https://docs.python.org/3/tutorial/  
 https://www.w3schools.com/python/  
 https://www.geeksforgeeks.org/python/python-programming-language-tutorial/  
@@ -43,7 +46,7 @@ https://www.datacamp.com/tutorial
 
 # Libraries
 
-# Project management
+## Project management
 uv  
 https://docs.astral.sh/uv/  
 https://www.datacamp.com/tutorial/python-uv  
@@ -77,25 +80,25 @@ termcolor
 colorama  
 pyfiglet  
 
-ASCIIMATICS  
-https://github.com/peterbrittain/asciimatics  
-
-Terminal TextEffects  
-https://github.com/ChrisBuilds/terminaltexteffects  
-
 ## TUI  
 Textual  
 https://textual.textualize.io/  
-
-Typer  
-https://typer.tiangolo.com/  
 
 Rich  
 https://github.com/Textualize/rich  
 https://rich.readthedocs.io/  
 
+Typer  
+https://typer.tiangolo.com/  
+
 PyTermGUI  
 https://pypi.org/project/PyTermGUI/7.1.0/  
+
+Terminal TextEffects  
+https://github.com/ChrisBuilds/terminaltexteffects  
+
+ASCIIMATICS  
+https://github.com/peterbrittain/asciimatics  
 
 ## GUI
 wxPython  
@@ -163,8 +166,6 @@ https://pytorch.org/
 TensorFlow  
 Keras  
 Theano  
-
-
 
 ------------------------------------------------------------------------------
 

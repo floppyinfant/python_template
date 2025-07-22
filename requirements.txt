@@ -1,13 +1,21 @@
 termcolor
 colorama
 pyfiglet
-mechanize
-selenium
+terminaltexteffects
+textual
+rich
+typer
+requests
+httpx
 scrapy
+bs4
+flask
+#PyQt5
+wxPython
 kivy
 pygame
-#PySide | PyQt4
-#opencv
-flask
+Pillow
+opencv-python
 pyinstaller
 pynsist
+python-dotenv

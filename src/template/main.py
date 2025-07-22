@@ -94,7 +94,7 @@ git pull origin master
 # https://docs.python.org/3/library/venv.html
 # python -m venv .venv
 # source .venv/bin/activate  #Linux
-# .venv\Scripts\activate     #Windows
+# .venv/Scripts/activate     #Windows
 
 ## virtualenv
 # https://virtualenv.pypa.io/en/stable/
@@ -181,9 +181,13 @@ git pull origin master
 #
 # Projects:
 # https://docs.astral.sh/uv/guides/projects/
+# https://docs.astral.sh/uv/guides/migration/pip-to-project/#requirements-files
+# uv init .
+#
 # uv init <project_name>  # pyproject.toml
 # cd <project_name>
 # uv add <package_name>   # creates .venv
+#
 # uv sync                 # install packages in .venv
 # uv tree                 # show package tree
 # uv build                # build package
@@ -202,7 +206,7 @@ git pull origin master
 # uv venv                 # create virtual environment .venv
 # https://docs.astral.sh/uv/pip/packages/
 # uv pip install <package_name>  # install package in .venv
-# .venv\Scripts\activate  # Windows: make packages of .venv available
+# .venv/Scripts/activate  # Windows: make packages of .venv available
 # deactivate              # exit virtual environment
 # uv pip install -e .     # install current project as an editable package
 # uv pip install -r requirements.txt
@@ -278,10 +282,10 @@ python setup.py py2exe
 # -i, --icon <FILE.ico or FILE.exe,ID or FILE.icns>
 # --upx-dir UPX_DIR
 # ^ Windows Line Delimiter
-# \ Linux Line Delimiter
+# <backslash> Linux Line Delimiter
 #
 # Exampes:
-pyinstaller --onefile --noconsole --icon=icon.ico --upx-dir=..\PyInstaller-3.2\upx app.py
+pyinstaller --onefile --noconsole --icon=icon.ico --upx-dir=../PyInstaller-3.2/upx app.py
 pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
 
@@ -398,7 +402,8 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
 # -------------------------------------------------------------------------------------------
 
-# Python 3 and 2 compatibility (these imports must be in the first place):
+# Python 3 and 2 compatibility
+# these imports must be in the first place!
 # https://docs.python.org/2.7/howto/pyporting.html
 # http://python-future.org/
 #
@@ -415,20 +420,55 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 # from __future__ import nested_scopes
 # from __future__ import generators
 # from __future__ import with_statement
-from __future__ import print_function
+# from __future__ import print_function
 
 # -------------------------
 
 import sys
 import os
 import os.path
+
+# example for interacting with the Environment (Linux Terminal Bash Shell Console)
+os.environ['PYTHONIOENCODING'] = 'utf-8'  # set encoding for stdout and stderr
+os.getenv('PYTHONIOENCODING', 'utf-8')  # get encoding for stdout and stderr
+
+# environment variables from .env file
+from dotenv import load_dotenv, dotenv_values
+#load_dotenv()                  # Load environment variables from .env file
+config = dotenv_values(".env")  # Load environment variables into a dictionary
+
+
 import time
 import datetime
 
 import argparse
 import getopt
 
+# Parser, Fileformats:
+import re
+import json
+import csv
+
+# Image Processing:
+# PIL (Python Imaging Library) for Python 2
+# Pillow (PIL fork) for Python 3
+# https://pillow.readthedocs.io/en/stable/
+from PIL import Image
+
+# OpenCV
+# https://opencv.org/get-started/
+import cv2 as cv
+
 # -------------------------
+
+"""
+# Logging:
+# https://docs.python.org/2/howto/logging.html
+# https://docs.python.org/2/library/logging.html
+"""
+import logging
+logger = logging.getLogger("template")
+
 
 """
 # Software Engineering, TDD:
@@ -457,31 +497,6 @@ import getopt
 """
 #import unittest
 
-"""
-# Logging:
-# https://docs.python.org/2/howto/logging.html
-# https://docs.python.org/2/library/logging.html
-"""
-import logging
-
-# -------------------------
-
-# Parser | Fileformats:
-import re
-import json
-import csv
-
-# -------------------------
-
-# Image Processing:
-
-# Pillow
-# PIL
-#import PIL
-
-# OpenCV
-#import cv2
-
 # -------------------------
 
 # Security | Privacy | Forensics | Reverse Engineering | Penetration Testing:
@@ -502,19 +517,35 @@ import csv
 
 # HPC (High Performance Computing):
 
-# Parallel Python: threading, processes, asynchronous IO (Twisted), asyncio (Python 3)
+# Parallel Python: Concurrency
+# threading, multiprocess, subprocess, 
+# https://docs.python.org/3/library/concurrency.html
+# asynchronous IO (Twisted), 
+# asyncio (async/await, Coroutines)
+# https://docs.python.org/3/library/asyncio.html
 import threading
 #from threading import Thread
 
+#import multiprocessing as mp
+#from multiprocessing import Process, Queue, Pool
+
 # Cython
-# Numba
+# https://cython.org/
+# https://en.wikipedia.org/wiki/Cython
 
 # SWIG (Wrapper, Bindings)
+# https://www.swig.org/
+
+# Numba
+# https://numba.pydata.org/
+# https://numba.readthedocs.io/en/stable/cuda/index.html
 
 # -------------------------
 
 """
-# Data Science, Maschine Learning, Deep Learning, Datamining:
+# Data Science, 
+# Maschine Learning, Deep Learning, Datamining, 
+# AI, LLM, Diffusion:
 
 # Anaconda (conda)
 # IPython/ Jupyter Notebook (IPython --pylab)
@@ -682,7 +713,7 @@ class Environment(object):
 # Geometry Managers:
 # pack, grid, place
 """
-import Tkinter as tk
+import tkinter as tk
 #from Tkinter import * # Python 2
 #from tkinter import * # Python 3
 
@@ -701,16 +732,44 @@ def createGuiTk():
 # -----------------------------------------
 
 """
-Qt-Bindings:
-PyQt4 | PySide
+wxPython
+https://www.wxpython.org/
+
+wxWidgets
+https://wxwidgets.org/
+https://wiki.wxwidgets.org/Tools
+
+FormBuilder
+https://github.com/wxFormBuilder/wxFormBuilder
 """
-from PyQt4.QtGui import *
+
+# -----------------------------------------
+
+"""
+Qt | KDE
+https://www.qt.io/
+
+Qt-Bindings
+https://wiki.python.org/moin/PyQt
+https://www.riverbankcomputing.com/static/Docs/PyQt5/
+
+Qt Designer
+https://www.riverbankcomputing.com/static/Docs/PyQt5/designer.html
+https://doc.qt.io/qt-6/qtdesigner-manual.html
+
+Qt Creator
+https://www.qt.io/product/development-tools/
+"""
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QTextEdit, QAction, QStatusBar, QMessageBox
+from PyQt5.QtGui import QIcon, QKeySequence
+
+# PyQt4
+#from PyQt4.QtGui import *
 #import PyQt4.QtCore
 # PySide
 #from PySide.QtCore import Qt
 #from PySide.QtGui import QApplication, QLabel
 #from PySide.QtSql import *
-
 
 # Qt
 def createGuiQtSimple():
@@ -739,7 +798,7 @@ class MyQMainWindow(QMainWindow):
         # init GUI
         # Window (QMainWindow, QWidget)
         self.setWindowTitle("A Simple Text Editor")
-        self.setWindowIcon(QIcon('../res/img/appicon.png'))
+        self.setWindowIcon(QIcon('res/img/appicon.png'))
         self.setGeometry(100, 100, 800, 600)
         self.setMinimumHeight(200)
         self.setMinimumWidth(280)
@@ -756,17 +815,17 @@ class MyQMainWindow(QMainWindow):
         # -----------------------------------------
 
         # Actions (trigger Functions)
-        self.newAction = QAction(QIcon('../res/img/new.png'), '&New', self, shortcut=QKeySequence.New, statusTip="Create a New File", triggered=self.newFile)
-        self.openAction = QAction(QIcon('../res/img/open.png'), 'O&pen', self, shortcut=QKeySequence.Open, statusTip="Open an existing file", triggered=self.openFile)
-        self.saveAction = QAction(QIcon('../res/img/save.png'), '&Save', self, shortcut=QKeySequence.Save, statusTip="Save the current file to disk", triggered=self.saveFile)
-        self.exitAction = QAction(QIcon('../res/img/exit.png'), 'E&xit', self, shortcut="Ctrl+Q", statusTip="Exit the Application", triggered=self.exitFile)
-        self.cutAction = QAction(QIcon('../res/img/cut.png'), 'C&ut', self, shortcut=QKeySequence.Cut, statusTip="Cut the current selection to clipboard", triggered=self.textEdit.cut)
-        self.copyAction = QAction(QIcon('../res/img/copy.png'), 'C&opy', self, shortcut=QKeySequence.Copy, statusTip="Copy the current selection to clipboard", triggered=self.textEdit.copy)
-        self.pasteAction = QAction(QIcon('../res/img/paste.png'), '&Paste', self, shortcut=QKeySequence.Paste, statusTip="Paste the clipboard's content in current location", triggered=self.textEdit.paste)
-        self.selectAllAction = QAction(QIcon('../res/img/selectAll.png'), 'Select All', self, statusTip="Select All", triggered=self.textEdit.selectAll)
-        self.redoAction = QAction(QIcon('../res/img/redo.png'), 'Redo', self, shortcut=QKeySequence.Redo, statusTip="Redo previous action", triggered=self.textEdit.redo)
-        self.undoAction = QAction(QIcon('../res/img/undo.png'), 'Undo', self, shortcut=QKeySequence.Undo, statusTip="Undo previous action", triggered=self.textEdit.undo)
-        self.aboutAction = QAction(QIcon('../res/img/about.png'), 'A&bout', self, statusTip="Displays info about text editor", triggered=self.aboutHelp)
+        self.newAction = QAction(QIcon('res/img/new.png'), '&New', self, shortcut=QKeySequence.New, statusTip="Create a New File", triggered=self.newFile)
+        self.openAction = QAction(QIcon('res/img/open.png'), 'O&pen', self, shortcut=QKeySequence.Open, statusTip="Open an existing file", triggered=self.openFile)
+        self.saveAction = QAction(QIcon('res/img/save.png'), '&Save', self, shortcut=QKeySequence.Save, statusTip="Save the current file to disk", triggered=self.saveFile)
+        self.exitAction = QAction(QIcon('res/img/exit.png'), 'E&xit', self, shortcut="Ctrl+Q", statusTip="Exit the Application", triggered=self.exitFile)
+        self.cutAction = QAction(QIcon('res/img/cut.png'), 'C&ut', self, shortcut=QKeySequence.Cut, statusTip="Cut the current selection to clipboard", triggered=self.textEdit.cut)
+        self.copyAction = QAction(QIcon('res/img/copy.png'), 'C&opy', self, shortcut=QKeySequence.Copy, statusTip="Copy the current selection to clipboard", triggered=self.textEdit.copy)
+        self.pasteAction = QAction(QIcon('res/img/paste.png'), '&Paste', self, shortcut=QKeySequence.Paste, statusTip="Paste the clipboard's content in current location", triggered=self.textEdit.paste)
+        self.selectAllAction = QAction(QIcon('res/img/selectAll.png'), 'Select All', self, statusTip="Select All", triggered=self.textEdit.selectAll)
+        self.redoAction = QAction(QIcon('res/img/redo.png'), 'Redo', self, shortcut=QKeySequence.Redo, statusTip="Redo previous action", triggered=self.textEdit.redo)
+        self.undoAction = QAction(QIcon('res/img/undo.png'), 'Undo', self, shortcut=QKeySequence.Undo, statusTip="Undo previous action", triggered=self.textEdit.undo)
+        self.aboutAction = QAction(QIcon('res/img/about.png'), 'A&bout', self, statusTip="Displays info about text editor", triggered=self.aboutHelp)
 
         # -----------------------------------------
 
@@ -825,15 +884,19 @@ class MyQMainWindow(QMainWindow):
 
     # Functions (Slots called when the Menu Actions are triggered)
     def newFile(self):
+        # TODO Qt Menu Actions
         pass
 
     def openFile(self):
+        # TODO Qt Menu Actions
         pass
 
     def saveFile(self):
+        # TODO Qt Menu Actions
         pass
 
     def exitFile(self):
+        # TODO Qt Menu Actions
         pass
 
     def aboutHelp(self):
@@ -1055,7 +1118,7 @@ def createCanvasWithPygame():
     # RESSOURCES
 
     # load images
-    img = pygame.image.load('../res/gfx/cat.png')
+    img = pygame.image.load('res/gfx/cat.png')
     #if img.get_size() != (IMAGESIZE, IMAGESIZE):
     #    img = pygame.transform.smoothscale(img, (IMAGESIZE, IMAGESIZE))
 
@@ -1194,18 +1257,24 @@ https://typer.tiangolo.com/
 
 TerminalTextEffects (TTE)
 https://chrisbuilds.github.io/terminaltexteffects/
+https://chrisbuilds.github.io/terminaltexteffects/showroom/
 
 @see ASCII-Art
 """
 
-from terminaltexteffects.effects import effect_rain
+from terminaltexteffects.effects.effect_blackhole import Blackhole
+
+def effectTTE(text):
+    """ Termial Text Effects"""
+    effect = Blackhole(text)
+    with effect.terminal_output() as terminal:
+        for frame in effect:
+            terminal.print(frame)
 
 def tui():
     """ Text User Interface
     """
-    #print("Hello TUI")
-    print(effect_rain("Hello World!"))
-    #print(effect_rain("Hello World!", speed=0.1, color="red"))
+    effectTTE("Mads, heute geht es um 21:00 Uhr in deiner Zeitzone ins Bett!\nUnd vorher Zähne putzen nicht vergessen!")
 
 # -------------------------------------------------------------------------------------------
 
@@ -1348,7 +1417,7 @@ def cui():
     print("Type '0' to exit")
 
     while True:
-        c = raw_input(">> ")
+        c = input(">> ")
 
         if '1' in c:
             createGuiTk()

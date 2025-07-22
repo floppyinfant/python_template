@@ -10,6 +10,48 @@ https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet
 
 ## Python
 https://docs.python.org/3/  
+https://docs.python.org/3/howto/index.html  
+
+### Language features
+asyncio (async/await)  
+https://docs.python.org/3/library/asyncio.html  
+https://docs.python.org/3/library/asyncio-task.html (Coroutines)  
+https://docs.python.org/3/reference/expressions.html#await  
+https://www.heise.de/hintergrund/async-await-in-Python-Nebenlaeufigkeit-leicht-gemacht-6193925.html  
+
+Concurrency (threading, subprocess)  
+https://docs.python.org/3/library/concurrency.html  
+
+Typing  
+https://docs.python.org/3/library/typing.html  
+
+Annotaions  
+https://docs.python.org/3/howto/annotations.html  
+
+Decorators  
+https://docs.python.org/3/glossary.html#term-decorator  
+
+Context Manager (with)  
+https://docs.python.org/3/library/stdtypes.html#context-manager-types  
+
+sys  
+https://docs.python.org/3/library/sys.html  
+
+os  
+https://docs.python.org/3/library/os.html  
+
+argparse  
+https://docs.python.org/3/howto/argparse.html#argparse-tutorial  
+
+logging  
+https://docs.python.org/3/howto/logging.html#logging-howto  
+https://docs.python.org/3/howto/logging-cookbook.html#logging-cookbook  
+
+re  
+https://docs.python.org/3/howto/regex.html#regex-howto  
+
+Functional programming  
+https://docs.python.org/3/howto/functional.html#functional-howto  
 
 ### IDEs
 VScode  

@@ -100,8 +100,12 @@ ENV/
 # mypy
 .mypy_cache/
 
-# Windows specific files
+# ----------------------
+# OS specific files
 Thumbs.db
+.DS_Store
+.idea
+.vscode
 *.code-workspace
 *.url
 *.lnk

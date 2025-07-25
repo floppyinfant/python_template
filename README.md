@@ -103,6 +103,9 @@ https://docs.python.org/3/library/venv.html
 pip  
 https://packaging.python.org/en/latest/tutorials/installing-packages/  
 
+pipx  
+https://pipx.pypa.io/  
+
 conda  
 https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html  
 https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html  
@@ -136,7 +139,7 @@ https://typer.tiangolo.com/
 PyTermGUI  
 https://pypi.org/project/PyTermGUI/7.1.0/  
 
-Terminal TextEffects  
+Terminal TextEffects (TTE)  
 https://github.com/ChrisBuilds/terminaltexteffects  
 
 ASCIIMATICS  

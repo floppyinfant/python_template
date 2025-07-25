@@ -33,6 +33,9 @@ __date__ = '20170208'
 __version__ = 0.1
 __description__ = ''
 
+
+# -------------------------------------------------------------------------------------------
+# comments - Tools, Documentation, Resources, Links
 # -------------------------------------------------------------------------------------------
 
 """
@@ -401,6 +404,8 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 """
 
 # -------------------------------------------------------------------------------------------
+# imports, Libraries, Modules, Packages
+# -------------------------------------------------------------------------------------------
 
 # Python 3 and 2 compatibility
 # these imports must be in the first place!
@@ -563,6 +568,9 @@ import threading
 # http://www.nltk.org/
 """
 
+
+# -------------------------------------------------------------------------------------------
+# Web, Network, WebScraping
 # -------------------------------------------------------------------------------------------
 
 """
@@ -700,8 +708,8 @@ class Environment(object):
 
 
 # -------------------------------------------------------------------------------------------
-
-# GUI:
+# GUI - Graphical User Interface
+# -------------------------------------------------------------------------------------------
 
 """
 # Tkinter
@@ -729,7 +737,7 @@ def createGuiTk():
     win.mainloop()
 
 
-# -----------------------------------------
+# -------------------------------------------------------------------------------------------
 
 """
 wxPython
@@ -743,7 +751,7 @@ FormBuilder
 https://github.com/wxFormBuilder/wxFormBuilder
 """
 
-# -----------------------------------------
+# -------------------------------------------------------------------------------------------
 
 """
 Qt | KDE
@@ -914,7 +922,7 @@ def createGuiQtTextEditor():
     # sys.exit()
 
 
-# -----------------------------------------
+# -------------------------------------------------------------------------------------------
 
 """
 Kivy
@@ -1033,9 +1041,11 @@ def createGuiKivy():
     app.run()
 
 
-# -----------------------------------------
-
-# Game | Creative Coding | Physical Computing | IoT:
+# -------------------------------------------------------------------------------------------
+# Game
+# Creative Coding
+# Physical Computing | IoT | MCU | Embedded | Robotics | AI
+# -------------------------------------------------------------------------------------------
 
 """
 Pygame (OpenGL, Canvas, MIDI, Sound)
@@ -1048,50 +1058,6 @@ import pygame
 #from pygame.locals import *
 import pygame.midi
 #import pygame.mixer_music
-
-"""
-Arcade
-https://arcade.academy/
-"""
-#import arcade
-
-
-"""
-Physics Engines
-
-Box2D
-pybox2d
-https://github.com/pybox2d/pybox2d/wiki/manual
-conda install -c https://conda.anaconda.org/kne pybox2d
-
-Chipmunks
-https://chipmunk-physics.net/
-
-Pymunk
-http://www.pymunk.org/en/latest/
-https://github.com/viblo/pymunk
-https://pymunk.readthedocs.org/en/latest/
-
-Cymunk
-https://github.com/kivy/cymunk
-http://cymunk.readthedocs.org/en/latest/
-
-Cocos2d
-http://python.cocos2d.org/doc.html
-"""
-
-# Audio | Music:
-# pylibpd (Pure Data)
-# pyaudio (PortAudio)
-# pyfluidsynth (Soundfont sf2)
-
-# Raspberry Pi:
-#import RPi.GPIO as GPIO
-# WiringPi2
-# picamera
-# cwiid (Wiimote)
-# mcpi (Minecraft Pi Edition)
-
 
 # Pygame
 def createCanvasWithPygame():
@@ -1240,7 +1206,73 @@ def createCanvasWithPygame():
         pygame.display.update()
         FPSCLOCK.tick(FPS)
 
+# -------------------------------------------------------------------------------------------
 
+"""
+Arcade
+https://arcade.academy/
+"""
+#import arcade
+
+# -------------------------------------------------------------------------------------------
+
+"""
+Physics Engines
+
+Box2D
+pybox2d
+https://github.com/pybox2d/pybox2d/wiki/manual
+conda install -c https://conda.anaconda.org/kne pybox2d
+
+Chipmunks
+https://chipmunk-physics.net/
+
+Pymunk
+http://www.pymunk.org/en/latest/
+https://github.com/viblo/pymunk
+https://pymunk.readthedocs.org/en/latest/
+
+Cymunk
+https://github.com/kivy/cymunk
+http://cymunk.readthedocs.org/en/latest/
+
+Cocos2d
+http://python.cocos2d.org/doc.html
+"""
+
+
+# Audio | DSP | Music | Creative Coding:
+# pylibpd (Pure Data)
+# pyaudio (PortAudio)
+# pyfluidsynth (Soundfont sf2)
+
+# @see Sonic Pi (Ruby)
+# https://sonic-pi.net/
+# @see openFrameworks (C++) for Audio, Video, Image Processing, Computer Vision, Graphics, GUI
+# https://openframeworks.cc/
+# @see Processing (Java)
+# https://processing.org/
+# @see JUCE (C++)
+# https://juce.com/
+# @see Will Pirkle (C++)
+# https://willpirkle.com/
+
+
+# Raspberry Pi:
+#import RPi.GPIO as GPIO
+# WiringPi2
+# picamera
+# cwiid (Wiimote)
+# mcpi (Minecraft Pi Edition)
+
+# @see Adafruit
+# http://www.adafruit.com/
+
+
+# -------------------------------------------------------------------------------------------
+# TUI - Text User Interface
+# CUI - Commandline User Interface
+# CLI - Commandline Interface
 # -------------------------------------------------------------------------------------------
 
 """
@@ -1271,10 +1303,37 @@ def effectTTE(text):
         for frame in effect:
             terminal.print(frame)
 
+# -----------------------------------------
+
+# Textualize Rich TUI Application
+from textual.app import App, ComposeResult
+from textual.widgets import Static, Footer, Header, Label
+
+class TuiApp(App):
+    """ TUI Application using Textualize Rich
+    """
+    def compose(self) -> ComposeResult:
+        """ Compose the TUI Application
+        """
+        yield Header()
+        yield Footer()
+        yield Label("Hello TUI Application using Textualize Rich!")
+        # Add a Static widget with the text
+        #yield Static("")
+    
+
+    def build(self):
+        return tui()
+
+
 def tui():
     """ Text User Interface
     """
     effectTTE("Mads, heute geht es um 21:00 Uhr in deiner Zeitzone ins Bett!\nUnd vorher Zähne putzen nicht vergessen!")
+
+    app = TuiApp()
+    app.run()  # run the TUI Application
+
 
 # -------------------------------------------------------------------------------------------
 

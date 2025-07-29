@@ -1270,6 +1270,120 @@ http://python.cocos2d.org/doc.html
 
 
 # -------------------------------------------------------------------------------------------
+
+""" 
+Regular Expressions (RegEx)
+https://docs.python.org/3/library/re.html
+
+Regex Patterns:
+\d    # match one digit
+\w    # match one alphanumeric character
+\s    # match one whitespace character
+.     # match any character except newline
+[]    # match any character in the brackets
+[^]   # match any character not in the brackets
+
+Regex Anchors:
+^     # match start of string
+$     # match end of string
+
+Regex Quantifiers:
+*     # match zero or more occurrences
++     # match one or more occurrences
+?     # match zero or one occurrence
+{n}   # match exactly n occurrences
+{n,}  # match n or more occurrences
+{n,m} # match between n and m occurrences
+
+Regex Groups:
+(ab)  # match the group ab
+(a|b) # match either a or b
+match.group(1)       # access the matched group by index starting from 1
+(?P<name>ab)         # match the group ab and name it 'name'
+match.group('name')  # access the named group 'name'
+"""
+
+import re
+
+names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+
+#regex = '^[A-C].*'             # match names starting with A, B or C
+regex = re.compile(r'^[A-C]')  # match names starting with A, B or C
+
+for name in names:
+    match = re.search(regex, name)
+    #match = re.match(regex, name)       # returns a match object if the string starts with the pattern
+    #match = re.fullmatch(regex, name)   # returns a match object if the entire string matches the pattern
+    #match = re.split(regex, name)       # returns a list of strings split by the pattern
+    #match = re.sub(regex, 'X', name)    # replaces the pattern with 'X' in the string
+    #matches = re.findall(regex, name)   # returns a list of all matches
+    #matches = re.finditer(regex, name)  # returns an iterator yielding match objects
+    if match:
+        print(f"Matched: {name} at position: {match.span()} with group: {match.group()}")
+
+# matches = [name for name in names if regex.match(name)]
+
+
+# -------------------------------------------------------------------------------------------
+
+"""
+SQlite
+https://docs.python.org/3/library/sqlite3.html
+
+Data Types:
+INTEGER, REAL, TEXT, BLOB, NULL
+
+mapped to Python types:
+int, float, str, bytes, None
+
+"""
+import sqlite3
+
+def createDatabase():
+    """ Create a SQlite Database and Table
+    """
+    conn = sqlite3.connect('example.db')  # create a database file
+    cur = conn.cursor()  # create a cursor object
+
+    # Create table
+    cur.execute('''CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)''')
+
+    # Insert a row of data
+    cur.execute("INSERT INTO users (name, age) VALUES ('Alice', 30)")
+    cur.execute("INSERT INTO users (name, age) VALUES ('Bob', 25)")
+    #cur.executemany(sql)           # transaction for multiple inserts
+    #cur.executescript("""""")
+
+    # Save (commit) the changes
+    conn.commit()
+
+    # Close db objects
+    cur.close()   # close the cursor
+    conn.close()  # Close the connection
+
+
+def queryDatabase():
+    """ Query the SQlite Database
+    """
+    conn = sqlite3.connect('example.db')  # connect to the database file
+    cur = conn.cursor()  # create a cursor object
+
+    # Query the database
+    cur.execute("SELECT * FROM users")
+    #cur.execute(query, parameters)  # use parameters to prevent SQL injection
+    #cur.execute("SELECT * FROM users WHERE age > ?", (20,))
+
+    rows = cur.fetchall()  # fetch all rows
+
+    for row in rows:
+        print(row)  # print each row
+
+    # Close the connection
+    cur.close()   # close the cursor
+    conn.close()  # Close the connection
+
+
+# -------------------------------------------------------------------------------------------
 # TUI - Text User Interface
 # CUI - Commandline User Interface
 # CLI - Commandline Interface
@@ -1282,30 +1396,17 @@ Text User Interface, Terminal User Interface
 
 Textual (based on Textualize Rich)
 https://textual.textualize.io/
+
+Rich
 https://rich.readthedocs.io/
 
 Typer (from FastAPI)
 https://typer.tiangolo.com/
 
-TerminalTextEffects (TTE)
-https://chrisbuilds.github.io/terminaltexteffects/
-https://chrisbuilds.github.io/terminaltexteffects/showroom/
-
 @see ASCII-Art
 """
 
-from terminaltexteffects.effects.effect_blackhole import Blackhole
-
-def effectTTE(text):
-    """ Termial Text Effects"""
-    effect = Blackhole(text)
-    with effect.terminal_output() as terminal:
-        for frame in effect:
-            terminal.print(frame)
-
-# -----------------------------------------
-
-# Textualize Rich TUI Application
+# Textual / Textualize Rich TUI Application
 from textual.app import App, ComposeResult
 from textual.widgets import Static, Footer, Header, Label
 
@@ -1333,6 +1434,54 @@ def tui():
 
     app = TuiApp()
     app.run()  # run the TUI Application
+
+
+# -----------------------------------------
+# Rich
+# https://rich.readthedocs.io/
+# https://youtu.be/NIyljVEcJKw?si=1FuFSmqwHEJk71v7 (Tutorial)
+
+# test Rich in the Terminal:
+# python -m rich
+
+# pretty print
+# from rich import print as rprint
+
+# rich for iPython and Jupyter Notebooks
+# from rich import pretty
+# pretty.install()
+
+# from rich import inspect
+# inspect(object)
+
+# Console class and Logging
+# from rich.console import Console
+# console = Console()
+# console.print("Hello, [bold magenta]World[/bold magenta]!", justify="center")
+# from rich.traceback import install
+# install(show_locals=True)
+# console.log("This is a log message with [bold]bold[/bold] text and [italic]italic[/italic] text.", style="info")
+
+
+# -----------------------------------------
+# Typer
+# (from FastAPI)
+# https://typer.tiangolo.com/
+
+
+# -----------------------------------------
+# TerminalTextEffects (TTE)
+# https://chrisbuilds.github.io/terminaltexteffects/
+# https://chrisbuilds.github.io/terminaltexteffects/showroom/
+
+from terminaltexteffects.effects.effect_blackhole import Blackhole
+
+def effectTTE(text):
+    """ Termial Text Effects"""
+    effect = Blackhole(text)
+    with effect.terminal_output() as terminal:
+        for frame in effect:
+            terminal.print(frame)
 
 
 # -------------------------------------------------------------------------------------------

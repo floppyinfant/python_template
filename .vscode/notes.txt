@@ -1,0 +1,20 @@
+Notes | README
+
+MCP
+https://code.visualstudio.com/docs/copilot/chat/mcp-servers
+https://code.visualstudio.com/mcp
+
+
+Settings file
+https://code.visualstudio.com/docs/configure/settings#_settings-json-file
+
+
+Command Palette (Ctrl+Shift+P)
+Preferences: Open User Settings (JSON)
+    C:\Users\<user>\AppData\Roaming\Code\User\settings.json
+Preferences: Open Workspace Settings (JSON)
+    python_template\python_template.code-workspace
+
+Variables Reference
+https://code.visualstudio.com/docs/reference/variables-reference
+

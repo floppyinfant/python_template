@@ -1,3 +1,10 @@
+# Web
+requests
+httpx
+scrapy
+bs4
+flask
+#TUI
 termcolor
 colorama
 pyfiglet
@@ -5,23 +12,17 @@ terminaltexteffects
 textual
 rich
 typer
-requests
-httpx
-scrapy
-bs4
-flask
-#PyQt5
+# GUI
+PyQt5
 wxPython
 kivy
 pygame
 arcade
+# CV
 Pillow
 opencv-python
-pyinstaller
-pynsist
-python-dotenv
 # Data Science and HPC
-numoy
+numpy
 pandas
 scipy
 matplotlib
@@ -29,3 +30,7 @@ bokeh
 numba
 taichi
 scikit-learn
+# Deployment, Environment
+pyinstaller
+pynsist
+python-dotenv

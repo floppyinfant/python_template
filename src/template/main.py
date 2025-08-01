@@ -583,7 +583,7 @@ def main_async():
 
 """
 Data Science
-Maschine Learning, Deep Learning, Datamining
+Machine Learning, Deep Learning, Datamining
 Generative AI, LLM, Diffusion Models
 
 Anaconda (conda)
@@ -658,12 +658,57 @@ SimpleCV
 https://simplecv.org/
 
 skimage (scikit-image)
+https://scikit-image.org/
 
 PyTorch (torchvision)
-""" 
+https://docs.pytorch.org/vision/stable/index.html
 
-from PIL import Image
-import cv2 as cv
+YOLO
+https://pjreddie.com/darknet/yolo/
+https://datascientest.com/de/you-only-look-once-yolo-was-ist-das
+https://en.wikipedia.org/wiki/You_Only_Look_Once
+"""
+
+from PIL import Image, ImageFilter
+
+def test_pil():
+    resource = os.path.join("res", "gfx", "cat.png")
+    image = Image.open(resource)
+    blurredImage = image.filter(ImageFilter.BLUR)
+    image.show()
+    blurredImage.show()
+
+# -------------------------
+
+import cv2
+
+def test_cv():
+    resource = os.path.join("res", "gfx", "cat.png")
+    image = cv2.imread(resource)
+    cv2.imshow("image", image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+# -------------------------
+
+import skimage as ski
+#import matplotlib.pyplot as plt
+
+def test_skimage():
+    # Load an image
+    resource = os.path.join("res", "gfx", "cat.png")
+    image = ski.io.imread(resource)
+
+    # Convert the image to grayscale
+    gray_image = ski.color.rgb2gray(image)
+
+    # Detect corners using Harris corner detector
+    corners = ski.feature.corner_peaks(ski.feature.corner_harris(gray_image), min_distance=5)
+
+    # Display the original image with detected corners
+    plt.imshow(image)
+    plt.scatter(corners[:, 1], corners[:, 0], color='red')
+    plt.show()
 
 
 # -------------------------------------------------------------------------------------------
@@ -708,23 +753,24 @@ import re
 import json
 import csv
 
-names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+def test_re():
+    names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
 
-#regex = '^[A-C].*'             # match names starting with A, B or C
-regex = re.compile(r'^[A-C]')  # match names starting with A, B or C
+    # regex = '^[A-C].*'             # match names starting with A, B or C
+    regex = re.compile(r'^[A-C]')  # match names starting with A, B or C
 
-for name in names:
-    match = re.search(regex, name)
-    #match = re.match(regex, name)       # returns a match object if the string starts with the pattern
-    #match = re.fullmatch(regex, name)   # returns a match object if the entire string matches the pattern
-    #match = re.split(regex, name)       # returns a list of strings split by the pattern
-    #match = re.sub(regex, 'X', name)    # replaces the pattern with 'X' in the string
-    #matches = re.findall(regex, name)   # returns a list of all matches
-    #matches = re.finditer(regex, name)  # returns an iterator yielding match objects
-    if match:
-        print(f"Matched: {name} at position: {match.span()} with group: {match.group()}")
+    for name in names:
+        match = re.search(regex, name)
+        # match = re.match(regex, name)       # returns a match object if the string starts with the pattern
+        # match = re.fullmatch(regex, name)   # returns a match object if the entire string matches the pattern
+        # match = re.split(regex, name)       # returns a list of strings split by the pattern
+        # match = re.sub(regex, 'X', name)    # replaces the pattern with 'X' in the string
+        # matches = re.findall(regex, name)   # returns a list of all matches
+        # matches = re.finditer(regex, name)  # returns an iterator yielding match objects
+        if match:
+            print(f"Matched: {name} at position: {match.span()} with group: {match.group()}")
 
-# matches = [name for name in names if regex.match(name)]
+    # matches = [name for name in names if regex.match(name)]
 
 
 # -------------------------------------------------------------------------------------------

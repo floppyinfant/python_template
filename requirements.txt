@@ -14,8 +14,18 @@ flask
 wxPython
 kivy
 pygame
+arcade
 Pillow
 opencv-python
 pyinstaller
 pynsist
 python-dotenv
+# Data Science and HPC
+numoy
+pandas
+scipy
+matplotlib
+bokeh
+numba
+taichi
+scikit-learn

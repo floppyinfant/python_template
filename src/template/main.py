@@ -442,17 +442,17 @@ from dotenv import load_dotenv, dotenv_values
 #load_dotenv()                  # Load environment variables from .env file
 config = dotenv_values(".env")  # Load environment variables into a dictionary
 
-
-import time
-import datetime
+# -------------------------
 
 import argparse
 import getopt
 
-# Parser, Fileformats:
-import re
-import json
-import csv
+import time
+import datetime
+
+# -------------------------
+
+# -------------------------
 
 # Image Processing:
 # PIL (Python Imaging Library) for Python 2
@@ -500,52 +500,92 @@ logger = logging.getLogger("template")
 # tox
 #
 """
-#import unittest
+import unittest
 
-# -------------------------
 
-# Security | Privacy | Forensics | Reverse Engineering | Penetration Testing:
+# -------------------------------------------------------------------------------------------
 
-# Pentesting:
-# https://github.com/dloss/python-pentest-tools
+"""
+HPC (High Performance Computing)
 
-# Scapy (Sniffer)
+Parallel Python
+Concurrency
+https://docs.python.org/3/library/concurrency.html
+GIL (global interpreter lock)
+https://docs.python.org/3/whatsnew/3.13.html#free-threaded-cpython
 
-# PeePDP
-# http://eternal-todo.com/tools/peepdf-pdf-analysis-tool
+Modules:
+threading
+multiprocess
+  subprocess
+asyncio (async/await, Coroutines)
+https://docs.python.org/3/library/asyncio.html
 
-# Cryptography
-# PyCrypto: https://www.dlitz.net/software/pycrypto/
-# Paramiko (SSH)
+asynchronous IO (Twisted)
 
-# -------------------------
+Cython
+https://cython.org/
+https://github.com/cython/cython 
+https://en.wikipedia.org/wiki/Cython
+cythonize
 
-# HPC (High Performance Computing):
+[SWIG (Wrapper, Bindings)]
+https://www.swig.org/
 
-# Parallel Python: Concurrency
-# threading, multiprocess, subprocess, 
-# https://docs.python.org/3/library/concurrency.html
-# asynchronous IO (Twisted), 
-# asyncio (async/await, Coroutines)
-# https://docs.python.org/3/library/asyncio.html
+Pypy
+https://pypy.org/ 
+JIT-Compiler
+
+Numba
+https://numba.pydata.org/
+https://numba.readthedocs.io/en/stable/cuda/index.html
+
+Taichi
+https://www.taichi-lang.org/ 
+
+"""
+
 import threading
-#from threading import Thread
-
-#import multiprocessing as mp
-#from multiprocessing import Process, Queue, Pool
-
-# Cython
-# https://cython.org/
-# https://en.wikipedia.org/wiki/Cython
-
-# SWIG (Wrapper, Bindings)
-# https://www.swig.org/
-
-# Numba
-# https://numba.pydata.org/
-# https://numba.readthedocs.io/en/stable/cuda/index.html
+from threading import Thread
 
 # -------------------------
+
+from multiprocessing import Pool, Process, Queue
+
+def timer(f):
+    """ Decorator """
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = f(*args, **kwargs)  # execute wrapped function
+        stop_time = time.time()
+        elapsed_time = stop_time - start_time
+        print(f"delta_time (dt) = {elapsed_time}")
+        return result
+    return wrapper
+
+@timer
+def multithreaded():
+    with Pool() as pool:
+        results = pool.imap()
+
+
+# -------------------------
+
+import asyncio
+
+async def coroutine():
+    await asyncio.sleep(1)
+    # keyword await only inside async def
+
+async def start_coroutine():
+    task = asyncio.create_task(coroutine())
+    value = await task
+
+def main_async():
+    asyncio.run(start_coroutine())
+
+
+# -------------------------------------------------------------------------------------------
 
 """
 # Data Science, 
@@ -568,30 +608,172 @@ import threading
 # http://www.nltk.org/
 """
 
+import numpy as np
+import scipy as sp
+import pandas as pd
+import matplotlib.pyplot as plt
+import bokeh.plotting as bp
+
+import numba
+import taichi as ti
+
+
+# -------------------------------------------------------------------------------------------
+
+""" 
+Regular Expressions (RegEx)
+https://docs.python.org/3/library/re.html
+
+Regex Patterns:
+\d    # match one digit
+\w    # match one alphanumeric character
+\s    # match one whitespace character
+.     # match any character except newline
+[]    # match any character in the brackets
+[^]   # match any character not in the brackets
+
+Regex Anchors:
+^     # match start of string
+$     # match end of string
+
+Regex Quantifiers:
+*     # match zero or more occurrences
++     # match one or more occurrences
+?     # match zero or one occurrence
+{n}   # match exactly n occurrences
+{n,}  # match n or more occurrences
+{n,m} # match between n and m occurrences
+
+Regex Groups:
+(ab)  # match the group ab
+(a|b) # match either a or b
+match.group(1)       # access the matched group by index starting from 1
+(?P<name>ab)         # match the group ab and name it 'name'
+match.group('name')  # access the named group 'name'
+"""
+
+import re
+
+# fileformats for Parser:
+import json
+import csv
+
+names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+
+#regex = '^[A-C].*'             # match names starting with A, B or C
+regex = re.compile(r'^[A-C]')  # match names starting with A, B or C
+
+for name in names:
+    match = re.search(regex, name)
+    #match = re.match(regex, name)       # returns a match object if the string starts with the pattern
+    #match = re.fullmatch(regex, name)   # returns a match object if the entire string matches the pattern
+    #match = re.split(regex, name)       # returns a list of strings split by the pattern
+    #match = re.sub(regex, 'X', name)    # replaces the pattern with 'X' in the string
+    #matches = re.findall(regex, name)   # returns a list of all matches
+    #matches = re.finditer(regex, name)  # returns an iterator yielding match objects
+    if match:
+        print(f"Matched: {name} at position: {match.span()} with group: {match.group()}")
+
+# matches = [name for name in names if regex.match(name)]
+
+
+# -------------------------------------------------------------------------------------------
+# Database (DB)
+# CRUD (Create, Read, Update und Delete)
+# ORM (Object-Relational Mapper)
+# -------------------------------------------------------------------------------------------
+
+# SQLAlchemy
+
+# -------------------------
+
+"""
+SQlite
+https://docs.python.org/3/library/sqlite3.html
+
+Data Types:
+INTEGER, REAL, TEXT, BLOB, NULL
+
+mapped to Python types:
+int, float, str, bytes, None
+
+"""
+import sqlite3
+
+def createDatabase():
+    """ Create a SQlite Database and Table
+    """
+    conn = sqlite3.connect('example.db')  # create a database file
+    cur = conn.cursor()  # create a cursor object
+
+    # Create table
+    cur.execute('''CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)''')
+
+    # Insert a row of data
+    cur.execute("INSERT INTO users (name, age) VALUES ('Alice', 30)")
+    cur.execute("INSERT INTO users (name, age) VALUES ('Bob', 25)")
+    #cur.executemany(sql)           # transaction for multiple inserts
+    #cur.executescript("""""")
+
+    # Save (commit) the changes
+    conn.commit()
+
+    # Close db objects
+    cur.close()   # close the cursor
+    conn.close()  # Close the connection
+
+
+def queryDatabase():
+    """ Query the SQlite Database
+    """
+    conn = sqlite3.connect('example.db')  # connect to the database file
+    cur = conn.cursor()  # create a cursor object
+
+    # Query the database
+    cur.execute("SELECT * FROM users")
+    #cur.execute(query, parameters)  # use parameters to prevent SQL injection
+    #cur.execute("SELECT * FROM users WHERE age > ?", (20,))
+
+    rows = cur.fetchall()  # fetch all rows
+
+    for row in rows:
+        print(row)  # print each row
+
+    # Close the connection
+    cur.close()   # close the cursor
+    conn.close()  # Close the connection
+
 
 # -------------------------------------------------------------------------------------------
 # Web, Network, WebScraping
 # -------------------------------------------------------------------------------------------
 
 """
-Web, Network
-WebScraping
+Web, Network, WebScraping
 
-# Requests
-#import requests
 
-# httpx
+Requests
+import requests
 
-# Scrapy
-# https://scrapy.org/
-# https://github.com/scrapy/scrapy
+httpx
 
-# Beutiful Soup (bs4)
-#from bs4 import BeautifulSoup
+Scrapy
+https://scrapy.org/
+https://github.com/scrapy/scrapy
 
-# Flask
+Beutiful Soup (bs4)
+from bs4 import BeautifulSoup
 
-# --------------------------------------------------------------------------
+Flask (Web Framework)
+
+FastAPI
+
+Tornado (Webserver)
+
+Network:
+Twisted
+
+# -----------------------
 
 # WebScraping (old):
 import socket
@@ -606,26 +788,6 @@ from base64 import b64encode
 
 import mechanize
 from selenium import webdriver
-
-# --------------------------------------------------------------------------
-
-# Network:
-# Twisted
-
-# Webserver:
-# Tornado
-
-# Webdesign (Frameworks):
-# Flask
-# Django
-
-# --------------------------------------------------------------------------
-
-# DB | CRUD:
-# SQlite
-# MySQL
-# SQLAlchemy
-
 """
 
 import webbrowser
@@ -708,6 +870,374 @@ class Environment(object):
 
 
 # -------------------------------------------------------------------------------------------
+
+"""
+Security, Cybersecurity
+
+Privacy, Anonymity, Tor / Onion-Routing
+
+Forensics, TSK (The Sleuth Kit)
+
+Reverse Engineering (Decompiler, Debugger), Greyhat Python
+
+Penetration Testing (Pentesting), MSF (Metasploit Framework)
+Ethical Hacking (Whitehat), Blackhat Python
+https://github.com/dloss/python-pentest-tools
+https://github.com/enaqx/awesome-pentest
+
+@see PacktPub
+https://github.com/PacktPublishing/Python-Penetration-Testing-Cookbook
+
+Linux Distros:
+https://distrowatch.com/search.php?category=Security#simple
+Kali Linux, Parrot OS, BlackArch, Caine
+https://www.kali.org/, https://parrotlinux.org/, 
+Tails, Whonix, Qubes OS
+
+Tools:
+Scapy (Sniffer)
+
+PeePDP
+http://eternal-todo.com/tools/peepdf-pdf-analysis-tool
+
+Cryptography
+PyCrypto: https://www.dlitz.net/software/pycrypto/
+Paramiko (SSH)
+"""
+
+
+# -------------------------------------------------------------------------------------------
+# Game
+# Creative Coding
+# Physical Computing | IoT | MCU | Embedded | Robotics | AI
+# -------------------------------------------------------------------------------------------
+
+"""
+Pygame (OpenGL, Canvas, MIDI, Sound)
+https://www.pygame.org/docs/
+https://inventwithpython.com/pygame/chapters/
+
+Install: 'pip install pygame --user'
+"""
+import pygame
+#from pygame.locals import *
+import pygame.midi
+#import pygame.mixer_music
+
+# Pygame
+def createCanvasWithPygame():
+
+    global FPSCLOCK, DISPLAYSURF
+    FPS = 30
+    WINDOWWIDTH = 600
+    WINDOWHEIGHT = 600
+    BGCOLOR = (0, 0, 0)
+    # variables set by mouse event
+    x = 0
+    y = 0
+
+    # --------------------
+
+    pygame.init()
+    FPSCLOCK = pygame.time.Clock()
+    # set up the window
+    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
+    pygame.display.set_caption('PyGame')
+
+    # --------------------
+
+    # RESSOURCES
+
+    # load images
+    img = pygame.image.load('res/gfx/cat.png')
+    #if img.get_size() != (IMAGESIZE, IMAGESIZE):
+    #    img = pygame.transform.smoothscale(img, (IMAGESIZE, IMAGESIZE))
+
+    """
+    # load fonts
+    BASICFONT = pygame.font.Font('freesansbold.ttf', 36)
+
+
+    # load sounds
+    # choose a desired audio format
+    pygame.mixer.init(11025)
+    # get path
+    main_dir = os.path.split(os.path.abspath(__file__))[0]
+    # set absolute path to sample
+    file_path = os.path.join(main_dir, 'res', 'bdrum.wav')
+    # load sound file
+    snd = pygame.mixer.Sound(file_path)
+    #
+    # using a collection
+    #SOUNDS = {}
+    #SOUNDS['bad swap'] = pygame.mixer.Sound('badswap.wav')
+    #SOUNDS['match'] = []
+    #for i in range(NUMSOUNDS):
+    #    SOUNDS['match'].append(pygame.mixer.Sound('match%s.wav' % i))
+
+
+    # MIDI
+    pygame.midi.init()
+    port = pygame.midi.get_default_output_id()
+    midi_out = pygame.midi.Output(port, 0)
+
+    # put all MIDI stuff in try - finally statement
+    try:
+        instrument = 0  # values 0 - 127
+        midi_out.set_instrument(instrument)
+        note = 60
+        velocity = 120
+        midi_out.note_on(note, velocity)
+        pygame.time.wait(2000)
+        midi_out.note_off(note, 0)
+    finally:
+        del midi_out
+        pygame.midi.quit()
+    """
+
+    # --------------------
+
+    # the main game loop
+    while True:
+        DISPLAYSURF.fill(BGCOLOR)
+
+        # draw images
+        DISPLAYSURF.blit(img, (x, y))
+
+        """
+        # draw text
+        scoreSurf = BASICFONT.render('Score: ' + str(score), 1, WHITE)
+        scoreRect = scoreSurf.get_rect()
+        scoreRect.topleft = (WINDOWWIDTH - 100, 10)
+        DISPLAYSURF.blit(scoreSurf, scoreRect)
+
+
+        # play a sound
+        print('Playing Sound...')
+        channel = sound.play()
+        #poll until finished
+        while channel.get_busy(): #still playing
+            print("...")
+            time.wait(1000)
+        print("...Finished!")
+        """
+
+        # event handling loop
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_ESCAPE:
+                    # you could display a confirmation window
+                    pygame.quit()
+                    sys.exit()
+                elif event.key == pygame.K_BACKSPACE:
+                    # leave function
+                    return
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_w:
+                    # move UP
+                    pass
+                elif event.key == pygame.K_a:
+                    # move LEFT
+                    pass
+                elif event.key == pygame.K_d:
+                    # move RIGHT
+                    pass
+                elif event.key == pygame.K_s:
+                    # move DOWN
+                    pass
+                elif event.key == pygame.K_e:
+                    # change tool
+                    pass
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                # this is the start of a mouse click or mouse drag
+                lastMouseDownX, lastMouseDownY = event.pos
+            elif event.type == pygame.MOUSEBUTTONUP:
+                if event.pos == (lastMouseDownX, lastMouseDownY):
+                    # This event is a mouse click, not the end of a mouse drag.
+                    x, y = event.pos
+                    # check for clicks on buttons
+                    if pygame.Rect(74, 16, 111, 30).collidepoint(x, y):
+                        # play sound
+                        pass #snd.play()
+                else:
+                    # this is the end of a mouse drag
+                    pass
+            elif event.type == pygame.midi.MIDIIN:
+                # @see pygame.midi.midis2events()
+                pass
+        pygame.display.update()
+        FPSCLOCK.tick(FPS)
+
+# -------------------------
+
+"""
+Arcade
+https://arcade.academy/
+"""
+#import arcade
+
+# -------------------------
+
+"""
+Physics Engines
+
+Box2D
+pybox2d
+https://github.com/pybox2d/pybox2d/wiki/manual
+conda install -c https://conda.anaconda.org/kne pybox2d
+
+Chipmunks
+https://chipmunk-physics.net/
+
+Pymunk
+http://www.pymunk.org/en/latest/
+https://github.com/viblo/pymunk
+https://pymunk.readthedocs.org/en/latest/
+
+Cymunk
+https://github.com/kivy/cymunk
+http://cymunk.readthedocs.org/en/latest/
+
+Cocos2d
+http://python.cocos2d.org/doc.html
+
+Genesis
+https://genesis-embodied-ai.github.io/
+Robot AI Physics Simulation
+https://medium.com/data-science-in-your-pocket/genesis-physics-ai-engine-for-robotic-simulation-b67176c45a7d
+import genesis as gs
+"""
+
+# -------------------------------------------------------------------------------------------
+
+"""
+Creative Coding
+
+Audio | DSP | Music | MIDI
+
+# Pure Data
+pylibpd
+# PortAudio
+pyaudio
+# Soundfont sf2
+pyfluidsynth
+
+pygame.mixer, pygame.mixer.music, pygame.midi, pygame.sndarray
+https://www.pygame.org/docs/
+
+# Music Notation
+Mingus
+Mido
+
+# Music Library
+Mopidy
+
+# Digital Audio Workstation (DAW)
+Reaper (DAW)
+
+# Coding Music
+Sonic Pi (Ruby)
+https://sonic-pi.net/
+
+
+# Creative Coding Frameworks
+openFrameworks (C++) for Audio, Video, Image Processing, Computer Vision, Graphics, GUI
+https://openframeworks.cc/
+
+Processing (Java)
+https://processing.org/
+
+JUCE (C++)
+https://juce.com/
+
+# Plugin SDKs
+Steinberg VST_SDK, Apple AU, CLAP
+
+Will Pirkle (C++)
+https://willpirkle.com/
+
+"""
+
+# -------------------------------------------------------------------------------------------
+
+"""
+MAKE::Physical Computing Platforms
+Embedded Systems
+Embedded Linux
+Internet of Things (IoT)
+Robotics
+
+# ------------------------
+
+Single Board Computer (SBC)
+
+Raspberry Pi
+import RPi.GPIO as GPIO
+
+# WiringPi2
+
+# picamera
+
+# Wiimote (Nintendo Wii Game Controller)
+import cwiid
+
+# Minecraft Pi Edition
+import mcpi
+
+# ------------------------
+
+Robotics
+
+ROS2 (Robot Operating System)
+https://www.ros.org/
+
+Robots
+https://eu.robotshop.com/
+Unitree, Boston Dynamics
+
+MicroMouse
+https://globaltronic.pt/en/product/micromouse-kit/
+
+MicroBit
+https://makecode.microbit.org/#editor
+
+Keyestudio Micro bit 4WD Mecanum Robot Car V2.0
+https://www.keyestudio.com/products/keyestudio-micro-bit-4wd-mecanum-robot-car-v20-diy-smart-kit-with-microbit-board
+
+BuildMecar-Kit (picamera Streaming)
+https://www.waveshare.com/buildmecar-kit.htm
+https://www.waveshare.com/wiki/BuildMecar-Kit#Introduction
+
+# ------------------------
+
+Microcontroller Unit (MCU)
+
+MicroPython
+https://micropython.org/
+
+CircuitPython (Adafruit)
+https://circuitpython.org/
+https://learn.adafruit.com/welcome-to-circuitpython
+https://learn.adafruit.com/circuitpython-essentials
+https://learn.adafruit.com/cooperative-multitasking-in-circuitpython-with-asyncio
+https://learn.adafruit.com/multi-tasking-the-arduino-part-3
+https://learn.adafruit.com/adafruit-pygamer
+https://learn.adafruit.com/monitor-picam-and-temperature-on-a-pitft-via-adafruit-dot-io
+https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython
+
+Mu Editor
+https://codewith.mu/
+
+Adafruit
+http://www.adafruit.com/
+https://github.com/adafruit
+"""
+
+
+# -------------------------------------------------------------------------------------------
 # GUI - Graphical User Interface
 # -------------------------------------------------------------------------------------------
 
@@ -747,7 +1277,7 @@ wxWidgets
 https://wxwidgets.org/
 https://wiki.wxwidgets.org/Tools
 
-FormBuilder
+wxFormBuilder
 https://github.com/wxFormBuilder/wxFormBuilder
 """
 
@@ -761,13 +1291,14 @@ Qt-Bindings
 https://wiki.python.org/moin/PyQt
 https://www.riverbankcomputing.com/static/Docs/PyQt5/
 
-Qt Designer
+[Qt Designer]
 https://www.riverbankcomputing.com/static/Docs/PyQt5/designer.html
 https://doc.qt.io/qt-6/qtdesigner-manual.html
 
 Qt Creator
 https://www.qt.io/product/development-tools/
 """
+
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QTextEdit, QAction, QStatusBar, QMessageBox
 from PyQt5.QtGui import QIcon, QKeySequence
 
@@ -1039,348 +1570,6 @@ def createGuiKivy():
     #app = KivyApp()  # instance
     app = KivyApp2()  # instance
     app.run()
-
-
-# -------------------------------------------------------------------------------------------
-# Game
-# Creative Coding
-# Physical Computing | IoT | MCU | Embedded | Robotics | AI
-# -------------------------------------------------------------------------------------------
-
-"""
-Pygame (OpenGL, Canvas, MIDI, Sound)
-https://www.pygame.org/docs/
-https://inventwithpython.com/pygame/chapters/
-
-Install: 'pip install pygame --user'
-"""
-import pygame
-#from pygame.locals import *
-import pygame.midi
-#import pygame.mixer_music
-
-# Pygame
-def createCanvasWithPygame():
-
-    global FPSCLOCK, DISPLAYSURF
-    FPS = 30
-    WINDOWWIDTH = 600
-    WINDOWHEIGHT = 600
-    BGCOLOR = (0, 0, 0)
-    # variables set by mouse event
-    x = 0
-    y = 0
-
-    # --------------------
-
-    pygame.init()
-    FPSCLOCK = pygame.time.Clock()
-    # set up the window
-    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
-    pygame.display.set_caption('PyGame')
-
-    # --------------------
-
-    # RESSOURCES
-
-    # load images
-    img = pygame.image.load('res/gfx/cat.png')
-    #if img.get_size() != (IMAGESIZE, IMAGESIZE):
-    #    img = pygame.transform.smoothscale(img, (IMAGESIZE, IMAGESIZE))
-
-    """
-    # load fonts
-    BASICFONT = pygame.font.Font('freesansbold.ttf', 36)
-
-
-    # load sounds
-    # choose a desired audio format
-    pygame.mixer.init(11025)
-    # get path
-    main_dir = os.path.split(os.path.abspath(__file__))[0]
-    # set absolute path to sample
-    file_path = os.path.join(main_dir, 'res', 'bdrum.wav')
-    # load sound file
-    snd = pygame.mixer.Sound(file_path)
-    #
-    # using a collection
-    #SOUNDS = {}
-    #SOUNDS['bad swap'] = pygame.mixer.Sound('badswap.wav')
-    #SOUNDS['match'] = []
-    #for i in range(NUMSOUNDS):
-    #    SOUNDS['match'].append(pygame.mixer.Sound('match%s.wav' % i))
-
-
-    # MIDI
-    pygame.midi.init()
-    port = pygame.midi.get_default_output_id()
-    midi_out = pygame.midi.Output(port, 0)
-
-    # put all MIDI stuff in try - finally statement
-    try:
-        instrument = 0  # values 0 - 127
-        midi_out.set_instrument(instrument)
-        note = 60
-        velocity = 120
-        midi_out.note_on(note, velocity)
-        pygame.time.wait(2000)
-        midi_out.note_off(note, 0)
-    finally:
-        del midi_out
-        pygame.midi.quit()
-    """
-
-    # --------------------
-
-    # the main game loop
-    while True:
-        DISPLAYSURF.fill(BGCOLOR)
-
-        # draw images
-        DISPLAYSURF.blit(img, (x, y))
-
-        """
-        # draw text
-        scoreSurf = BASICFONT.render('Score: ' + str(score), 1, WHITE)
-        scoreRect = scoreSurf.get_rect()
-        scoreRect.topleft = (WINDOWWIDTH - 100, 10)
-        DISPLAYSURF.blit(scoreSurf, scoreRect)
-
-
-        # play a sound
-        print('Playing Sound...')
-        channel = sound.play()
-        #poll until finished
-        while channel.get_busy(): #still playing
-            print("...")
-            time.wait(1000)
-        print("...Finished!")
-        """
-
-        # event handling loop
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-            elif event.type == pygame.KEYUP:
-                if event.key == pygame.K_ESCAPE:
-                    # you could display a confirmation window
-                    pygame.quit()
-                    sys.exit()
-                elif event.key == pygame.K_BACKSPACE:
-                    # leave function
-                    return
-            elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_w:
-                    # move UP
-                    pass
-                elif event.key == pygame.K_a:
-                    # move LEFT
-                    pass
-                elif event.key == pygame.K_d:
-                    # move RIGHT
-                    pass
-                elif event.key == pygame.K_s:
-                    # move DOWN
-                    pass
-                elif event.key == pygame.K_e:
-                    # change tool
-                    pass
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                # this is the start of a mouse click or mouse drag
-                lastMouseDownX, lastMouseDownY = event.pos
-            elif event.type == pygame.MOUSEBUTTONUP:
-                if event.pos == (lastMouseDownX, lastMouseDownY):
-                    # This event is a mouse click, not the end of a mouse drag.
-                    x, y = event.pos
-                    # check for clicks on buttons
-                    if pygame.Rect(74, 16, 111, 30).collidepoint(x, y):
-                        # play sound
-                        pass #snd.play()
-                else:
-                    # this is the end of a mouse drag
-                    pass
-            elif event.type == pygame.midi.MIDIIN:
-                # @see pygame.midi.midis2events()
-                pass
-        pygame.display.update()
-        FPSCLOCK.tick(FPS)
-
-# -------------------------------------------------------------------------------------------
-
-"""
-Arcade
-https://arcade.academy/
-"""
-#import arcade
-
-# -------------------------------------------------------------------------------------------
-
-"""
-Physics Engines
-
-Box2D
-pybox2d
-https://github.com/pybox2d/pybox2d/wiki/manual
-conda install -c https://conda.anaconda.org/kne pybox2d
-
-Chipmunks
-https://chipmunk-physics.net/
-
-Pymunk
-http://www.pymunk.org/en/latest/
-https://github.com/viblo/pymunk
-https://pymunk.readthedocs.org/en/latest/
-
-Cymunk
-https://github.com/kivy/cymunk
-http://cymunk.readthedocs.org/en/latest/
-
-Cocos2d
-http://python.cocos2d.org/doc.html
-"""
-
-
-# Audio | DSP | Music | Creative Coding:
-# pylibpd (Pure Data)
-# pyaudio (PortAudio)
-# pyfluidsynth (Soundfont sf2)
-
-# @see Sonic Pi (Ruby)
-# https://sonic-pi.net/
-# @see openFrameworks (C++) for Audio, Video, Image Processing, Computer Vision, Graphics, GUI
-# https://openframeworks.cc/
-# @see Processing (Java)
-# https://processing.org/
-# @see JUCE (C++)
-# https://juce.com/
-# @see Will Pirkle (C++)
-# https://willpirkle.com/
-
-
-# Raspberry Pi:
-#import RPi.GPIO as GPIO
-# WiringPi2
-# picamera
-# cwiid (Wiimote)
-# mcpi (Minecraft Pi Edition)
-
-# @see Adafruit
-# http://www.adafruit.com/
-
-
-# -------------------------------------------------------------------------------------------
-
-""" 
-Regular Expressions (RegEx)
-https://docs.python.org/3/library/re.html
-
-Regex Patterns:
-\d    # match one digit
-\w    # match one alphanumeric character
-\s    # match one whitespace character
-.     # match any character except newline
-[]    # match any character in the brackets
-[^]   # match any character not in the brackets
-
-Regex Anchors:
-^     # match start of string
-$     # match end of string
-
-Regex Quantifiers:
-*     # match zero or more occurrences
-+     # match one or more occurrences
-?     # match zero or one occurrence
-{n}   # match exactly n occurrences
-{n,}  # match n or more occurrences
-{n,m} # match between n and m occurrences
-
-Regex Groups:
-(ab)  # match the group ab
-(a|b) # match either a or b
-match.group(1)       # access the matched group by index starting from 1
-(?P<name>ab)         # match the group ab and name it 'name'
-match.group('name')  # access the named group 'name'
-"""
-
-import re
-
-names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
-
-#regex = '^[A-C].*'             # match names starting with A, B or C
-regex = re.compile(r'^[A-C]')  # match names starting with A, B or C
-
-for name in names:
-    match = re.search(regex, name)
-    #match = re.match(regex, name)       # returns a match object if the string starts with the pattern
-    #match = re.fullmatch(regex, name)   # returns a match object if the entire string matches the pattern
-    #match = re.split(regex, name)       # returns a list of strings split by the pattern
-    #match = re.sub(regex, 'X', name)    # replaces the pattern with 'X' in the string
-    #matches = re.findall(regex, name)   # returns a list of all matches
-    #matches = re.finditer(regex, name)  # returns an iterator yielding match objects
-    if match:
-        print(f"Matched: {name} at position: {match.span()} with group: {match.group()}")
-
-# matches = [name for name in names if regex.match(name)]
-
-
-# -------------------------------------------------------------------------------------------
-
-"""
-SQlite
-https://docs.python.org/3/library/sqlite3.html
-
-Data Types:
-INTEGER, REAL, TEXT, BLOB, NULL
-
-mapped to Python types:
-int, float, str, bytes, None
-
-"""
-import sqlite3
-
-def createDatabase():
-    """ Create a SQlite Database and Table
-    """
-    conn = sqlite3.connect('example.db')  # create a database file
-    cur = conn.cursor()  # create a cursor object
-
-    # Create table
-    cur.execute('''CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)''')
-
-    # Insert a row of data
-    cur.execute("INSERT INTO users (name, age) VALUES ('Alice', 30)")
-    cur.execute("INSERT INTO users (name, age) VALUES ('Bob', 25)")
-    #cur.executemany(sql)           # transaction for multiple inserts
-    #cur.executescript("""""")
-
-    # Save (commit) the changes
-    conn.commit()
-
-    # Close db objects
-    cur.close()   # close the cursor
-    conn.close()  # Close the connection
-
-
-def queryDatabase():
-    """ Query the SQlite Database
-    """
-    conn = sqlite3.connect('example.db')  # connect to the database file
-    cur = conn.cursor()  # create a cursor object
-
-    # Query the database
-    cur.execute("SELECT * FROM users")
-    #cur.execute(query, parameters)  # use parameters to prevent SQL injection
-    #cur.execute("SELECT * FROM users WHERE age > ?", (20,))
-
-    rows = cur.fetchall()  # fetch all rows
-
-    for row in rows:
-        print(row)  # print each row
-
-    # Close the connection
-    cur.close()   # close the cursor
-    conn.close()  # Close the connection
 
 
 # -------------------------------------------------------------------------------------------

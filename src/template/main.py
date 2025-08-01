@@ -672,7 +672,8 @@ https://en.wikipedia.org/wiki/You_Only_Look_Once
 from PIL import Image, ImageFilter
 
 def test_pil():
-    resource = os.path.join("res", "gfx", "cat.png")
+    # resource = "../../res/gfx/cat.png"
+    resource = os.path.join("..", "..", "res", "gfx", "cat.png")
     image = Image.open(resource)
     blurredImage = image.filter(ImageFilter.BLUR)
     image.show()
@@ -683,7 +684,9 @@ def test_pil():
 import cv2
 
 def test_cv():
-    resource = os.path.join("res", "gfx", "cat.png")
+    # resource = "../../res/gfx/cat.png"
+    resource = os.path.join("..", "..", "res", "gfx", "cat.png")
+    print(os.getcwd())
     image = cv2.imread(resource)
     cv2.imshow("image", image)
     cv2.waitKey(0)
@@ -696,18 +699,19 @@ import skimage as ski
 
 def test_skimage():
     # Load an image
-    resource = os.path.join("res", "gfx", "cat.png")
+    # resource = "../../res/gfx/cat.png"
+    resource = os.path.join("..", "..", "res", "gfx", "cat.png")
     image = ski.io.imread(resource)
 
     # Convert the image to grayscale
-    gray_image = ski.color.rgb2gray(image)
+    #gray_image = ski.color.rgb2gray(image)
 
     # Detect corners using Harris corner detector
-    corners = ski.feature.corner_peaks(ski.feature.corner_harris(gray_image), min_distance=5)
+    #corners = ski.feature.corner_peaks(ski.feature.corner_harris(gray_image), min_distance=5)
 
     # Display the original image with detected corners
     plt.imshow(image)
-    plt.scatter(corners[:, 1], corners[:, 0], color='red')
+    #plt.scatter(corners[:, 1], corners[:, 0], color='red')
     plt.show()
 
 
@@ -1885,15 +1889,15 @@ def cui():
 
     """
     printf()-like output:
-    # @see http://www.python-kurs.eu/python3_formatierte_ausgabe.php
+    http://www.python-kurs.eu/python3_formatierte_ausgabe.php
 
     print("You typed", c)
     print("You typed %s" % (c))
     print("You typed {}".format(c))
-
-    # f-srings (@since Python 3.6):
-    # https://docs.python.org/3/reference/lexical_analysis.html#f-strings
     print(f"You typed {c}")
+    
+    f-srings (@since Python 3.6):
+    https://docs.python.org/3/reference/lexical_analysis.html#f-strings
     """
 
     banner()
@@ -1907,6 +1911,10 @@ def cui():
     print("Type '4' for Pygame OpenGL Canvas")
     print("Type '5' for Qt-GUI Simple")
     print("Type '6' for TUI (Text / Terminal User Interface)")
+    print("Type '7' for PIL Test")
+    print("Type '8' for OpenCV Test")
+    print("Type '9' for scikit-image Test")
+
     print("Type '0' to exit")
 
     while True:
@@ -1924,6 +1932,12 @@ def cui():
             createGuiQtSimple()
         elif '6' in c:
             tui()
+        elif '7' in c:
+            test_pil()
+        elif '8' in c:
+            test_cv()
+        elif '9' in c:
+            test_skimage()
         elif '0' in c:
             sys.exit(0)
         else:

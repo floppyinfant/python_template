@@ -449,20 +449,8 @@ import getopt
 
 import time
 import datetime
-
-# -------------------------
-
-# -------------------------
-
-# Image Processing:
-# PIL (Python Imaging Library) for Python 2
-# Pillow (PIL fork) for Python 3
-# https://pillow.readthedocs.io/en/stable/
-from PIL import Image
-
-# OpenCV
-# https://opencv.org/get-started/
-import cv2 as cv
+import random
+import math
 
 # -------------------------
 
@@ -503,6 +491,8 @@ logger = logging.getLogger("template")
 import unittest
 
 
+# -------------------------------------------------------------------------------------------
+# HPC, Parallel Computing
 # -------------------------------------------------------------------------------------------
 
 """
@@ -586,26 +576,58 @@ def main_async():
 
 
 # -------------------------------------------------------------------------------------------
+# Data Science, Machine Learning, Deep Learning, AI
+#
+# Anaconda, IPython, Jupyter Notebook, Google Colab
+# -------------------------------------------------------------------------------------------
 
 """
-# Data Science, 
-# Maschine Learning, Deep Learning, Datamining, 
-# AI, LLM, Diffusion:
+Data Science
+Maschine Learning, Deep Learning, Datamining
+Generative AI, LLM, Diffusion Models
 
-# Anaconda (conda)
-# IPython/ Jupyter Notebook (IPython --pylab)
+Anaconda (conda)
+https://www.anaconda.com/
+https://anaconda.com/app/code-in-the-cloud
+https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html
+https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf
 
-# Numpy, SciPy, Pandas
+Jupyter Notebook (IPython --pylab)
+https://jupyter.org/
 
-# Scikit-learn (sklearn), Theano, Keras, Tensorflow (Google)
+Google Colab (Colaboratory)
+https://colab.research.google.com/
 
-# Matplotlib
+# -------------------------
 
-# Bokeh (interactive graphics)
-# https://bokeh.pydata.org/en/latest/
+Libraries:
+Numpy, SciPy, Pandas
 
-# NLTK (Natural Languages Toolkit)
-# http://www.nltk.org/
+Scikit-learn (sklearn)
+
+Matplotlib
+
+Bokeh (interactive graphics)
+https://bokeh.pydata.org/en/latest/
+
+NLTK (Natural Languages Toolkit)
+http://www.nltk.org/
+
+Keras
+Theano
+Tensorflow (Google)
+PyTorch (Facebook)
+Transformers (Hugging Face)
+
+# -------------------------
+
+Numba
+https://numba.pydata.org/
+https://numba.readthedocs.io/en/stable/cuda/index.html
+
+Taichi
+https://www.taichi-lang.org/ 
+
 """
 
 import numpy as np
@@ -619,8 +641,36 @@ import taichi as ti
 
 
 # -------------------------------------------------------------------------------------------
+# Image Processing, Computer Vision
+# -------------------------------------------------------------------------------------------
 
+"""
+Image Processing
+
+PIL (Python Imaging Library) for Python 2
+Pillow (PIL fork) for Python 3
+https://pillow.readthedocs.io/en/stable/
+
+OpenCV
+https://opencv.org/get-started/
+
+SimpleCV
+https://simplecv.org/
+
+skimage (scikit-image)
+
+PyTorch (torchvision)
 """ 
+
+from PIL import Image
+import cv2 as cv
+
+
+# -------------------------------------------------------------------------------------------
+# Regular Expressions (RegEx)
+# -------------------------------------------------------------------------------------------
+
+"""
 Regular Expressions (RegEx)
 https://docs.python.org/3/library/re.html
 

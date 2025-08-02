@@ -452,6 +452,18 @@ import datetime
 import random
 import math
 
+def deltatime(f):
+    """ deltatime Decorator for Profiling """
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = f(*args, **kwargs)  # execute wrapped function
+        stop_time = time.time()
+        elapsed_time = stop_time - start_time
+        print(f"delta_time (dt) = {elapsed_time}")
+        return result
+    return wrapper
+
+
 # -------------------------
 
 """
@@ -538,23 +550,17 @@ https://www.taichi-lang.org/
 import threading
 from threading import Thread
 
+def threaded() -> None:
+    #with ThreadPool() as pool:
+        #results = pool.imap
+    pass
+
 # -------------------------
 
 from multiprocessing import Pool, Process, Queue
 
-def timer(f):
-    """ Decorator """
-    def wrapper(*args, **kwargs):
-        start_time = time.time()
-        result = f(*args, **kwargs)  # execute wrapped function
-        stop_time = time.time()
-        elapsed_time = stop_time - start_time
-        print(f"delta_time (dt) = {elapsed_time}")
-        return result
-    return wrapper
-
-@timer
-def multithreaded():
+@deltatime
+def multiprocessed() -> None:
     with Pool() as pool:
         results = pool.imap()
 
@@ -719,7 +725,7 @@ def test_skimage():
 # Regular Expressions (RegEx)
 # -------------------------------------------------------------------------------------------
 
-"""
+r"""
 Regular Expressions (RegEx)
 https://docs.python.org/3/library/re.html
 
@@ -852,26 +858,32 @@ def queryDatabase():
 Web, Network, WebScraping
 
 
-Requests
+Requests (HTTP-Library)
+https://requests.readthedocs.io/en/latest/
 import requests
 
-httpx
+httpx (HTTP-Client)
+https://www.python-httpx.org/
 
-Scrapy
+Scrapy (Web Scraper, Spider)
 https://scrapy.org/
 https://github.com/scrapy/scrapy
 
-Beutiful Soup (bs4)
+Beautiful Soup (Parsing HTML, XML)
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 from bs4 import BeautifulSoup
 
 Flask (Web Framework)
+https://flask.palletsprojects.com/en/stable/
 
-FastAPI
+FastAPI (Web Framework for building APIs)
+https://fastapi.tiangolo.com/
 
-Tornado (Webserver)
+Tornado (Webserver, Web Framework)
+https://www.tornadoweb.org/en/stable/
 
-Network:
-Twisted
+Twisted (Network)
+https://twisted.org/
 
 # -----------------------
 
@@ -947,13 +959,6 @@ class DBManager(object):
         pass
 
 
-class ML(object):
-    """ Machine Learning
-    """
-    def __init__(self):
-        pass
-
-
 class Environment(object):
     """ TODO: Interact with the Linux Terminal Bash Shell Console
     """
@@ -965,8 +970,10 @@ class Environment(object):
         webbrowser.open(url)
 
     def runProgram(self, prog):
-        os.system(prog)
+        # don't use os
+        #os.system(prog)
         #os.popen(prog)
+        pass
 
 
 # -------------------------------------------------------------------------------------------
@@ -1049,7 +1056,7 @@ def createCanvasWithPygame():
     # RESSOURCES
 
     # load images
-    img = pygame.image.load('res/gfx/cat.png')
+    img = pygame.image.load('../../res/gfx/cat.png')
     #if img.get_size() != (IMAGESIZE, IMAGESIZE):
     #    img = pygame.transform.smoothscale(img, (IMAGESIZE, IMAGESIZE))
 
@@ -1437,7 +1444,7 @@ class MyQMainWindow(QMainWindow):
         # init GUI
         # Window (QMainWindow, QWidget)
         self.setWindowTitle("A Simple Text Editor")
-        self.setWindowIcon(QIcon('res/img/appicon.png'))
+        self.setWindowIcon(QIcon('../../res/img/appicon.png'))
         self.setGeometry(100, 100, 800, 600)
         self.setMinimumHeight(200)
         self.setMinimumWidth(280)
@@ -1454,17 +1461,17 @@ class MyQMainWindow(QMainWindow):
         # -----------------------------------------
 
         # Actions (trigger Functions)
-        self.newAction = QAction(QIcon('res/img/new.png'), '&New', self, shortcut=QKeySequence.New, statusTip="Create a New File", triggered=self.newFile)
-        self.openAction = QAction(QIcon('res/img/open.png'), 'O&pen', self, shortcut=QKeySequence.Open, statusTip="Open an existing file", triggered=self.openFile)
-        self.saveAction = QAction(QIcon('res/img/save.png'), '&Save', self, shortcut=QKeySequence.Save, statusTip="Save the current file to disk", triggered=self.saveFile)
-        self.exitAction = QAction(QIcon('res/img/exit.png'), 'E&xit', self, shortcut="Ctrl+Q", statusTip="Exit the Application", triggered=self.exitFile)
-        self.cutAction = QAction(QIcon('res/img/cut.png'), 'C&ut', self, shortcut=QKeySequence.Cut, statusTip="Cut the current selection to clipboard", triggered=self.textEdit.cut)
-        self.copyAction = QAction(QIcon('res/img/copy.png'), 'C&opy', self, shortcut=QKeySequence.Copy, statusTip="Copy the current selection to clipboard", triggered=self.textEdit.copy)
-        self.pasteAction = QAction(QIcon('res/img/paste.png'), '&Paste', self, shortcut=QKeySequence.Paste, statusTip="Paste the clipboard's content in current location", triggered=self.textEdit.paste)
-        self.selectAllAction = QAction(QIcon('res/img/selectAll.png'), 'Select All', self, statusTip="Select All", triggered=self.textEdit.selectAll)
-        self.redoAction = QAction(QIcon('res/img/redo.png'), 'Redo', self, shortcut=QKeySequence.Redo, statusTip="Redo previous action", triggered=self.textEdit.redo)
-        self.undoAction = QAction(QIcon('res/img/undo.png'), 'Undo', self, shortcut=QKeySequence.Undo, statusTip="Undo previous action", triggered=self.textEdit.undo)
-        self.aboutAction = QAction(QIcon('res/img/about.png'), 'A&bout', self, statusTip="Displays info about text editor", triggered=self.aboutHelp)
+        self.newAction = QAction(QIcon('../../res/img/new.png'), '&New', self, shortcut=QKeySequence.New, statusTip="Create a New File", triggered=self.newFile)
+        self.openAction = QAction(QIcon('../../res/img/open.png'), 'O&pen', self, shortcut=QKeySequence.Open, statusTip="Open an existing file", triggered=self.openFile)
+        self.saveAction = QAction(QIcon('../../res/img/save.png'), '&Save', self, shortcut=QKeySequence.Save, statusTip="Save the current file to disk", triggered=self.saveFile)
+        self.exitAction = QAction(QIcon('../../res/img/exit.png'), 'E&xit', self, shortcut="Ctrl+Q", statusTip="Exit the Application", triggered=self.exitFile)
+        self.cutAction = QAction(QIcon('../../res/img/cut.png'), 'C&ut', self, shortcut=QKeySequence.Cut, statusTip="Cut the current selection to clipboard", triggered=self.textEdit.cut)
+        self.copyAction = QAction(QIcon('../../res/img/copy.png'), 'C&opy', self, shortcut=QKeySequence.Copy, statusTip="Copy the current selection to clipboard", triggered=self.textEdit.copy)
+        self.pasteAction = QAction(QIcon('../../res/img/paste.png'), '&Paste', self, shortcut=QKeySequence.Paste, statusTip="Paste the clipboard's content in current location", triggered=self.textEdit.paste)
+        self.selectAllAction = QAction(QIcon('../../res/img/selectAll.png'), 'Select All', self, statusTip="Select All", triggered=self.textEdit.selectAll)
+        self.redoAction = QAction(QIcon('../../res/img/redo.png'), 'Redo', self, shortcut=QKeySequence.Redo, statusTip="Redo previous action", triggered=self.textEdit.redo)
+        self.undoAction = QAction(QIcon('../../res/img/undo.png'), 'Undo', self, shortcut=QKeySequence.Undo, statusTip="Undo previous action", triggered=self.textEdit.undo)
+        self.aboutAction = QAction(QIcon('../../res/img/about.png'), 'A&bout', self, statusTip="Displays info about text editor", triggered=self.aboutHelp)
 
         # -----------------------------------------
 
@@ -1578,6 +1585,7 @@ https://github.com/kivy/kivent
 https://github.com/chozabu/KivEntEd
 https://chipmunk-physics.net/forum/viewtopic.php?t=3757
 """
+"""
 from kivy.app import App
 from kivy.lang import Builder
 # UI Widgets
@@ -1670,6 +1678,7 @@ def createGuiKivy():
     #app = KivyApp()  # instance
     app = KivyApp2()  # instance
     app.run()
+"""
 
 
 # -------------------------------------------------------------------------------------------
@@ -1691,6 +1700,10 @@ https://rich.readthedocs.io/
 
 Typer (from FastAPI)
 https://typer.tiangolo.com/
+
+TerminalTextEffects (TTE)
+https://chrisbuilds.github.io/terminaltexteffects/
+https://chrisbuilds.github.io/terminaltexteffects/showroom/
 
 @see ASCII-Art
 """
@@ -1719,13 +1732,14 @@ class TuiApp(App):
 def tui():
     """ Text User Interface
     """
-    effectTTE("Mads, heute geht es um 21:00 Uhr in deiner Zeitzone ins Bett!\nUnd vorher Zähne putzen nicht vergessen!")
 
     app = TuiApp()
     app.run()  # run the TUI Application
 
 
 # -----------------------------------------
+
+"""
 # Rich
 # https://rich.readthedocs.io/
 # https://youtu.be/NIyljVEcJKw?si=1FuFSmqwHEJk71v7 (Tutorial)
@@ -1750,111 +1764,44 @@ def tui():
 # from rich.traceback import install
 # install(show_locals=True)
 # console.log("This is a log message with [bold]bold[/bold] text and [italic]italic[/italic] text.", style="info")
+"""
 
+# -------------------------------------------------------------------------------------------
+# ASCII-Art
+#
+# Leetspeak
+# https://de.wikipedia.org/wiki/Leetspeak
+# http://www.1337.me/
+# -------------------------------------------------------------------------------------------
 
-# -----------------------------------------
-# Typer
-# (from FastAPI)
-# https://typer.tiangolo.com/
-
-
-# -----------------------------------------
-# TerminalTextEffects (TTE)
-# https://chrisbuilds.github.io/terminaltexteffects/
-# https://chrisbuilds.github.io/terminaltexteffects/showroom/
+""" 
+TerminalTextEffects (TTE)
+https://chrisbuilds.github.io/terminaltexteffects/
+https://chrisbuilds.github.io/terminaltexteffects/showroom/
+"""
 
 from terminaltexteffects.effects.effect_blackhole import Blackhole
 
-def effectTTE(text):
-    """ Termial Text Effects"""
+def tte_effect(text):
+    """ Terminal Text Effects """
     effect = Blackhole(text)
     with effect.terminal_output() as terminal:
         for frame in effect:
             terminal.print(frame)
 
 
-# -------------------------------------------------------------------------------------------
+# -----------------------------------------
 
 """
-CUI
-Commandline User Interface
+FIGlet
+https://pypi.python.org/pypi/pyfiglet
+https://github.com/pwaller/pyfiglet
+http://www.figlet.org/
 
-CLI
-Commandline Interface
-https://en.wikipedia.org/wiki/Command-line_interface
-
-
-# Terminal (VT100 Emulation):
-# https://de.wikipedia.org/wiki/ANSI-Escapesequenz
-# https://de.wikipedia.org/wiki/Terminalemulation
-"""
-
-"""
-# Colorama
-# https://pypi.python.org/pypi/colorama
-#from colorama import init as coloramainit
-#from colorama import Fore, Back, Style
-#
-# Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
-# Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
-# Style: DIM, NORMAL, BRIGHT, RESET_ALL
-#
-# FOREGROUND:
-# ESC [ 30 m      # black
-# ESC [ 31 m      # red
-# ESC [ 32 m      # green
-# ESC [ 33 m      # yellow
-# ESC [ 34 m      # blue
-# ESC [ 35 m      # magenta
-# ESC [ 36 m      # cyan
-# ESC [ 37 m      # white
-# ESC [ 39 m      # reset
-#
-# BACKGROUND:
-# ESC [ 40 m      # black
-# ...
-# MULTIPLE PARAMS:
-# ESC [ 36 ; 45 ; 1 m
-#
-# Examples:
-# init()
-# print('\033[31m' + 'some red text')
-# print('\033[39m') # reset to default color
-# print(Fore.RED + 'some red text' + Fore.RESET)
-# print(Style.RESET_ALL) # back to normal
-"""
-
-"""
-# Termcolor
-# https://pypi.python.org/pypi/termcolor
-#
-# Text colors: grey, red, green, yellow, blue, magenta, cyan, white
-# Text highlights: on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white
-# Attributes: bold, dark, underline, blink, reverse, concealed
-#
-# Examples:
-# print(colored('Hello, World!', 'red', attrs=['reverse', 'blink']))
-# cprint('Hello, World!', 'green', 'on_red')
-"""
-from termcolor import colored, cprint
-
-"""
-# ASCII-Art:
-# Leetspeak
-# https://de.wikipedia.org/wiki/Leetspeak
-# http://www.1337.me/
-"""
-
-"""
-# FIGlet
-# https://pypi.python.org/pypi/pyfiglet
-# https://github.com/pwaller/pyfiglet
-# http://www.figlet.org/
-# fonts: lean, mini, banner
-# favorite fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
+fonts: lean, mini, banner
+favorite fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
 """
 from pyfiglet import Figlet
-
 
 def banner():
     #print "\n********************************"
@@ -1866,11 +1813,102 @@ def banner():
     print(f.renderText('Totman'))
     print('\033[39m')
 
-    # termcolor
-    #cprint('[  *  ] Hello World!', 'red')
-    #print('[  ' + colored('*', 'red') + '  ] Hello termcolor')  # use termcolor function colored()
-    #print('[  \033[31m*\033[39m  ] Hello VT100')                # use CSI Escape Sequence directly
+    #tte_effect(f.renderText('Totman'))
 
+
+# -------------------------------------------------------------------------------------------
+# CUI
+# -------------------------------------------------------------------------------------------
+
+r"""
+CUI (Commandline User Interface)
+
+CLI (Commandline Interface)
+https://en.wikipedia.org/wiki/Command-line_interface
+
+Terminal (VT100 Emulation)
+https://de.wikipedia.org/wiki/ANSI-Escapesequenz
+https://de.wikipedia.org/wiki/Terminalemulation
+
+@see TUI (Text User Interface)
+
+# -----------------------------------------
+# (Colored) Text Output
+# -----------------------------------------
+
+printf()-like output
+http://www.python-kurs.eu/python3_formatierte_ausgabe.php
+print("You typed ", c)
+print("You typed %s" % (c))
+print("You typed {}".format(c))
+
+f-srings (@since Python 3.6):
+https://docs.python.org/3/reference/lexical_analysis.html#f-strings
+print(f"You typed {c}")
+
+# -----------------------------------------
+
+# use CSI Escape Sequence directly
+print('[  \033[31m*\033[39m  ] Hello VT100')
+
+# -----------------------------------------
+
+Termcolor
+https://pypi.python.org/pypi/termcolor
+
+Text colors: grey, red, green, yellow, blue, magenta, cyan, white
+Text highlights: on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white
+Attributes: bold, dark, underline, blink, reverse, concealed
+
+Examples:
+from termcolor import colored, cprint
+print(colored('Hello, World!', 'red', attrs=['reverse', 'blink']))
+cprint('Hello, World!', 'green', 'on_red')
+cprint('[  *  ] Hello World!', 'red')
+
+# -----------------------------------------
+
+Colorama
+https://pypi.python.org/pypi/colorama
+from colorama import init as coloramainit
+from colorama import Fore, Back, Style
+
+Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+Style: DIM, NORMAL, BRIGHT, RESET_ALL
+
+FOREGROUND:
+ESC [ 30 m      # black
+ESC [ 31 m      # red
+ESC [ 32 m      # green
+ESC [ 33 m      # yellow
+ESC [ 34 m      # blue
+ESC [ 35 m      # magenta
+ESC [ 36 m      # cyan
+ESC [ 37 m      # white
+ESC [ 39 m      # reset
+
+BACKGROUND:
+ESC [ 40 m      # black
+...
+MULTIPLE PARAMS:
+ESC [ 36 ; 45 ; 1 m
+
+Examples:
+init()
+print('\033[31m' + 'some red text')
+print('\033[39m') # reset to default color
+print(Fore.RED + 'some red text' + Fore.RESET)
+print(Style.RESET_ALL) # back to normal
+
+# -----------------------------------------
+
+Rich
+https://rich.readthedocs.io/
+https://youtu.be/NIyljVEcJKw?si=1FuFSmqwHEJk71v7 (Tutorial)
+
+@see TUI
+"""
 
 def usage():
     """ Print commandline usage
@@ -1887,19 +1925,6 @@ def cui():
     """ Commandline User Interface
     """
 
-    """
-    printf()-like output:
-    http://www.python-kurs.eu/python3_formatierte_ausgabe.php
-
-    print("You typed", c)
-    print("You typed %s" % (c))
-    print("You typed {}".format(c))
-    print(f"You typed {c}")
-    
-    f-srings (@since Python 3.6):
-    https://docs.python.org/3/reference/lexical_analysis.html#f-strings
-    """
-
     banner()
 
     #usage()
@@ -1907,9 +1932,9 @@ def cui():
     # CUI
     print("Type '1' for Tk-GUI")
     print("Type '2' for Qt-GUI Editor")
-    print("Type '3' for Kivy App")
+    #print("Type '3' for Kivy App")        # TODO wxPython GUI
     print("Type '4' for Pygame OpenGL Canvas")
-    print("Type '5' for Qt-GUI Simple")
+    #print("Type '5' for Qt-GUI Simple")
     print("Type '6' for TUI (Text / Terminal User Interface)")
     print("Type '7' for PIL Test")
     print("Type '8' for OpenCV Test")
@@ -1925,11 +1950,13 @@ def cui():
         elif '2' in c:
             createGuiQtTextEditor()
         elif '3' in c:
-            createGuiKivy()
+            #createGuiKivy()
+            pass
         elif '4' in c:
             createCanvasWithPygame()
         elif '5' in c:
-            createGuiQtSimple()
+            #createGuiQtSimple()
+            pass
         elif '6' in c:
             tui()
         elif '7' in c:
@@ -1938,6 +1965,8 @@ def cui():
             test_cv()
         elif '9' in c:
             test_skimage()
+        elif "55" in c:  # does not work
+            createGuiQtSimple()
         elif '0' in c:
             sys.exit(0)
         else:
@@ -1987,7 +2016,14 @@ if __name__ == "__main__":
         except ValueError:
             usage()
 
-        # ---------------------------------------------------
+        # -----------------------------------------
+
+        # argparse
+        parser = argparse.ArgumentParser(description='WebScraper url')
+        parser.add_argument('--url', action="store", dest="url", required=True)
+        args = parser.parse_args()
+
+        # -----------------------------------------
 
         # optargs (C-Style)
         try:
@@ -2006,21 +2042,23 @@ if __name__ == "__main__":
             elif opt == '-c':
                 hidecode = arg
 
-        # ---------------------------------------------------
-
-        # argparse
-        parser = argparse.ArgumentParser(description='WebScraper url')
-        parser.add_argument('--url', action="store", dest="url", required=True)
-        args = parser.parse_args()
-
         """
+
+        # -----------------------------------------
 
         # start application
         DEBUG = 1
-        # logging TODO
-        timestart = time.time() #time.clock()
+        # profiling
+        time_start = time.time()
+        # logging
+        logger.info("main() started")
 
         main(args)
 
+        logger.info(f"main() ended\nelapsed time: {time.time() - time_start}")
+
     except KeyboardInterrupt:
+        # Ctrl + D          on Linux
+        # Ctrl + Z + Return on Windows (?)
+
         print(sys.argv[0] + "interrupted by user, killing all threads!")

@@ -452,7 +452,17 @@ import datetime
 import random
 import math
 
-def deltatime(f):
+
+"""
+Decorators (implemented with Descriptors)
+https://docs.python.org/3/howto/descriptor.html
+https://docs.python.org/3/glossary.html#term-decorator
+https://wiki.python.org/moin/Decorators
+@property, @classmethod, @staticmethod, @abstractmethod, @dataclass, @cache, @lru_cache
+https://docs.python.org/3/library/functions.html#property
+https://docs.python.org/3/library/functions.html#classmethod
+"""
+def delta_time(f):
     """ deltatime Decorator for Profiling """
     def wrapper(*args, **kwargs):
         start_time = time.time()
@@ -467,9 +477,10 @@ def deltatime(f):
 # -------------------------
 
 """
-# Logging:
-# https://docs.python.org/2/howto/logging.html
-# https://docs.python.org/2/library/logging.html
+Logging:
+https://docs.python.org/3/howto/logging.html
+https://docs.python.org/3/howto/logging-cookbook.html
+https://docs.python.org/3/library/logging.html
 """
 import logging
 logger = logging.getLogger("template")

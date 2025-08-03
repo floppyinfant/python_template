@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="test function calls to CUI">
+    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="changed order of topics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/template/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +188,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -332,7 +333,8 @@
       <workItem from="1754063707105" duration="9604000" />
       <workItem from="1754083987567" duration="4348000" />
       <workItem from="1754113337744" duration="1318000" />
-      <workItem from="1754140937912" duration="9262000" />
+      <workItem from="1754140937912" duration="12536000" />
+      <workItem from="1754214691578" duration="1918000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -386,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754088496887</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changed order of topics">
+      <option name="closed" value="true" />
+      <created>1754165532160</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1754165532160</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -450,7 +460,8 @@
     <MESSAGE value="more comments, refactored" />
     <MESSAGE value="cv snippets" />
     <MESSAGE value="test function calls to CUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="test function calls to CUI" />
+    <MESSAGE value="changed order of topics" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed order of topics" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_template$app.coverage" NAME="app Coverage Results" MODIFIED="1754113350211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

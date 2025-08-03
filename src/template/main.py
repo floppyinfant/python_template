@@ -1692,20 +1692,41 @@ TUI
 Text User Interface, Terminal User Interface
 @see oterm, ollmcp for ollama (as examples for modern TUI)
 
+
 Textual (based on Textualize Rich)
 https://textual.textualize.io/
 
+# -----------------------------------------
+
 Rich
 https://rich.readthedocs.io/
+https://youtu.be/NIyljVEcJKw?si=1FuFSmqwHEJk71v7 (Tutorial)
+
+# test Rich in the Terminal:
+python -m rich
+
+# pretty print
+from rich import print as rprint
+
+# rich for iPython and Jupyter Notebooks
+from rich import pretty
+pretty.install()
+
+from rich import inspect
+inspect(object)
+
+# Console class and Logging
+from rich.console import Console
+console = Console()
+console.print("Hello, [bold magenta]World[/bold magenta]!", justify="center")
+from rich.traceback import install
+install(show_locals=True)
+console.log("This is a log message with [bold]bold[/bold] text and [italic]italic[/italic] text.", style="info")
+
+# -----------------------------------------
 
 Typer (from FastAPI)
 https://typer.tiangolo.com/
-
-TerminalTextEffects (TTE)
-https://chrisbuilds.github.io/terminaltexteffects/
-https://chrisbuilds.github.io/terminaltexteffects/showroom/
-
-@see ASCII-Art
 """
 
 # Textual / Textualize Rich TUI Application
@@ -1737,35 +1758,6 @@ def tui():
     app.run()  # run the TUI Application
 
 
-# -----------------------------------------
-
-"""
-# Rich
-# https://rich.readthedocs.io/
-# https://youtu.be/NIyljVEcJKw?si=1FuFSmqwHEJk71v7 (Tutorial)
-
-# test Rich in the Terminal:
-# python -m rich
-
-# pretty print
-# from rich import print as rprint
-
-# rich for iPython and Jupyter Notebooks
-# from rich import pretty
-# pretty.install()
-
-# from rich import inspect
-# inspect(object)
-
-# Console class and Logging
-# from rich.console import Console
-# console = Console()
-# console.print("Hello, [bold magenta]World[/bold magenta]!", justify="center")
-# from rich.traceback import install
-# install(show_locals=True)
-# console.log("This is a log message with [bold]bold[/bold] text and [italic]italic[/italic] text.", style="info")
-"""
-
 # -------------------------------------------------------------------------------------------
 # ASCII-Art
 #
@@ -1773,24 +1765,6 @@ def tui():
 # https://de.wikipedia.org/wiki/Leetspeak
 # http://www.1337.me/
 # -------------------------------------------------------------------------------------------
-
-""" 
-TerminalTextEffects (TTE)
-https://chrisbuilds.github.io/terminaltexteffects/
-https://chrisbuilds.github.io/terminaltexteffects/showroom/
-"""
-
-from terminaltexteffects.effects.effect_blackhole import Blackhole
-
-def tte_effect(text):
-    """ Terminal Text Effects """
-    effect = Blackhole(text)
-    with effect.terminal_output() as terminal:
-        for frame in effect:
-            terminal.print(frame)
-
-
-# -----------------------------------------
 
 """
 FIGlet
@@ -1816,6 +1790,24 @@ def banner():
     #tte_effect(f.renderText('Totman'))
 
 
+# -----------------------------------------
+
+""" 
+TerminalTextEffects (TTE)
+https://chrisbuilds.github.io/terminaltexteffects/
+https://chrisbuilds.github.io/terminaltexteffects/showroom/
+"""
+
+from terminaltexteffects.effects.effect_blackhole import Blackhole
+
+def tte_effect(text):
+    """ Terminal Text Effects """
+    effect = Blackhole(text)
+    with effect.terminal_output() as terminal:
+        for frame in effect:
+            terminal.print(frame)
+
+
 # -------------------------------------------------------------------------------------------
 # CUI
 # -------------------------------------------------------------------------------------------
@@ -1833,7 +1825,7 @@ https://de.wikipedia.org/wiki/Terminalemulation
 @see TUI (Text User Interface)
 
 # -----------------------------------------
-# (Colored) Text Output
+# String Formatting
 # -----------------------------------------
 
 printf()-like output
@@ -1847,9 +1839,14 @@ https://docs.python.org/3/reference/lexical_analysis.html#f-strings
 print(f"You typed {c}")
 
 # -----------------------------------------
+# (Colored) Text Output
+# -----------------------------------------
 
 # use CSI Escape Sequence directly
 print('[  \033[31m*\033[39m  ] Hello VT100')
+
+print('\033[31m' + 'some red text')
+print('\033[39m')  # reset to default color
 
 # -----------------------------------------
 
@@ -1896,8 +1893,6 @@ ESC [ 36 ; 45 ; 1 m
 
 Examples:
 init()
-print('\033[31m' + 'some red text')
-print('\033[39m') # reset to default color
 print(Fore.RED + 'some red text' + Fore.RESET)
 print(Style.RESET_ALL) # back to normal
 
@@ -1905,8 +1900,6 @@ print(Style.RESET_ALL) # back to normal
 
 Rich
 https://rich.readthedocs.io/
-https://youtu.be/NIyljVEcJKw?si=1FuFSmqwHEJk71v7 (Tutorial)
-
 @see TUI
 """
 

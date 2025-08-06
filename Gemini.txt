@@ -1,0 +1,11 @@
+https://developers.google.com/gemini-code-assist/docs/overview?hl=de
+https://github.com/google-gemini/gemini-cli
+
+https://gemini.google.com/app
+https://ai.google.dev/
+https://aistudio.google.com/prompts/new_chat
+
+https://ai.google.dev/gemini-api/docs?hl=de
+https://ai.google.dev/gemini-api/docs/pricing?hl=de
+
+

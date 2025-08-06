@@ -22,15 +22,19 @@ arcade
 Pillow
 opencv-python
 # Data Science and HPC
+numba
 numpy
 pandas
 scipy
 matplotlib
 bokeh
-numba
 taichi
 scikit-learn
 # Deployment, Environment
 pyinstaller
 pynsist
 python-dotenv
+# 
+mcp[cli]
+ollama
+#google

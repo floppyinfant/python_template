@@ -437,10 +437,14 @@ import os.path
 os.environ['PYTHONIOENCODING'] = 'utf-8'  # set encoding for stdout and stderr
 os.getenv('PYTHONIOENCODING', 'utf-8')  # get encoding for stdout and stderr
 
-# environment variables from .env file
+# Environment variables from .env file
 from dotenv import load_dotenv, dotenv_values
+# 1. alternative:
 #load_dotenv()                  # Load environment variables from .env file
+#os.getenv('API_KEY')           # get environment variables with os.getenv()
+# 2. alternative:
 config = dotenv_values(".env")  # Load environment variables into a dictionary
+
 
 # -------------------------
 
@@ -454,13 +458,13 @@ import math
 
 
 """
-Decorators (implemented with Descriptors)
-https://docs.python.org/3/howto/descriptor.html
+Decorator
 https://docs.python.org/3/glossary.html#term-decorator
 https://wiki.python.org/moin/Decorators
 @property, @classmethod, @staticmethod, @abstractmethod, @dataclass, @cache, @lru_cache
 https://docs.python.org/3/library/functions.html#property
 https://docs.python.org/3/library/functions.html#classmethod
+https://docs.python.org/3/howto/descriptor.html
 """
 def delta_time(f):
     """ deltatime Decorator for Profiling """
@@ -483,8 +487,26 @@ https://docs.python.org/3/howto/logging-cookbook.html
 https://docs.python.org/3/library/logging.html
 """
 import logging
-logger = logging.getLogger("template")
+from rich.logging import RichHandler
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='_log.log', encoding='utf-8', level=logging.DEBUG)
+# create console handler and set level to debug
+#ch = logging.StreamHandler()
+#ch.setLevel(logging.DEBUG)
+#formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s \t: %(message)s')
+#ch.setFormatter(formatter)
+#logger.addHandler(ch)
+logger.addHandler(RichHandler())
+# log levels
+logger.debug('Hello debug')
+logger.info('Hello info')
+logger.warning('Hello warning')
+logger.error('Hello error')
+logger.critical('Hello critical | fatal')
+
+
+# -------------------------
 
 """
 # Software Engineering, TDD:
@@ -527,12 +549,20 @@ https://docs.python.org/3/library/concurrency.html
 GIL (global interpreter lock)
 https://docs.python.org/3/whatsnew/3.13.html#free-threaded-cpython
 
+
 Modules:
 threading
+(CAVE: GIL)
+
 multiprocess
-  subprocess
+
 asyncio (async/await, Coroutines)
 https://docs.python.org/3/library/asyncio.html
+
+
+# -------------------------
+
+Libraries:
 
 asynchronous IO (Twisted)
 
@@ -570,7 +600,7 @@ def threaded() -> None:
 
 from multiprocessing import Pool, Process, Queue
 
-@deltatime
+@delta_time
 def multiprocessed() -> None:
     with Pool() as pool:
         results = pool.imap()
@@ -590,6 +620,38 @@ async def start_coroutine():
 
 def main_async():
     asyncio.run(start_coroutine())
+
+
+# -------------------------------------------------------------------------------------------
+
+"""
+Cython
+https://cython.org/
+"""
+
+#import cython
+
+
+# -------------------------
+
+"""
+Numba 
+https://numba.pydata.org/
+https://numba.readthedocs.io/en/stable/user/index.html
+https://numba.readthedocs.io/en/stable/cuda/index.html
+uses LLVM IR 
+"""
+
+import numba
+
+@numba.jit(nopython=True)
+def test_numba():
+    pass
+
+
+# -------------------------
+
+#import taichi as ti
 
 
 # -------------------------------------------------------------------------------------------
@@ -647,14 +709,11 @@ https://www.taichi-lang.org/
 
 """
 
-import numpy as np
-import scipy as sp
-import pandas as pd
-import matplotlib.pyplot as plt
-import bokeh.plotting as bp
-
-import numba
-import taichi as ti
+#import numpy as np
+#import scipy as sp
+#import pandas as pd
+#import matplotlib.pyplot as plt
+#import bokeh.plotting as bp
 
 
 # -------------------------------------------------------------------------------------------
@@ -712,7 +771,7 @@ def test_cv():
 # -------------------------
 
 import skimage as ski
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 def test_skimage():
     # Load an image

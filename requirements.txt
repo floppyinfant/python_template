@@ -37,4 +37,5 @@ python-dotenv
 # 
 mcp[cli]
 ollama
+langchain[llms]
 #google

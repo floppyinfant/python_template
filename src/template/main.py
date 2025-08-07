@@ -678,8 +678,8 @@ Google Colab (Colaboratory)
 https://colab.research.google.com/
 
 # -------------------------
+# Libraries for DataScience, Machine Learning 
 
-Libraries:
 Numpy, SciPy, Pandas
 
 Scikit-learn (sklearn)
@@ -692,20 +692,31 @@ https://bokeh.pydata.org/en/latest/
 NLTK (Natural Languages Toolkit)
 http://www.nltk.org/
 
+# -------------------------
+# Libraries for Deeplearning: LLM, Diffusion Models
+
+Tensorflow (Google)
 Keras
 Theano
-Tensorflow (Google)
+
 PyTorch (Facebook)
+JAX
 Transformers (Hugging Face)
+
+# Fine Tuning, LoRAs, VAE (?)
+unsloth
+
+# others, MCP Agents
+langChain, langGraph
+Ollama SDK
+MCP SDK
 
 # -------------------------
 
-Numba
-https://numba.pydata.org/
-https://numba.readthedocs.io/en/stable/cuda/index.html
-
-Taichi
-https://www.taichi-lang.org/ 
+README, Tutorials, Cheat Sheets
+https://www.datacamp.com/cheat-sheet/category/python
+https://sebastianraschka.com/blog/2014/matrix_cheatsheet_table.html (Matrix in different languages)
+https://hyperpolyglot.org/numerical-analysis (in different languages)
 
 """
 
@@ -714,6 +725,13 @@ https://www.taichi-lang.org/
 #import pandas as pd
 #import matplotlib.pyplot as plt
 #import bokeh.plotting as bp
+
+#import torch
+#from transformers import pipeline
+
+#import jax
+#import jax.numpy as jnp
+#from jax import jit
 
 
 # -------------------------------------------------------------------------------------------

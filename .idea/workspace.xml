@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="comments">
+      <change afterPath="$PROJECT_DIR$/docs/Markdown.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/conda.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/pip.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/uv.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/venv.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/template/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/main.py" afterDir="false" />
     </list>
@@ -338,7 +343,8 @@
       <workItem from="1754214691578" duration="2898000" />
       <workItem from="1754310226586" duration="1764000" />
       <workItem from="1754497684769" duration="1870000" />
-      <workItem from="1754598037428" duration="754000" />
+      <workItem from="1754598037428" duration="1206000" />
+      <workItem from="1754682256164" duration="5565000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -408,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754216713570</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="comments">
+      <option name="closed" value="true" />
+      <created>1754598895351</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754598895351</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">

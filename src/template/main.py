@@ -48,6 +48,7 @@ https://git-scm.com/downloads
 https://atom.io/#github (Atom Editor has Git and Github integration)
 
 # GitHub
+# git
 
 # create repository online without any files
 # (if you created files (e.g. .gitignore, README.md) do git pull (merge) before git push)
@@ -75,188 +76,205 @@ git pull origin master
 # -------------------------------------------------------------------------------------------
 
 """
-### Python Distributions:
-#
-## Python.org
-# https://www.python.org/
-## Anaconda
-# https://www.anaconda.com/what-is-anaconda/
-## Enthought
-# https://www.enthought.com/product/enthought-python-distribution/
-## ActivePython
-# https://www.activestate.com/activepython
+Python Distributions
+
+Python.org
+https://www.python.org/
+
+Anaconda
+https://www.anaconda.com/what-is-anaconda/
+
+# -------------------------
+
+Enthought
+https://www.enthought.com/product/enthought-python-distribution/
+
+ActivePython
+https://www.activestate.com/activepython
 """
 
 # -------------------------------------------------------------------------------------------
 
 """
-### Virtual Environments:
-# https://conda.io/docs/commands.html#conda-vs-pip-vs-virtualenv-commands
+Virtual Environments:
+https://conda.io/docs/commands.html#conda-vs-pip-vs-virtualenv-commands
 
-## venv
-# https://docs.python.org/3/library/venv.html
+venv
+https://docs.python.org/3/library/venv.html
+
+python -m venv .venv
+source .venv/bin/activate  #Linux
+.venv/Scripts/activate     #Windows
+
+# -------------------------
+
+virtualenv
+https://virtualenv.pypa.io/en/stable/
+
+# list environments
+lsvirtualenv
+cd $ENV_BASE_DIR; virtualenv $ENVIRONMENT_NAME
+source $ENV_BASE_DIR/$ENVIRONMENT_NAME/bin/activate
+deactivate
+
+# -------------------------
+
+conda
+https://conda.io/docs/commands.html#conda-vs-pip-vs-virtualenv-commands
+
+# list all environments
+conda info --envs
+
+conda create --name $ENVIRONMENT_NAME python
+source activate $ENVIRONMENT_NAME
+source deactivate
+
+# -------------------------
+
+uv
+https://docs.astral.sh/uv/
+
+uv init .
+uv add <package_name>   # creates .venv
+uv venv                 # creates .venv
+.venv/Scripts/activate  # Windows
+
+"""
+
+# Shell:
 # python -m venv .venv
 # source .venv/bin/activate  #Linux
 # .venv/Scripts/activate     #Windows
 
-## virtualenv
-# https://virtualenv.pypa.io/en/stable/
-# # list environments
-# lsvirtualenv
-# cd $ENV_BASE_DIR; virtualenv $ENVIRONMENT_NAME
-# source $ENV_BASE_DIR/$ENVIRONMENT_NAME/bin/activate
-# deactivate
-
-## conda
-# # list all environments
-# conda info --envs
-# conda create --name $ENVIRONMENT_NAME python
-# source activate $ENVIRONMENT_NAME
-# source deactivate
-
-## uv
-# @see Package Management
-"""
-
-# Shell:
-# create virtual environment in current directory:
-# python -m venv .venv
-
-# Activate virtual environment:
-# source .venv/bin/activate  #Linux
-# .venv\Scripts\activate     #Windows
-
-# Install packages in virtual environment:
-# pip install -r requirements.txt
-
-
-# Alternatives:
-# conda
-# uv
 
 # -------------------------------------------------------------------------------------------
 
 """
-### Package Management:
+Package Management
 
-## conda
-# https://conda.io/docs/user-guide/overview.html
-# https://conda.io/docs/_downloads/conda-cheatsheet.pdf
-# conda search $SEARCH_TERM
-# conda list --name $ENVIRONMENT_NAME
-# # create requirements file
-# conda list --export
-#
-# conda update <package>
-# conda update --all
-# conda update python
-#
-# conda install <package>
-# conda remove --name $ENVIRONMENT_NAME $PACKAGE_NAME
+pip, PyPI (Python Package Index)
+https://pypi.org/
+https://pip.pypa.io/en/stable/
+https://pip.pypa.io/en/stable/user_guide/#requirements-files
+https://packaging.python.org/tutorials/packaging-projects/
 
+pip search $SEARCH_TERM
+pip list
 
-## pip, PyPI (Python Package Index)
-# https://pypi.org/
-# https://pip.pypa.io/en/stable/
-# https://pip.pypa.io/en/stable/user_guide/#requirements-files
-# https://packaging.python.org/tutorials/packaging-projects/
-#
-# pip search $SEARCH_TERM
-# pip list
-# # create requirements file
-# pip freeze
-# pip install -r requirements.txt
-#
-# pip install <package>
-# pip install --upgrade $PACKAGE_NAME
-# pip uninstall $PACKAGE_NAME
+# create requirements file
+pip freeze
+pip install -r requirements.txt
 
+pip install <package>
+pip install --upgrade $PACKAGE_NAME
+pip uninstall $PACKAGE_NAME
 
-## uv
-# https://docs.astral.sh/uv/
-# https://docs.astral.sh/uv/getting-started/features/
-#
+# -------------------------
+
+conda
+https://conda.io/docs/user-guide/overview.html
+https://conda.io/docs/_downloads/conda-cheatsheet.pdf
+
+conda search $SEARCH_TERM
+conda list --name $ENVIRONMENT_NAME
+
+# create requirements file
+conda list --export
+
+conda update <package>
+conda update --all
+conda update python
+
+conda install <package>
+conda remove --name $ENVIRONMENT_NAME $PACKAGE_NAME
+
+# -------------------------
+
+uv
+https://docs.astral.sh/uv/
+https://docs.astral.sh/uv/getting-started/features/
+
 # Python Versions:
-# uv python list
-#
+uv python list
+
 # Scripts:
-ä uv run <script_name>
-#
+uv run <script_name>
+
 # Projects:
-# https://docs.astral.sh/uv/guides/projects/
-# https://docs.astral.sh/uv/guides/migration/pip-to-project/#requirements-files
-# uv init .
-#
-# uv init <project_name>  # pyproject.toml
-# cd <project_name>
-# uv add <package_name>   # creates .venv
-#
-# uv sync                 # install packages in .venv
-# uv tree                 # show package tree
-# uv build                # build package
-# uv publish              # publish package to a package index
-#
+https://docs.astral.sh/uv/guides/projects/
+https://docs.astral.sh/uv/guides/migration/pip-to-project/#requirements-files
+uv init .
+
+uv init <project_name>              # pyproject.toml
+cd <project_name>
+uv add <package_name>               # creates .venv
+
+uv sync                             # install packages in .venv
+uv tree                             # show package tree
+uv build                            # build package
+uv publish                          # publish package to a package index
+
 # Tools:
-# https://docs.astral.sh/uv/guides/tools/
-# uvx <package_name>      # run in a temporary environment
-# uv tool run <package>   # run in a temporary environment (=uvx)
-# uv tool install <package_name>
-# uv tool list
-# uv tool update-shell
-#
+https://docs.astral.sh/uv/guides/tools/
+uvx <package_name>                  # run in a temporary environment
+uv tool run <package>               # run in a temporary environment (=uvx)
+uv tool install <package_name>
+uv tool list
+uv tool update-shell
+
 # Pip Interface:
-# https://docs.astral.sh/uv/pip/environments/
-# uv venv                 # create virtual environment .venv
-# https://docs.astral.sh/uv/pip/packages/
-# uv pip install <package_name>  # install package in .venv
-# .venv/Scripts/activate  # Windows: make packages of .venv available
-# deactivate              # exit virtual environment
-# uv pip install -e .     # install current project as an editable package
-# uv pip install -r requirements.txt
-# uv pip install -r pyproject.toml
-# uv pip list
-# uv pip tree
-# uv pip freeze
-# uv pip check
-# https://docs.astral.sh/uv/pip/compile/
-# uv pip compile pyproject.toml -o requirements.txt
-# uv pip sync requirements.txt
-#
+https://docs.astral.sh/uv/pip/environments/
+uv venv                             # create virtual environment .venv
+
+https://docs.astral.sh/uv/pip/packages/
+uv pip install <package_name>       # install package in .venv
+.venv/Scripts/activate              # Windows: make packages of .venv available
+deactivate                          # exit virtual environment
+
+uv pip install -e .                 # install current project as an editable package
+uv pip install -r requirements.txt
+uv pip install -r pyproject.toml
+uv pip list
+uv pip tree
+uv pip freeze
+uv pip check
+https://docs.astral.sh/uv/pip/compile/
+uv pip compile pyproject.toml -o requirements.txt
+uv pip sync requirements.txt
+
 # Utility:
-# uv cache dir
-# uv cache clear
-# uv tool dir
-# uv python dir
-# uv self update
+uv cache dir
+uv cache clear
+uv tool dir
+uv python dir
+uv self update
 """
 
 # Shell:
 # pip install -r requirements.txt
 
 
-# Alternatives:
-# conda
-# uv
-
 # -------------------------------------------------------------------------------------------
 
 """
-### DEPLOYMENT:
+DEPLOYMENT
 
-## setuptools:
+setuptools
 
-## easy_install:
+easy_install
 
-## distutils:
+distutils
 
-# egg (2004), wheel (2012):
-# https://packaging.python.org/discussions/wheel-vs-egg/
+egg (2004)
+wheel (2012)
+https://packaging.python.org/discussions/wheel-vs-egg/
 
+# -------------------------
 
-## Py2exe:
-# http://www.py2exe.org/
-# http://www.py2exe.org/index.cgi/Tutorial
-#
+Py2exe
+http://www.py2exe.org/
+http://www.py2exe.org/index.cgi/Tutorial
+
 # create a setup.py file
 from distutils.core import setup
 import py2exe
@@ -264,65 +282,75 @@ setup(console=['hello.py'])
 # run the file in DOS Command Window
 python setup.py py2exe
 
+# -------------------------
 
-## PyInstaller:
-# http://www.pyinstaller.org/, https://pyinstaller.readthedocs.io/en/stable/, https://github.com/pyinstaller/pyinstaller
-# Libraries:
-# (pefile)
-# (PyWin32: http://sourceforge.net/projects/pywin32/files/)
-# UDX
-# PyCrypto: https://www.dlitz.net/software/pycrypto/
-#
+PyInstaller:
+http://www.pyinstaller.org/
+https://pyinstaller.readthedocs.io/en/stable/
+https://github.com/pyinstaller/pyinstaller
+
+Libraries:
+pefile
+PyWin32
+http://sourceforge.net/projects/pywin32/files/
+UDX
+PyCrypto
+https://www.dlitz.net/software/pycrypto/
+
 # Installation:
-# pip install pyinstaller
-# on error: pip install future --upgrade
-#
-# Usage: https://pyinstaller.readthedocs.io/en/stable/usage.html
-# -D, --onedir
-# -F, --onefile
-# -c, --console, --nowindowed
-# -w, --windowed, --noconsole
-# -i, --icon <FILE.ico or FILE.exe,ID or FILE.icns>
-# --upx-dir UPX_DIR
-# ^ Windows Line Delimiter
-# <backslash> Linux Line Delimiter
-#
-# Exampes:
+pip install pyinstaller
+# on error: 
+pip install future --upgrade
+
+Usage:
+https://pyinstaller.readthedocs.io/en/stable/usage.html
+-D, --onedir
+-F, --onefile
+-c, --console, --nowindowed
+-w, --windowed, --noconsole
+-i, --icon <FILE.ico or FILE.exe,ID or FILE.icns>
+--upx-dir UPX_DIR
+^ Windows Line Delimiter
+<backslash> Linux Line Delimiter
+
+Examples:
 pyinstaller --onefile --noconsole --icon=icon.ico --upx-dir=../PyInstaller-3.2/upx app.py
 pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 
+# -------------------------
 
-## Buildozer VM (Kivy, P4A, Plyer)
-# Android *.apk export in a VirtualBox VM
-# https://kivy.org/docs/guide/packaging-android-vm.html
-# http://buildozer.readthedocs.io/en/latest/
-# https://github.com/kivy/buildozer
-#
-# Terminal:
-# buildozer init  # creates spec-file
-# buildozer android debug deploy run
+Buildozer VM (Kivy, P4A, Plyer)
+Android *.apk export in a VirtualBox VM
+https://kivy.org/docs/guide/packaging-android-vm.html
+http://buildozer.readthedocs.io/en/latest/
+https://github.com/kivy/buildozer
 
+Terminal:
+buildozer init  # creates spec-file
+buildozer android debug deploy run
 
-## Installer Builders:
+# -------------------------
 
-## Pynsist (based on NSIS)
-# https://pypi.python.org/pypi/pynsist
-# https://pynsist.readthedocs.io/en/latest/
-# https://github.com/takluyver/pynsist/
-# Download NSIS from http://nsis.sourceforge.net/Download
+Installer Builders:
 
-
-## Inno Setup
-# http://www.jrsoftware.org/isinfo.php
-# IS Tool (GUI)
-# http://www.istool.org/
-# https://sourceforge.net/projects/istool/
+Pynsist (based on NSIS)
+https://pypi.python.org/pypi/pynsist
+https://pynsist.readthedocs.io/en/latest/
+https://github.com/takluyver/pynsist/
+Download NSIS from http://nsis.sourceforge.net/Download
 
 
-## Alternative Installer:
-# Nullsoft Scriptable Install System (NSIS)
-# Windows Installer XML (WiX)
-# Install Shield (proprietary)
+Inno Setup
+http://www.jrsoftware.org/isinfo.php
+IS Tool (GUI)
+http://www.istool.org/
+https://sourceforge.net/projects/istool/
+
+
+Alternative Installer:
+Nullsoft Scriptable Install System (NSIS)
+Windows Installer XML (WiX)
+Install Shield (proprietary)
 """
 
 # Alternatives:
@@ -335,71 +363,66 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 # -------------------------------------------------------------------------------------------
 
 """
-### IDEs:
-# https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
-# https://wiki.python.org/moin/PythonEditors
-# https://www.pythoncentral.io/comparison-of-python-ides-development/
+IDEs:
+https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
+https://wiki.python.org/moin/PythonEditors
+https://www.pythoncentral.io/comparison-of-python-ides-development/
 
-## IDLE
+IDLE
 
-## Jupyter Notebook
-# http://jupyter.org/
-# https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
+Jupyter Notebook
+http://jupyter.org/
+https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
 
-## IPython
-# https://ipython.org/
+IPython
+https://ipython.org/
 
-## Atom Editor
-# https://atom.io/#ide
+PyCharm
+http://www.jetbrains.com/pycharm/
 
-## PyCharm
-# http://www.jetbrains.com/pycharm/
+Wing IDE
+http://wingware.com/
 
-## Wing IDE
-# http://wingware.com/
+Eclipse PyDev
+http://pydev.org/
 
-## Eclipse PyDev
-# http://pydev.org/
+Python Tools for Visual Studio (PTVS): xlrd, xlwt
+https://marketplace.visualstudio.com/items?itemName=donjayamanne.python
+https://microsoft.github.io/PTVS/
 
-## Python Tools for Visual Studio (PTVS): xlrd, xlwt
-# https://marketplace.visualstudio.com/items?itemName=donjayamanne.python
-# https://microsoft.github.io/PTVS/
+Netbeans
+http://wiki.netbeans.org/Python
 
-## Netbeans
-# http://wiki.netbeans.org/Python
+Komodo IDE
+http://www.activestate.com/komodo-ide
 
-## Komodo IDE
-# http://www.activestate.com/komodo-ide
+# -------------------------
 
-## Visual Studio Code
-# https://code.visualstudio.com/
-#
-# Copilot
-# https://code.visualstudio.com/docs/copilot/overview
-#
-# Continue.dev
-# https://www.continue.dev/
+Visual Studio Code
+https://code.visualstudio.com/
+Copilot
+https://code.visualstudio.com/docs/copilot/overview
 
-## Mu Editor
-# https://codewith.mu/
+Cursor IDE
+https://cursor.so/
 
-## Thonny
-# https://thonny.org/
+Sublime Text
+https://www.sublimetext.com/
 
-## Sublime Text
-# https://www.sublimetext.com/
+Neovim
+https://neovim.io/
 
-## Neovim
-# https://neovim.io/
+Vim
+https://www.vim.org/
 
-## Vim
-# https://www.vim.org/
+Emacs
+https://www.gnu.org/software/emacs/
 
-## Emacs
-# https://www.gnu.org/software/emacs/
+Mu Editor
+https://codewith.mu/
 
-## Cursor IDE
-# https://cursor.so/
+Thonny
+https://thonny.org/
 
 """
 
@@ -407,17 +430,20 @@ pyinstaller --onefile --windowed --icon=res/icon.ICO /path/to/yourscript.py
 # imports, Libraries, Modules, Packages
 # -------------------------------------------------------------------------------------------
 
-# Python 3 and 2 compatibility
-# these imports must be in the first place!
-# https://docs.python.org/2.7/howto/pyporting.html
-# http://python-future.org/
-#
-# https://docs.python.org/2/library/__future__.html
-# https://docs.python.org/2/library/future_builtins.html
-# https://docs.python.org/2/library/__builtin__.html
-#
-# https://docs.python.org/3/library/builtins.html
-# https://docs.python.org/3/library/__future__.html
+"""
+Python 3 and 2 compatibility
+these imports must be in the first place!
+https://docs.python.org/2.7/howto/pyporting.html
+http://python-future.org/
+
+https://docs.python.org/2/library/__future__.html
+https://docs.python.org/2/library/future_builtins.html
+https://docs.python.org/2/library/__builtin__.html
+
+https://docs.python.org/3/library/builtins.html
+https://docs.python.org/3/library/__future__.html
+"""
+
 # from __future__ import print_function
 # from __future__ import division
 # from __future__ import unicode_literals
@@ -435,13 +461,13 @@ import os.path
 
 # example for interacting with the Environment (Linux Terminal Bash Shell Console)
 os.environ['PYTHONIOENCODING'] = 'utf-8'  # set encoding for stdout and stderr
-os.getenv('PYTHONIOENCODING', 'utf-8')  # get encoding for stdout and stderr
+os.getenv('PYTHONIOENCODING', 'utf-8')    # get encoding for stdout and stderr
 
 # Environment variables from .env file
 from dotenv import load_dotenv, dotenv_values
 # 1. alternative:
-#load_dotenv()                  # Load environment variables from .env file
-#os.getenv('API_KEY')           # get environment variables with os.getenv()
+load_dotenv()                  # Load environment variables from .env file
+os.getenv('API_KEY')           # get environment variables with os.getenv()
 # 2. alternative:
 config = dotenv_values(".env")  # Load environment variables into a dictionary
 
@@ -466,6 +492,7 @@ https://docs.python.org/3/library/functions.html#property
 https://docs.python.org/3/library/functions.html#classmethod
 https://docs.python.org/3/howto/descriptor.html
 """
+
 def delta_time(f):
     """ deltatime Decorator for Profiling """
     def wrapper(*args, **kwargs):
@@ -486,6 +513,7 @@ https://docs.python.org/3/howto/logging.html
 https://docs.python.org/3/howto/logging-cookbook.html
 https://docs.python.org/3/library/logging.html
 """
+
 import logging
 from rich.logging import RichHandler
 
@@ -533,6 +561,7 @@ logger.critical('Hello critical | fatal')
 # tox
 #
 """
+
 import unittest
 
 
@@ -605,7 +634,6 @@ def multiprocessed() -> None:
     with Pool() as pool:
         results = pool.imap()
 
-
 # -------------------------
 
 import asyncio
@@ -631,7 +659,6 @@ https://cython.org/
 
 #import cython
 
-
 # -------------------------
 
 """
@@ -648,11 +675,9 @@ import numba
 def test_numba():
     pass
 
-
 # -------------------------
 
 #import taichi as ti
-
 
 # -------------------------------------------------------------------------------------------
 # Data Science, Machine Learning, Deep Learning, AI
@@ -892,6 +917,7 @@ mapped to Python types:
 int, float, str, bytes, None
 
 """
+
 import sqlite3
 
 def createDatabase():
@@ -1114,6 +1140,7 @@ https://inventwithpython.com/pygame/chapters/
 
 Install: 'pip install pygame --user'
 """
+
 import pygame
 #from pygame.locals import *
 import pygame.midi
@@ -1274,6 +1301,7 @@ https://arcade.academy/
 """
 #import arcade
 
+
 # -------------------------
 
 """
@@ -1305,6 +1333,7 @@ Robot AI Physics Simulation
 https://medium.com/data-science-in-your-pocket/genesis-physics-ai-engine-for-robotic-simulation-b67176c45a7d
 import genesis as gs
 """
+
 
 # -------------------------------------------------------------------------------------------
 
@@ -1355,6 +1384,7 @@ Will Pirkle (C++)
 https://willpirkle.com/
 
 """
+
 
 # -------------------------------------------------------------------------------------------
 
@@ -1437,15 +1467,19 @@ https://github.com/adafruit
 # -------------------------------------------------------------------------------------------
 
 """
-# Tkinter
+Tkinter
+
 # Python Shell:
-# help(Tkinter.<Tab>)
-# Core Widgets:
-# Label, Button, Entry, Checkbutton, Radiobutton, Spinbox, Listbox, Text, Canvas, Bitmap, Image
-# Toplevel, Frame, Menu, Menubutton, Scrollbar, OptionMenu, LabelFrame, Message, PanedWindow, Scale
-# Geometry Managers:
-# pack, grid, place
+help(Tkinter.<Tab>)
+
+Core Widgets:
+Label, Button, Entry, Checkbutton, Radiobutton, Spinbox, Listbox, Text, Canvas, Bitmap, Image
+Toplevel, Frame, Menu, Menubutton, Scrollbar, OptionMenu, LabelFrame, Message, PanedWindow, Scale
+
+Geometry Managers:
+pack, grid, place
 """
+
 import tkinter as tk
 #from Tkinter import * # Python 2
 #from tkinter import * # Python 3
@@ -1475,6 +1509,7 @@ https://wiki.wxwidgets.org/Tools
 wxFormBuilder
 https://github.com/wxFormBuilder/wxFormBuilder
 """
+
 
 # -------------------------------------------------------------------------------------------
 
@@ -1673,6 +1708,7 @@ https://github.com/kivy/kivent
 https://github.com/chozabu/KivEntEd
 https://chipmunk-physics.net/forum/viewtopic.php?t=3757
 """
+
 """
 from kivy.app import App
 from kivy.lang import Builder
@@ -1863,6 +1899,7 @@ http://www.figlet.org/
 fonts: lean, mini, banner
 favorite fonts: alligator2, poison, cosmic, chunky, eftiwater, isometric2, larry3d, letters, nipples, ntgreek, rectangles, shadow, slant, speed
 """
+
 from pyfiglet import Figlet
 
 def banner():
@@ -1912,6 +1949,7 @@ https://de.wikipedia.org/wiki/Terminalemulation
 
 @see TUI (Text User Interface)
 
+
 # -----------------------------------------
 # String Formatting
 # -----------------------------------------
@@ -1925,6 +1963,7 @@ print("You typed {}".format(c))
 f-srings (@since Python 3.6):
 https://docs.python.org/3/reference/lexical_analysis.html#f-strings
 print(f"You typed {c}")
+
 
 # -----------------------------------------
 # (Colored) Text Output

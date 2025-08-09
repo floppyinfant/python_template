@@ -1,13 +1,60 @@
 Notes | README
 
+------------------------------------------------------------------------------
+
 MCP
 https://code.visualstudio.com/docs/copilot/chat/mcp-servers
 https://code.visualstudio.com/mcp
 
 
+mcp.json
+VScode Format
+{
+	"servers": {
+		"blenderMCP": {
+			"type": "stdio",
+			"command": "uvx",
+			"args": [
+				"blender-mcp"
+			]
+		}
+	},
+	"inputs": []
+}
+
+Android Studio (Jetbrains)
+https://developer.android.com/studio/gemini/add-mcp-server?hl=de
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    }
+  }
+}
+
+Claude Desktop (BlenderMCP example)
+{
+    "mcpServers": {
+        "blender": {
+            "command": "uvx",
+            "args": [
+                "blender-mcp"
+            ]
+        }
+    }
+}
+
+------------------------------------------------------------------------------
+
 Settings file
 https://code.visualstudio.com/docs/configure/settings#_settings-json-file
+C:\Users\thorsten\AppData\Roaming\Code\User\settings.json
 
+------------------------------------------------------------------------------
 
 Command Palette (Ctrl+Shift+P)
 Preferences: Open User Settings (JSON)

@@ -1,6 +1,6 @@
 """
 https://ai.google.dev/gemini-api/docs?hl=de
-
+pip install google-genai mcp
 """
 
 from google import genai

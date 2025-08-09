@@ -39,3 +39,4 @@ mcp[cli]
 ollama
 langchain[llms]
 #google
+google-genai

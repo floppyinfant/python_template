@@ -1,0 +1,23 @@
+https://developers.google.com/gemini-code-assist/docs/overview
+https://github.com/google-gemini/gemini-cli
+
+https://gemini.google.com/app
+https://ai.google.dev/
+https://aistudio.google.com/prompts/new_chat
+
+https://ai.google.dev/gemini-api/docs
+https://ai.google.dev/gemini-api/docs/pricing
+
+------------------------------------------------------------------------------
+
+MCP
+https://developers.google.com/gemini-code-assist/docs/use-agentic-chat-pair-programmer
+https://developers.google.com/gemini-code-assist/docs/tools-agents/tools-overview
+https://developers.google.com/gemini-code-assist/docs/agent-mode
+
+.gemini/settings.json
+# enthält u.a. MCP-Server
+
+.gemini/GEMINI.md
+# Contextdatei
+https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md#example-context-file-content-eg-geminimd

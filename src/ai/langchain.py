@@ -4,6 +4,8 @@ https://www.langchain.com/
 https://python.langchain.com/docs/introduction/
 https://github.com/langchain-ai/langchain
 
+LangGraph - Gemini Agent Quickstart
+https://github.com/google-gemini/gemini-fullstack-langgraph-quickstart
 """
 
 from langchain.chat_models  import ChatOpenAI

@@ -7,3 +7,4 @@
 # vs. main.py
 #from package import Class
 
+from .template import main

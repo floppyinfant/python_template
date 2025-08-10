@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="comments">
+      <change afterPath="$PROJECT_DIR$/.gemini/GEMINI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gemini/Gemini.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gemini/extensions/blender/gemini-extension.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gemini/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GEMINI.md" beforeDir="false" afterPath="$PROJECT_DIR$/.aiexclude" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemini.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ai/gemini_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/gemini_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ai/langchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/langchain.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +203,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\.gemini" />
       <recent name="C:\Users\tm\Documents\Workspaces\Python\python_template\notepad" />
       <recent name="C:\Users\tm\Documents\Workspaces\Python\python_template\docs" />
       <recent name="C:\Users\tm\Documents\Workspaces\Python\python_template\examples" />
@@ -346,7 +351,8 @@
       <workItem from="1754682256164" duration="6169000" />
       <workItem from="1754688757202" duration="7000" />
       <workItem from="1754731696674" duration="3738000" />
-      <workItem from="1754747154753" duration="2692000" />
+      <workItem from="1754747154753" duration="5415000" />
+      <workItem from="1754860114723" duration="3053000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -432,7 +438,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754688546444</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="comments">
+      <option name="closed" value="true" />
+      <created>1754769974800</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1754769974800</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -499,6 +513,17 @@
     <MESSAGE value="changed order of topics" />
     <MESSAGE value="comments" />
     <option name="LAST_COMMIT_MESSAGE" value="comments" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/ai/langchain.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_template$app.coverage" NAME="app Coverage Results" MODIFIED="1754113350211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

@@ -1,3 +1,5 @@
+Google Gemini Code Assistant | Gemini CLI
+
 https://developers.google.com/gemini-code-assist/docs/overview
 https://github.com/google-gemini/gemini-cli
 
@@ -17,7 +19,21 @@ https://developers.google.com/gemini-code-assist/docs/agent-mode
 
 .gemini/settings.json
 # enthält u.a. MCP-Server
+{
+	"mcpServers": {
+		"blenderMCP": {
+			"command": "uvx",
+			"args": [
+				"blender-mcp"
+			]
+		}
+	}
+}
+
+------------------------------------------------------------------------------
 
 .gemini/GEMINI.md
 # Contextdatei
 https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md#example-context-file-content-eg-geminimd
+
+------------------------------------------------------------------------------

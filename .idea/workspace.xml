@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="comments">
-      <change afterPath="$PROJECT_DIR$/.gemini/GEMINI.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gemini/Gemini.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gemini/extensions/blender/gemini-extension.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gemini/settings.json" afterDir="false" />
+    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="Gemini">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GEMINI.md" beforeDir="false" afterPath="$PROJECT_DIR$/.aiexclude" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemini.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/gemini_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/gemini_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/langchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/langchain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +344,10 @@
       <workItem from="1754688757202" duration="7000" />
       <workItem from="1754731696674" duration="3738000" />
       <workItem from="1754747154753" duration="5415000" />
-      <workItem from="1754860114723" duration="3053000" />
+      <workItem from="1754860114723" duration="3512000" />
+      <workItem from="1754938769163" duration="734000" />
+      <workItem from="1754996096036" duration="617000" />
+      <workItem from="1755162387850" duration="5934000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -446,7 +441,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754769974800</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Gemini">
+      <option name="closed" value="true" />
+      <created>1754864840142</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1754864840142</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -512,7 +515,8 @@
     <MESSAGE value="test function calls to CUI" />
     <MESSAGE value="changed order of topics" />
     <MESSAGE value="comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments" />
+    <MESSAGE value="Gemini" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gemini" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

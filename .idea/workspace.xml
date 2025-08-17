@@ -4,9 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="Gemini">
+    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="notes">
+      <change afterPath="$PROJECT_DIR$/docs/Blender_Python_API/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Robotics/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Robotics/ROS2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/uv_pip_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai/hf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai/openai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/events/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/icons/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/ops/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/ops/hello_operator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/props/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/template-blender-addon-old.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/ui/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/ui/hello_panel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/addon/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/blender_manifest.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bl_extension/build.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python_template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_template.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requirements-readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +59,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass">
     <envs>
@@ -173,28 +204,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "L:/WORKSPACES/PYTHON_WS/python_template/src/bl_extension/addon",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\bl_extension\addon" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\.gemini" />
       <recent name="C:\Users\tm\Documents\Workspaces\Python\python_template\notepad" />
       <recent name="C:\Users\tm\Documents\Workspaces\Python\python_template\docs" />
@@ -347,7 +384,9 @@
       <workItem from="1754860114723" duration="3512000" />
       <workItem from="1754938769163" duration="734000" />
       <workItem from="1754996096036" duration="617000" />
-      <workItem from="1755162387850" duration="5934000" />
+      <workItem from="1755162387850" duration="6791000" />
+      <workItem from="1755324117416" duration="2991000" />
+      <workItem from="1755416617715" duration="5903000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -449,7 +488,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754864840142</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="links">
+      <option name="closed" value="true" />
+      <created>1755171353679</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1755171353679</updated>
+    </task>
+    <task id="LOCAL-00015" summary="notes">
+      <option name="closed" value="true" />
+      <created>1755171975134</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1755171975134</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -516,7 +571,9 @@
     <MESSAGE value="changed order of topics" />
     <MESSAGE value="comments" />
     <MESSAGE value="Gemini" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gemini" />
+    <MESSAGE value="links" />
+    <MESSAGE value="notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="notes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

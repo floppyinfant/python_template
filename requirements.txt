@@ -40,3 +40,5 @@ ollama
 langchain[llms]
 #google
 google-genai
+openai
+huggingface_hub  # Shell: hf auth login # get a read token from hf.co/settings/tokens

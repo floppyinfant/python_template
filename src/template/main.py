@@ -1301,6 +1301,13 @@ https://arcade.academy/
 """
 #import arcade
 
+# -------------------------
+
+"""
+ursina engine
+https://www.ursinaengine.org/
+"""
+#from ursina import *
 
 # -------------------------
 
@@ -1341,6 +1348,11 @@ import genesis as gs
 Creative Coding
 
 Audio | DSP | Music | MIDI
+https://wiki.python.org/moin/PythonInMusic
+
+Blokas Patchbox OS
+https://blokas.io/patchbox-os/docs/
+MODEP
 
 # Pure Data
 pylibpd

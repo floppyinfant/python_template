@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="MCP">
-      <change afterPath="$PROJECT_DIR$/docs/Python_Music.md" afterDir="false" />
+    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="cleanup">
+      <change afterPath="$PROJECT_DIR$/Notebooks/template.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/INSTALL.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Markdown.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_TODO.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_fileheaders.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/conda_vs_pip.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/condaenv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/deployment_pyinstaller_buildozer.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/notes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requirements-conda.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Requirements/requirements-conda.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requirements-pip.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Requirements/requirements-pip.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/uv_pip_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Requirements/uv_pip_list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MCP/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MCP/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -374,7 +369,8 @@
       <workItem from="1755162387850" duration="6791000" />
       <workItem from="1755324117416" duration="2991000" />
       <workItem from="1755416617715" duration="6022000" />
-      <workItem from="1755429354797" duration="1235000" />
+      <workItem from="1755429354797" duration="1261000" />
+      <workItem from="1755446029892" duration="9592000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -508,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755429878279</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1755430616235</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1755430616235</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -579,7 +583,8 @@
     <MESSAGE value="notes" />
     <MESSAGE value="Blender Extension initial commit" />
     <MESSAGE value="MCP" />
-    <option name="LAST_COMMIT_MESSAGE" value="MCP" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

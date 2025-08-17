@@ -40,5 +40,6 @@ dependencies = [
     "terminaltexteffects>=0.12.0",
     "textual>=4.0.0",
     "typer>=0.16.0",
+    "ursina>=8.1.1",
     "wxpython>=4.2.3",
 ]

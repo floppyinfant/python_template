@@ -1,0 +1,569 @@
+################################
+#
+# NOOBS (New Out Of The Box Software)
+#
+#
+# shift-Taste gedrückt halten beim booten,
+# erlaubt erneutes Installieren des Betriebssystems
+#
+#
+################################
+
+################################
+#
+# Raspbian (Debian Wheezy)
+#
+#
+# login
+# name: pi
+# pass: raspberry
+#
+# Settings | Preferences
+sudo raspi-config
+#
+#
+################################
+
+################################
+#
+# Packetquellen
+#
+#
+# Schlüssel herunterladen:
+#
+#
+# Quellen hinzufügen:
+sudo nano /etc/apt/sources.list
+# deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
+#
+sudo nano /etc/apt/sources.list.d/raspi.list 
+# deb http://archive.raspberrypi.org/debian/ wheezy main
+#
+#
+################################
+
+################################
+#
+# APT
+#
+#
+sudo apt-get clean
+#
+sudo apt-get update
+sudo apt-get upgrade
+#
+sudo apt-get dist-upgrade
+#
+apt-cache search <keyword>
+#
+sudo apt-get install <packages>
+sudo apt-get remove <packages>
+sudo apt-get autoremove
+#
+#
+################################
+
+################################
+#
+# Firmware update
+#
+#
+# /boot
+# /modules
+# /opt/vc
+#
+# https://github.com/Hexxeh/rpi-update 
+# https://github.com/Hexxeh/rpi-firmware
+# https://github.com/raspberrypi/firmware
+# https://github.com/notro/rpi-firmware # with FBTFT-Support
+#
+sudo rpi-update
+#
+#
+# Kernel Sources
+#
+# https://github.com/raspberrypi/linux 
+#
+#
+################################
+
+################################
+#
+# Package Manager mit grafischer Oberfläche
+#
+#
+sudo apt-get install synaptic
+#
+#
+################################
+
+################################
+#
+# Installieren einiger Tools
+#
+#
+sudo apt-get install mc,htop
+#
+sudo apt-get install sonic-pi,fbi,vlc,mplayer,mencoder,libav,imagemagick,python-picamera
+#
+#
+################################
+
+################################
+#
+# SSH
+#
+#
+sudo raspi-config
+#
+#
+# Windows: PuTTY (activate X11-forwarding), Xming
+ssh -X pi@raspberrypi.local
+# Login
+# user:     pi
+# passwd:   raspberry
+#
+# X11-forwarding: Programme, die in der Console gestartet werden, werden in Xming angezeigt
+#
+# Desktop anzeigen (besser vnc benutzen)
+lxsession
+#
+#
+################################
+
+################################
+#
+# VNC
+#
+#
+sudo apt-get update
+sudo apt-get install tightvncserver
+# start server
+vncserver :1 -geometry 1280x600
+# stop vncserver
+vncserver -kill :1
+# Clients
+# Windows (RealVNC-Viewer): connection adress "192.168.1.58:1"
+# Mac OS X (Finder): "Gehe zu > mit Server verbinden": vnc://raspberrypi.local:1
+#
+#
+################################
+
+################################
+#
+# Autostart
+#
+#
+# 1) Desktop Shortcut
+mkdir /home/pi/.config/autostart
+nano tightvnc.desktop 
+## [Desktop Entry]
+## Type=Application
+## Name=TightVNC
+## Exec=vncserver :1
+## StartupNotify=false
+# @see blog.wenzlaff.de/?p=2207
+#
+#
+# 2) LXDE
+mkdir /home/pi/.config/lxsession/LXDE
+nano /home/pi/.config/lxsession/LXDE/autostart
+# add a line to start a shell skript
+# @see learn.adafruit.com/synergy-on-raspberry-pi/setup-synergy-client-autostart
+#
+#
+# 3) System V init-Process
+# @see http://elinux.org/RPi_VNC_Server#Run_at_boot
+# @see more /etc/init.d/README 
+#
+sudo nano /etc/init.d/vncboot
+chmod 755 /etc/init.d/vncboot # chmod a+x ...
+#
+sudo update-rc.d /etc/init.d/vncboot defaults  # enable autostart at boot
+sudo update-rc.d /etc/init.d/vncboot remove    # disable autostart at boot
+#
+#
+# more:
+sudo /etc/init.d/<service> {status | start | stop}
+sudo service <service> {start, restart, stop}
+#
+sudo nano /etc/default/<service>
+sudo nano /etc/init.d/<service>
+sudo nano /etc/rc.local
+#
+# enable service
+sudo insserv /etc/init.d/asplashscreen
+sudo reboot
+# disable service
+sudo insserv /etc/init.d/asplashscreen -r
+#
+#
+################################
+
+################################
+#
+# SCP
+#
+#
+# scp <source> <destination>
+# scp <localfile> <user>@<ip-adress>:<path>
+scp ./file.zip pi@192.168.1.58:~/     # upload (ins home Verzeichnis)
+scp pi@192.168.1.58:~/file.log ./     # download (ins aktuelle Verzeichnis)
+#
+#
+################################
+
+################################
+#
+# NFS
+#
+# AFP
+#
+#
+################################
+
+################################
+#
+# Bluetooth
+#
+#
+# Rii mini K02+ [Bluetooth] Keyboard
+# http://www.riitek.com/product_Info.asp?id=80
+#
+# Bluetooth Keyboard on Raspberry Pi
+# http://blog.petrilopia.net/linux/raspberry-pi-bluetooth-keyboard-work/
+#
+sudo apt-get install bluetooth bluez-utils blueman
+# list devices connected to USB-Port
+lsusb
+> ...
+> Bus 001 Device 007: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)
+#
+# scan for devices in discovery mode
+hcitool scan
+> Scanning ...
+>         BA:7B:89:11:B3:4C       Macro Keyboard
+# MAC-Adress of device is reported. Use this adress in the next steps.
+#
+# Type next command and set PIN-code to '0000' in console.
+# Press '0000' + 'enter' on the bluetooth keyboard to pair devices.
+sudo bluez-simple-agent hci0 BA:7B:89:11:B3:4C
+> RequestPinCode (/org/bluez/2772/hci0/dev_BA_7B_89_11_B3_4C)
+> Enter PIN Code: 0000
+> Release
+> New device (/org/bluez/2772/hci0/dev_BA_7B_89_11_B3_4C)
+#
+# make keyboard a trusted bluetooth device
+sudo bluez-test-device trusted BA:7B:89:11:B3:4C yes
+#
+# After that we can test our bluetooth keyboard
+sudo bluez-test-input connect BA:7B:89:11:B3:4C
+# If everything went OK we should now have working bluetooth keyboard.
+# In case of error try: 'man bluez-simple-agent'; use command with 'remove'
+#
+#
+############
+#
+# Alternative: Desktop GUI
+startx
+# Menu > Preferences > Bluetooth Manager
+# pair, trust, connect
+#
+#
+################################
+
+################################
+#
+# Wifi Access Point
+#
+#
+# @see https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/install-software
+#
+#
+sudo apt-get install hostapd
+sudo apt-get install isc-dhcp-server
+# 
+sudo nano /etc/dhcp/dhcpd.conf
+#
+sudo nano /etc/default/isc-dhcp-server
+#
+sudo ifdown wlan0
+sudo nano /etc/network/interfaces
+#
+sudo ifconfig wlan0 192.168.42.1 # assign a static ip-adress
+#
+sudo nano /etc/hostapd/hostapd.conf
+#
+sudo nano /etc/default/hostapd
+# DAEMON_CONF="/etc/hostapd/hostapd.conf"
+#
+sudo nano /etc/sysctl.conf
+# net.ipv4.ip_forward=1
+#
+sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+#
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+#
+sudo iptables -t nat -S
+sudo iptables -S
+#
+sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
+#
+sudo nano /etc/network/interfaces
+# up iptables-restore < /etc/iptables.ipv4.nat
+#
+# ...
+#
+sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf
+#
+sudo service hostapd start 
+sudo service isc-dhcp-server start
+#
+# run every time on boot
+sudo update-rc.d hostapd enable 
+sudo update-rc.d isc-dhcp-server enable
+#
+#
+################################
+
+################################
+#
+# Webserver
+#
+#
+# Apache
+# Nginx
+# Lighttpd
+#
+#
+# Protokolle:
+# TCP/ IP
+# http
+# https
+# ssl
+# ssh
+# SFTP, FTP
+#
+#
+# Verzeichnisdienste:
+# LDAP
+# Active Directory
+#
+#
+# Shared Folder
+# Windows Ordner-Freigabe (CIFS)
+# Samba Shares (SMB)
+# WebDAV
+#
+#
+# Clouds:
+# http://de.wikipedia.org/wiki/Kategorie:Cloud_Computing
+# Dropbox
+# Google Drive
+# Skydrive (Microsoft)
+# Box
+# iCloud/ MobileMe (Apple)
+# Ubuntu One
+# (Telekom)
+# (1&1)
+# Kies (Samsung)
+# 
+# Firefox Sync
+#
+# Google Docs
+# Microsoft Office 365
+# Evernote
+#
+# Google AppEngine 
+#     Google Web Toolkit (GWT) <- Java Enterprise
+# Amazon EC2 (Elastic Compute)
+#
+# Java Enterprise Application Server: Glassfish, JBoss
+#
+#
+# CMS:
+# http://de.wikipedia.org/wiki/Kategorie:Content-Management-System
+# http://de.wikipedia.org/wiki/Kategorie:Freies_Web-Content-Management-System
+# http://de.wikipedia.org/wiki/Liste_von_Webframeworks
+#
+# Wordpress
+# Joomla, Mambo, PostNuke
+# Magnolia
+# TYPO3
+# Drupal
+# Contao
+# Plone, Zope
+# Website Baker
+#
+# MediaWiki
+# BlueSpice for MediaWiki
+# Trac
+#
+# Ruby On Rails
+# Django, Flake, Pyramid, Web2py
+#
+# ASP.Net
+# Java Enterprise, JSF, Java Beans, Spring, Struts
+# Google Web Toolkit (GWT)
+#
+#
+# JS Frameworks:
+# jQuery, Zepto
+# Ext JS
+# Prototype
+# Moo Tools
+# Dojo Toolkit
+# YUI Library
+# Zend
+#
+#
+################################
+
+################################
+#
+# ownCloud
+#
+#
+# Quelle: ct 09/2015 (04.04.2015), p. 98
+#
+sudo nano /etc/apt/sources.lidt.d/owncloud.list
+# deb http://download.opensuse.org/repositories/isv:/ownCloud:/community/Debian_7.0
+#
+sudo apt-get update
+sudo apt-get upgrade
+#
+sudo apt-get install owncloud
+#
+# Alternativ:
+sudo apt-get install apache2 php5 php5-gd php5-sqlite php5-curl php5-json php5-common php5-intl php-pear php-apc php-xml-parser libapache2-mod-php5 curl libcurl3 libcurl3-dev sqlite mysql-server php5-mysql php5-mcrypt php5-imagick
+#
+#
+# MySQL root passwort vergeben
+#
+#
+sudo nano /etc/apache2/sites-available/default
+# add the entry immediately before the line '</VirtualHost>':
+<Directory /var/www/owncloud>
+  Options Indexes FollowSymLinks MultiViews
+  AllOverride All
+  Order allow,deny
+  allow from all
+</Directory>
+#
+# Apche neu starten, um die geänderte Konfiguration einzulesen
+sudo service apache2 reload
+#
+# Browser
+http://127.0.0.1/owncloud
+# > Menü > Speicher & Datenbank > MySQL/MariaDB
+#
+sudo nano /var/www/owncloud/.htaccess
+# php_value upload_max_filesize 2G
+# php_value post_max_size 2G
+#
+# Routineaufgaben nicht bei jedem Seitenaufruf per AJAX ausführen, sondern ...
+sudo crontab -u www-data -e
+# */15 * * * * php -f /var/www/owncloud/cron.php
+#
+#
+#
+#
+#
+######
+#
+# http://www.connect.de/ratgeber/so-installieren-sie-owncloud-auf-einem-raspberry-pi-1540246.html 
+# http://doc.owncloud.org/server/7.0/admin_manual/installation/installation_source.html
+#
+#
+sudo groupadd www-data
+sudo usermod -a -G www-data www-data
+#
+#
+sudo nano /etc/apache2/apache2.conf
+# ans Ende der Datei den DynDNS Server Name eintragen: z.B. meinecloud.no-ip.biz
+# Router Port-Freigabe für Port 80 an die IP-Adresse des Raspberry Pi einrichten
+#
+sudo nano /etc/hosts
+# ans Ende der Datei eintragen: 127.0.1.1 owncloud
+#
+sudo nano /etc/apache2/sites-available/default-ssl
+# Add the entry immediately before the line '</VirtualHost>':
+<Directory /path/to/your/owncloud/install>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    allow from all
+    # Dav Off # Disable WebDAV-Support at least for owncloud-DIR
+    Satisfy Any
+</Directory>
+#
+sudo nano /etc/php5/apache2/php.ini
+# search and edit 'upload_max_filesize = 2G post_max_size = 2G'
+#
+# enable SSL:
+sudo a2enmod ssl
+sudo a2ensite default-ssl
+sudo service apache2 reload
+# enable module mod_rewrite:
+sudo a2enmod rewrite 
+sudo a2enmod headers
+#
+sudo service apache2 restart 
+# sudo /etc/init.d/apache2 restart
+#
+#
+# download from https://owncloud.org/install/
+tar -xjf owncloud-x.y.z.tar.bz2
+sudo cp -r owncloud /var/www
+sudo chown -R www-data:www-data /var/www/owncloud
+#
+#
+# Mit browser ownCloud aufrufen und Konfiguration fertigstellen:
+# http://doc.owncloud.org/server/7.0/admin_manual/installation/installation_wizard.html
+#
+#
+# Zertifikat für https erstellen:
+sudo mkdir -p /etc/apache2/ssl 
+sudo openssl req -new -x509 -days 365 -nodes -out /etc/apache2/ssl/apache.pem -keyout /etc/apache2/ssl/apache.pem 
+sudo ln -sf /etc/apache2/ssl/apache.pem /etc/apache2/ssl/`/usr/bin/openssl x509 -noout -hash < /etc/apache2/ssl/apache.pem` 
+sudo chmod 600 /etc/apache2/ssl/apache.pem
+#
+#
+################################
+#
+# phpMyAdmin
+#
+#
+################################
+#
+# Mediawiki
+#
+#
+# Addon Bluespice
+#
+# LibreOffice
+#
+#
+################################
+
+################################
+#
+# Raspberry Control (Android)
+# needs Software on Raspberry Pi to be installed
+#
+#
+# @see http://www.lukasz-skalski.com/category/software/ 
+# @see http://codebangers.com/how-to-setup-your-raspberry-pi-to-use-raspberry-pi-android-app/#.Uyen0_l5M4c 
+# download here http://goo.gl/NNK7T 
+./rpc_utils --install
+#
+# remove
+rm -Rf $HOME/Raspberry_Control
+sudo insserv -r rpc_shellinaboxd
+sudo rm /etc/init.d/rpc_shellinaboxd
+#
+#
+################################
+

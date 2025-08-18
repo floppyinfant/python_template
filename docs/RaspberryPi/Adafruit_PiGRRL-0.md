@@ -1,28 +1,36 @@
-Adafruit PiGRRL-zero
-for Pi0 with 3D-printed case
-https://learn.adafruit.com/pigrrl-zero/overview
-Manual Installation:
-https://learn.adafruit.com/pigrrl-zero/software-manual-1
+# Adafruit PiGRRL-zero 
+https://learn.adafruit.com/pigrrl-zero/overview  
+https://learn.adafruit.com/pigrrl-zero/software-manual-1  
+
+- Pi0  
+- TFT-Display  
+- D-Pad + Shoulder-Buttons  
+- LiPo-Accu + Charging-Device  
+- 3D-printed case  
+
+### Mods  
+- Pi Zero W (with Wifi and Bluetooth)
+- HDMI-Output  
+- Pi Camera 5MP  
+- Sound: i2S and 3W Amp + 0,8W Speaker  
+- UART or MIDI 3,5mm Jack  
+- Patchbox OS with RT-Kernel, (pd, MODEP, Jack), Hotspot / Wifi-Access-Point (AP)  
+- Keyboard via Bluetooth (Rii-Clever) setup with Desktop Tools (Toolbar)  
 
 
-Mods:
-Pi Zero W (with Wifi and Bluetooth)
-OS
-HDMI-Output
-Pi Camera 5MP
-Sound: i2S and 3W Amp + 0,8W Speaker
-UART or MIDI 3,5mm Jack
-Patchbox OS with RT-Kernel, (pd, MODEP, Jack), Hotspot / Wifi-Access-Point (AP)
-Keyboard via Bluetooth (Rii-Clever) setup with Desktop Tools (Toolbar)
+## Basic Setup  
 
+Get Patchbox OS  
+https://blokas.io/patchbox-os/  
 
-Basic Setup
+connect  
+- via Ethernet
+- USB-to-TTL-Serial-Cable
+- WLAN (wpa_supplicant.conf needed)  
+- use scp (WinSCP) to copy files
+- Putty as a terminal for **SSH**
 
-Get Patchbox OS
-https://blokas.io/patchbox-os/
-
-connect via Ethernet, USB-to-TTL-Serial-Cable, WLAN (wpa_supplicant.conf needed)
-use scp (WinSCP) to copy files, Putty as a terminal for ssh:
+```
 ssh patch@retropie.local
 
 passwd
@@ -37,14 +45,17 @@ sudo raspi-config
 sudo patchbox
 # Blokas Patchbox OS config-tool:
 # audio, RT-Kernel
+```
 
-
-Desktop
+## Desktop
+```
 startx
 # Desktop "PIXEL" >> Einstellungen, Taskbar, Toolbar (Wifi-Symbol, Audio)
 # X11 beenden über Menü oder via SSH | Alt+F1-6: ... kill <seat> ... ???
+```
 
-Network
+## Network  
+```
 ifconfig
 ifconfig wlan0
 sudo iwlist wlan0 scan
@@ -55,26 +66,32 @@ sudo iwlist wlan0 scan
 wpa_passphrase "testing" < file_where_password_is_stored
 wpa_passphrase "ssid" >> /etc/wpa_supplicant/wpa_supplicant.conf
 wpa_cli -i wlan0 reconfigure
+```
 
-
-Bluetooth for QWERTY-Keyboard
+## Bluetooth for QWERTY-Keyboard  
+```
 # use the tools on the Desktop Toolbar
+```
 
-Manual Setup
-use a USB-Hub with Ethernet and  a PC with Putty, WinSCP (to copy Scripts, ROMs) or use Samba (ROMs only)
-manual installation:
-https://learn.adafruit.com/pigrrl-zero/software-manual-1
+## Manual Setup  
+use a USB-Hub with Ethernet and a PC with Putty, WinSCP (to copy Scripts, ROMs) or use Samba (ROMs only)  
 
-download:
-https://github.com/adafruit/Raspberry-Pi-Installer-Scripts
+manual installation:  
+https://learn.adafruit.com/pigrrl-zero/software-manual-1  
 
-Install RetroPie
-https://retropie.org.uk/download/
+download:  
+https://github.com/adafruit/Raspberry-Pi-Installer-Scripts  
 
-Adafruit PiTFT
+Install RetroPie  
+https://retropie.org.uk/download/  
+
+## Adafruit PiTFT  
+```
 sudo bash pitft-fbcp.sh
+```
 
-Overclock
+## Overclock  
+```
 sudo nano /boot/config.txt
 # insert at end of file:
 gpu_mem=44
@@ -90,17 +107,24 @@ arm_freq=1000
 core_freq=500
 sdram_freq=450
 over_voltage=6
+```
 
-Adafruit Retrogame (Button support)
+## Adafruit Retrogame (Button support)  
+```
 sudo bash retrogame.sh
 # edit the file /boot/retrogame.cfg to match the PINs used
 # (the wiring changed to preserve the I2S-Pins for audio)
-RetroPie: Configure Controller
-Emulationstation
-# press whatever key was assigned to the “Start” button to access the main menu. You’ll find an option here for “CONFIGURE INPUT”
+```
 
-Audio (I2S)
-https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp
+## Configure Controller (RetroPie)  
+Emulationstation  
+```
+# press whatever key was assigned to the “Start” button to access the main menu. You’ll find an option here for “CONFIGURE INPUT”
+```
+
+## Audio (I2S)  
+https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp  
+```
 # Adafruit Setup-Script:
 sudo bash i2samp.sh
 reboot 			# reboot twice!
@@ -128,8 +152,8 @@ dtoverlay=i2s-mmap
 
 # Create asound.conf file
 sudo nano /etc/asound.conf
-
-
+```
+```
 pcm.speakerbonnet {
    type hw card 0
 }
@@ -162,8 +186,8 @@ pcm.!default {
     type             plug
     slave.pcm       "softvol"
 }
-
-
+```
+```
 # Speaker Tests
 # noise Test
 speaker-test -c2
@@ -192,52 +216,54 @@ alsamixer
 # Just press the up and down arrows to set the volume, and ESC to quit
 
 # Hardware: If SD is connected to ground directly (voltage is under 0.16V) then the amp is shut down
+```
 
-HDMI-Output
-using Adapter-cable from Mini-HDMI to HDMI
+## HDMI-Output  
+using Adapter-cable from Mini-HDMI to HDMI  
 
-Pi Camera (5MP) with Adapter-Cable for Pi0 (smaller pitch)
+## Camera  
+Pi Camera (5MP) with Adapter-Cable for Pi0 (smaller pitch)  
 
 
-References
-https://learn.adafruit.com/pigrrl-zero/software-manual-1
+# References  
+https://learn.adafruit.com/pigrrl-zero/software-manual-1  
 
-Pi0
-https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable/overview
-https://www.adafruit.com/product/3400
-https://de.pinout.xyz/pinout/pin7_gpio4
+Pi0  
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable/overview  
+https://www.adafruit.com/product/3400  
+https://de.pinout.xyz/pinout/pin7_gpio4  
 
-PiGRRL-zero Advance
-https://www.threedprintspace.com/software
-https://www.thingiverse.com/thing:2126383
-https://www.stuffaboutcode.com/2016/01/pocket-pigrrl-battery-monitor.html
+PiGRRL-zero Advance  
+https://www.threedprintspace.com/software  
+https://www.thingiverse.com/thing:2126383  
+https://www.stuffaboutcode.com/2016/01/pocket-pigrrl-battery-monitor.html  
 
-GPi-case (safe-shutdown script)
-https://support.retroflag.com/
-https://github.com/RetroFlag/retroflag-picase
-https://recalbox.gitbook.io/documentation/basic-manual/getting-started/preparation-and-installation-of-recalbox/retroflag-gpi-case
+GPi-case (safe-shutdown script)  
+https://support.retroflag.com/  
+https://github.com/RetroFlag/retroflag-picase  
+https://recalbox.gitbook.io/documentation/basic-manual/getting-started/preparation-and-installation-of-recalbox/retroflag-gpi-case  
 
-PiBoy DMG
-https://www.experimentalpi.com/
+PiBoy DMG  
+https://www.experimentalpi.com/  
 
-Adafruit
-https://learn.adafruit.com/running-opengl-based-games-and-emulators-on-adafruit-pitft-displays
-https://github.com/adafruit/Adafruit-Retrogame/blob/master/configs/retrogame.cfg.zero
-https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp
+Adafruit  
+https://learn.adafruit.com/running-opengl-based-games-and-emulators-on-adafruit-pitft-displays  
+https://github.com/adafruit/Adafruit-Retrogame/blob/master/configs/retrogame.cfg.zero  
+https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp  
 
-Patchbox OS (RT-Kernel)
-https://blokas.io/patchbox-os/docs/first-run-options/
+Patchbox OS (RT-Kernel)  
+https://blokas.io/patchbox-os/docs/first-run-options/  
 
-Retro Gaming / RetroPie Distro
-https://retropie.org.uk/
+Retro Gaming / RetroPie Distro  
+https://retropie.org.uk/  
 
-Edit /boot/config.txt
-https://www.raspberrypi.org/documentation/computers/configuration.html
+Edit /boot/config.txt  
+https://www.raspberrypi.org/documentation/computers/configuration.html  
 
-Wifi: wpa_supplicant.conf
-https://manpages.debian.org/testing/wpasupplicant/wpa_supplicant.conf.5.en.html
-https://www.linuxbabe.com/ubuntu/connect-to-wi-fi-from-terminal-on-ubuntu-18-04-19-04-with-wpa-supplicant
+Wifi: wpa_supplicant.conf  
+https://manpages.debian.org/testing/wpasupplicant/wpa_supplicant.conf.5.en.html  
+https://www.linuxbabe.com/ubuntu/connect-to-wi-fi-from-terminal-on-ubuntu-18-04-19-04-with-wpa-supplicant  
 
-Camera (5MP)
-https://www.adafruit.com/product/1367
-https://picamera.readthedocs.io/en/release-1.13/
+Camera (5MP)  
+https://www.adafruit.com/product/1367  
+https://picamera.readthedocs.io/en/release-1.13/  

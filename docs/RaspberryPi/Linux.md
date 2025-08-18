@@ -1,36 +1,44 @@
-Linux (A Short Primer)
+# Linux
+(A Short Primer)  
 
-http://www.selflinux.org
+http://www.selflinux.org  
 http://wiki.ubuntuusers.de
-
 http://wiki.ubuntuusers.de/Shell/Befehls%C3%BCbersicht
+http://wiki.ubuntuusers.de/Benutzer_und_Gruppen  
+http://wiki.ubuntuusers.de/usermod  
 
-http://wiki.ubuntuusers.de/Benutzer_und_Gruppen
-http://wiki.ubuntuusers.de/usermod
+
+Prompt:  
+pi@raspberry ~ $  
+
+Code completion:  
+<Tab>  
+
+History:  
+Cursor_up/ -down  
+```
+history
+```
+
+Verzeichnisse:  
+```
+.               # current dir  
+..              # parrent dir  
+/               # root dir  
+~, /home        # user dir  
+$PATH  
+set  
+./befehl  
+```
+
+Ausgabe umlenken:  
+```
+|               # pipe output to another process
+>               # redirect character stream to file
+>>              # append character stream to file
+```
 
 ```
-Prompt:
-pi@raspberry ~ $
-
-
-# Code completion
-<Tab>
-
-# History
-Cursor_up/ -down
-history
-
-# Verzeichnisse
-., ..
-/
-~, /home
-$PATH, set, ./befehl
-
-# Ausgabe umlenken
-|
->
->>
-
 sudo
 
 # Anzeige von UID GID
@@ -42,9 +50,8 @@ groups benutzer
 
 # angemeldete Benutzer
 w
-who  # verkürzte Form von 'w'
+who
 whoami
-
 
 # Benutzerverwaltung
 useradd, usermod
@@ -54,7 +61,7 @@ groupadd, groupmod
 adduser, deluser
 addgroup, delgroup
 
-# Bestehenden Benutzer einer weiteren Gruppe hinzufügen
+# Bestehenden Benutzer einer weiteren Gruppe hinzufügen
 sudo usermod -aG GRUPPENNAME BENUTZERNAME
 
 # change owner
@@ -65,8 +72,6 @@ chgrp group file
 # Rechte setzen
 chmod 755 *.txt
 chmod a+x *.txt
-
-- - -
 
 # print working directory
 pwd
@@ -85,8 +90,6 @@ lsof
 
 tar -xvzf *.tar.gz
 
-- - -
-
 # laufende prozesse(process status)
 ps aux
 
@@ -104,8 +107,6 @@ pkill x
 # X11 starten (Desktop)
 startx
 
-- - -
-
 hostname
 
 ifconfig
@@ -118,14 +119,12 @@ free -h
 
 cat /proc/meminfo
 
-- - -
-
 dmesg
 
 tail -f /var/log/messages
+```
 
-- - -
-
+```
 # Raspbian (Debian Wheezy)
 raspi-config
 
@@ -134,14 +133,13 @@ sudo wget https://raw.github.com/Hexxeh/rpi-update/master/rpi-update -O /usr/bin
 sudo chmod +x /usr/bin/rpi-update
 sudo REPO_URI=https://github.com/notro/rpi-firmware rpi-update
 
-- - -
 
 # Boot...
 sudo nano /boot/cmdline.txt
 sudo nano /boot/config.txt
+```
 
-- - -
-
+```
 # System V init-Process
 cat /etc/init.d/README | more
 
@@ -185,13 +183,14 @@ sudo ldconfig
 
 ---
 
-Shell
+# Shell  
 
-In Linux ist alles eine Datei!
-(UNIX: everything is a file!)
+In Linux ist alles eine Datei!  
+(UNIX: everything is a file!)  
 ```
 # root shell oder sudo benutzen, um GPIO zu nutzen!
 sudo bash
+
 # GPIO PIN
 echo "25" > /sys/class/gpio/export
 # Ausgabe
@@ -208,11 +207,10 @@ cat /sys/class/gpio/gpio18/value
 
 # Temperatur auslesen
 cat /sys/class/thermal/thermal_zone0/temp
+```
 
+```
 # Pi Cam
 raspistill --help
 raspivid --help
 ```
-
----
-

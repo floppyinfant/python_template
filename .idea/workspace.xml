@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="RPi">
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/Adafruit_PiGRRL-0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/Administration.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/Linux.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/MediaCenter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/PiBoy_DMG.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/PiTFT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/Pi_Camera.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/Python.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/Raspberry_Pi_Hardware.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/WiringPi.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/HARDWARE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/WiringPi.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Adafruit_PiGRRL-0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Adafruit_PiGRRL-0.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Administration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Administration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Linux.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Linux.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/MediaCenter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/MediaCenter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/PiBoy_DMG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/PiBoy_DMG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/PiTFT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/PiTFT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Pi_Camera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Pi_Camera.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Python.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Python.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Raspberry_Pi_Hardware.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/WiringPi.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,7 +378,8 @@
       <workItem from="1755416617715" duration="6022000" />
       <workItem from="1755429354797" duration="1261000" />
       <workItem from="1755446029892" duration="10061000" />
-      <workItem from="1755512881185" duration="1926000" />
+      <workItem from="1755512881185" duration="2146000" />
+      <workItem from="1755539240969" duration="10267000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -525,7 +529,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755456383285</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="RPi">
+      <option name="closed" value="true" />
+      <created>1755515015907</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1755515015907</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">

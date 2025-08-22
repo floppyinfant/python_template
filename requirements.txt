@@ -1,9 +1,12 @@
+torch
 # Web
 requests
 httpx
 scrapy
 bs4
 flask
+fastapi
+uvicorn
 #TUI
 termcolor
 colorama
@@ -21,24 +24,38 @@ arcade
 # CV
 Pillow
 opencv-python
+# Deployment, Environment
+pyinstaller
+pynsist
+python-dotenv
+# ----------------------------------------------------------------------------
 # Data Science and HPC
 numba
-numpy
-pandas
 scipy
 matplotlib
 bokeh
 taichi
 scikit-learn
-# Deployment, Environment
-pyinstaller
-pynsist
-python-dotenv
-# 
+numpy
+pandas
+# AI
+# 1. Download CUDA-Toolkit (check supported Version on pytorch website first!)
+# 2. Install torch for your CUDA-Toolkit Version (e.g. 12.9)
+# !uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu129
+jax
+tensorflow
+#
 mcp[cli]
 ollama
-langchain[llms]
-#google
+transformers
+huggingface_hub  # Shell: hf auth login # get a read token from hf.co/settings/tokens
+langchain
+langchain-huggingface
 google-genai
 openai
-huggingface_hub  # Shell: hf auth login # get a read token from hf.co/settings/tokens
+# Fine-Tuning
+unsloth
+trl
+peft
+accelerate
+bitsandbytes

@@ -5,20 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="RPi">
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/HARDWARE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/RaspberryPi/WiringPi.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/Pricing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/Pytorch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Web/FastAPI/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Web/Flask/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai/ar_mr_vr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai/fine_tuning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai/langchain_hf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python_template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_template.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Adafruit_PiGRRL-0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Adafruit_PiGRRL-0.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Administration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Administration.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Linux.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Linux.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/MediaCenter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/MediaCenter.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/PiBoy_DMG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/PiBoy_DMG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/PiTFT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/PiTFT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Pi_Camera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Pi_Camera.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Python.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Python.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Raspberry_Pi_Hardware.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/WiringPi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MCP/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/MCP/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Markdown.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Requirements/requirements-conda.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/Requirements/requirements-conda.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Requirements/requirements-pip.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/Requirements/requirements-pip.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Requirements/uv_pip_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/Requirements/uv_pip_list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/conda.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/conda.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pip.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/pip.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/uv.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/uv.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/venv.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/venv.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ai/pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/pytorch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/_flask.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/learning_flask/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/learning_flask/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/learning_flask/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/learning_flask/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/learning_flask/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/learning_flask/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/learning_flask/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/learning_flask/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/learning_flask/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/learning_flask/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/learning_flask/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/learning_flask/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/learning_flask/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/learning_flask/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/learning_flask/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/learning_flask/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/rapid_flask_[video]/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/rapid_flask_[video]/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv/examples/rapid_flask_[video]/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/srv/flask/examples/rapid_flask_[video]/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +72,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -193,38 +214,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;L:/WORKSPACES/PYTHON_WS/python_template/src/bl_extension/addon&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "L:/WORKSPACES/PYTHON_WS/python_template/src/bl_extension/addon",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="python_template" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="python_template" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\bl_extension\addon" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\env" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Requirements" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\.gemini" />
-      <recent name="C:\Users\tm\Documents\Workspaces\Python\python_template\notepad" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\AI" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Web" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Flask" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\srv\flask" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Deployment" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -341,8 +371,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.90" />
-        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.515" />
+        <option value="bundled-python-sdk-7e47963ff851-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.515" />
       </set>
     </attachedChunks>
   </component>
@@ -379,7 +409,17 @@
       <workItem from="1755429354797" duration="1261000" />
       <workItem from="1755446029892" duration="10061000" />
       <workItem from="1755512881185" duration="2146000" />
-      <workItem from="1755539240969" duration="10267000" />
+      <workItem from="1755539240969" duration="10376000" />
+      <workItem from="1755549866621" duration="189000" />
+      <workItem from="1755550090669" duration="7462000" />
+      <workItem from="1755637528598" duration="3008000" />
+      <workItem from="1755640705290" duration="823000" />
+      <workItem from="1755705344831" duration="6560000" />
+      <workItem from="1755761233144" duration="1730000" />
+      <workItem from="1755774264049" duration="5189000" />
+      <workItem from="1755780986750" duration="293000" />
+      <workItem from="1755781300772" duration="5979000" />
+      <workItem from="1755898470600" duration="2036000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -537,7 +577,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755515015907</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="RPi">
+      <option name="closed" value="true" />
+      <created>1755549610298</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1755549610298</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -612,20 +660,9 @@
     <MESSAGE value="RPi" />
     <option name="LAST_COMMIT_MESSAGE" value="RPi" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/ai/langchain.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_template$app.coverage" NAME="app Coverage Results" MODIFIED="1754113350211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/python_template$main.coverage" NAME="main Coverage Results" MODIFIED="1754164232274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/template" />
+    <SUITE FILE_PATH="coverage/python_template$main.coverage" NAME="main Coverage Results" MODIFIED="1755641223584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/template" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.py">

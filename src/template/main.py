@@ -992,6 +992,10 @@ https://flask.palletsprojects.com/en/stable/
 
 FastAPI (Web Framework for building APIs)
 https://fastapi.tiangolo.com/
+fastapi dev main.py  # run the server
+
+uvicorn
+https://www.uvicorn.org/
 
 Tornado (Webserver, Web Framework)
 https://www.tornadoweb.org/en/stable/
@@ -1347,40 +1351,61 @@ import genesis as gs
 """
 Creative Coding
 
-Audio | DSP | Music | MIDI
+Music | MIDI | Audio | DSP
 https://wiki.python.org/moin/PythonInMusic
 
 Blokas Patchbox OS
 https://blokas.io/patchbox-os/docs/
 MODEP
 
-# Pure Data
-pylibpd
-# PortAudio
+Jack
+
+ASIO4All
+
+PortAudio
 pyaudio
-# Soundfont sf2
-pyfluidsynth
 
 pygame.mixer, pygame.mixer.music, pygame.midi, pygame.sndarray
 https://www.pygame.org/docs/
 
+Soundfont sf2
+pyfluidsynth
+
+---
+
 # Music Notation
+
 Mingus
 Mido
 
+---
+
 # Music Library
+
 Mopidy
 
 # Digital Audio Workstation (DAW)
+
 Reaper (DAW)
 
+---
+
 # Coding Music
+
 Sonic Pi (Ruby)
 https://sonic-pi.net/
 
+Pure Data
+pylibpd
+
+SuperCollider
+
+---
 
 # Creative Coding Frameworks
-openFrameworks (C++) for Audio, Video, Image Processing, Computer Vision, Graphics, GUI
+
+openFrameworks (C++) 
+for Audio, Video, Image Processing, Computer Vision, Graphics, GUI
 https://openframeworks.cc/
 
 Processing (Java)
@@ -1390,13 +1415,15 @@ JUCE (C++)
 https://juce.com/
 
 # Plugin SDKs
-Steinberg VST_SDK, Apple AU, CLAP
+Steinberg VST_SDK, Apple AU, Bitwig CLAP
 
 Will Pirkle (C++)
 https://willpirkle.com/
 
-"""
+MODEP
 
+VCV-Rack
+"""
 
 # -------------------------------------------------------------------------------------------
 

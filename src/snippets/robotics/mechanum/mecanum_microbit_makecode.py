@@ -6,6 +6,7 @@ https://microbit-micropython.readthedocs.io/en/latest/tutorials/introduction.htm
 
 Resources:
 https://docs.keyestudio.com/projects/KS4034/en/latest/docs/index.html#obtain-resources-important
+30.Multi-purpose-Smart-Car.hex
 
 View Hex-file in Online-Editor (drag and drop):
 https://makecode.microbit.org/#editor

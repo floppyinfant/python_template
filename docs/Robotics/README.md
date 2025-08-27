@@ -75,13 +75,9 @@ https://tellopilots.com/wiki/development/
 https://github.com/Matthias84/awesome-tello  
 
 
-MicroBit  
-
-
 First Tech Challenge (FTC)  
 https://de.wikipedia.org/wiki/First_Tech_Challenge  
 https://www.firstinspires.org/robotics/ftc  
-
 
 
 Waveshare BuildCar  
@@ -97,10 +93,17 @@ https://docs.keyestudio.com/projects/KS4034/en/latest/docs/Makecode/Makecode.htm
 https://www.dropbox.com/scl/fo/z456za605duto1vzr5hsb/AL2gMTj9Z8PMyyqLQEumNeU?e=1&noscript=1&rlkey=6dq2paw1m47wracblv1o931q0&dl=0  
 
 
+MicroBit  
+
+
 KittenBot  
 https://de.rs-online.com/web/p/bbc-micro-bit-add-ons/2121790  
 
 https://category.yahboom.net/  
+
+
+Adafruit
+https://learn.adafruit.com/category/robotics  
 
 ---
 

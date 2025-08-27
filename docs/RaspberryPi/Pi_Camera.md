@@ -1,5 +1,7 @@
 # Camera Module
 
+<src: BOL>  
+
 ## Hardware  
 Kamera Modul 5MP (27,99€)  
 stills capture mode (2592×1944), aspect ratio 4:3  

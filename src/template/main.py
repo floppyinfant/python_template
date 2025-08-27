@@ -518,7 +518,7 @@ import logging
 from rich.logging import RichHandler
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='_log.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename='../../.log/logger.log', encoding='utf-8', level=logging.DEBUG)
 # create console handler and set level to debug
 #ch = logging.StreamHandler()
 #ch.setLevel(logging.DEBUG)

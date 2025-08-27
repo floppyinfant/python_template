@@ -1,6 +1,8 @@
 # Linux
 (A Short Primer)  
 
+<src: BOL>  
+
 http://www.selflinux.org  
 http://wiki.ubuntuusers.de
 http://wiki.ubuntuusers.de/Shell/Befehls%C3%BCbersicht

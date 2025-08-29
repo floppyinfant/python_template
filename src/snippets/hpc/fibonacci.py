@@ -85,10 +85,11 @@ def delta_time(f):
 
 #@delta_time
 def fibonacci(n: int) -> int:
-    """Calculate the nth Fibonacci number using recursion with caching.
-
+    """
+    Calculate the nth Fibonacci number using recursion with caching.
     Args:
-        n (int): The position in the Fibonacci sequence."""
+        n (int): The position in the Fibonacci sequence.
+    """
     
     if n < 0:
         raise ValueError("Input must be a non-negative integer.")

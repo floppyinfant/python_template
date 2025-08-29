@@ -4,33 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/Robotics/Adafruit_IO.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Robotics/Android_Sensors.md" afterDir="false" />
+    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="_">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Adafruit_PiGRRL-0.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Adafruit_PiGRRL-0.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Administration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Administration.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/HARDWARE.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/HARDWARE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Linux.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Linux.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/MediaCenter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/MediaCenter.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/PiBoy_DMG.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/PiBoy_DMG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/PiTFT.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/PiTFT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Pi_Camera.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Pi_Camera.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Python.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/Python.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/WiringPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/WiringPi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/ar_mr_vr.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/ar_mr_vr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/fine_tuning.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/fine_tuning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/gemini_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/gemini_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/hf.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/hf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/langchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/langchain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/langchain_hf.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/langchain_hf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/mcp_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/mcp_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/ollama_sdk.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/ollama_sdk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/openai.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/openai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/pytorch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hpc/hpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/hpc/hpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/template.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Blender_Python_API/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Blender_Python_API/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/hpc/hpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/hpc/fibonacci.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +43,7 @@
       <list>
         <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -224,6 +203,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2025.1.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -241,11 +221,11 @@
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets\robotics\mechanum" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Robotics\Mecanum" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\.log" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\AI" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Web" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Flask" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\srv\flask" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -412,7 +392,11 @@
       <workItem from="1755781300772" duration="5979000" />
       <workItem from="1755898470600" duration="2293000" />
       <workItem from="1756232811399" duration="1735000" />
-      <workItem from="1756258232889" duration="1646000" />
+      <workItem from="1756258232889" duration="1864000" />
+      <workItem from="1756308765705" duration="6450000" />
+      <workItem from="1756405069869" duration="3116000" />
+      <workItem from="1756458459821" duration="5095000" />
+      <workItem from="1756494780441" duration="4196000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -594,7 +578,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755901168903</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="_">
+      <option name="closed" value="true" />
+      <created>1756260117018</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1756260117018</updated>
+    </task>
+    <task id="LOCAL-00025" summary="_">
+      <option name="closed" value="true" />
+      <created>1756321603301</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1756321603301</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -672,7 +672,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_template$app.coverage" NAME="app Coverage Results" MODIFIED="1754113350211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/python_template$main.coverage" NAME="main Coverage Results" MODIFIED="1755641223584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/template" />
+    <SUITE FILE_PATH="coverage/python_template$main.coverage" NAME="main Coverage Results" MODIFIED="1756260032246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/template" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.py">

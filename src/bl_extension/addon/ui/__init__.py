@@ -3,12 +3,14 @@ from .... import __package__ as base_package
 
 # file == module
 from . import hello_panel
-#from .hello_panel import HelloWorldPanel
+# classes
+from .hello_panel import *
 
 
 # defined classes must be registered
 classes = (
     hello_panel.HelloWorldPanel,
+    VIEW3D_PT_my_custom_panel
 )
 
 

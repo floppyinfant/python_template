@@ -11,10 +11,22 @@ https://docs.blender.org/manual/en/latest/advanced/scripting/addon_tutorial.html
 ---
 
 YouTube Tutorial  
-https://youtu.be/YUytEtaVrrc  
-https://youtu.be/0_QskeU8CPo  
+https://youtu.be/wWTAQP7-ZUQ (Blender)  
+
+https://www.youtube.com/@CGPython  
+https://youtu.be/YUytEtaVrrc (VScode Setup)  
+https://youtu.be/0_QskeU8CPo (Panel Demo)  
+
+https://youtube.com/playlist?list=PLRKZHg6r5mu42davqG2wUl_P-JDgJTaus (Curtis Holt)  
+
+https://www.youtube.com/@DarkfallBlender  
 
 ---
+
+## Blender Scripting Workspace
+
+In Preferences > Interface > Python Tooltips enable  
+In Preferences > Interface > Developer Extras enable  
 
 ## Development Tools  
 

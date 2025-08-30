@@ -28,6 +28,16 @@ https://www.youtube.com/@DarkfallBlender
 In Preferences > Interface > Python Tooltips enable  
 In Preferences > Interface > Developer Extras enable  
 
+## Installing Modules
+https://youtu.be/k1gCIezKA8E?t=121  
+inside Blenders Scripting Workspace (interactive console):  
+```
+bpy.utils.user_resource("SCRIPTS", path="modules")
+```
+```Bash
+pip install <library> --target=""  
+```
+
 ## Development Tools  
 
 https://developer.blender.org/docs/handbook/extensions/addon_dev_setup/  
@@ -63,4 +73,7 @@ pip install fake-bpy-module
 import bpy
 """automatically uses fake-bpy in VScode and works in Blender"""
 ```
+
+### Numpy-STL
+https://numpy-stl.readthedocs.io/en/latest/
 

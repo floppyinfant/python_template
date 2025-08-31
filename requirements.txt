@@ -34,6 +34,7 @@ numba
 scipy
 matplotlib
 bokeh
+streamlit
 taichi
 scikit-learn
 numpy
@@ -44,6 +45,12 @@ pandas
 # !uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu129
 jax
 tensorflow
+# Fine-Tuning
+unsloth
+trl
+peft
+accelerate
+bitsandbytes
 #
 mcp[cli]
 ollama
@@ -51,11 +58,6 @@ transformers
 huggingface_hub  # Shell: hf auth login # get a read token from hf.co/settings/tokens
 langchain
 langchain-huggingface
+langchain[google-genai]
 google-genai
 openai
-# Fine-Tuning
-unsloth
-trl
-peft
-accelerate
-bitsandbytes

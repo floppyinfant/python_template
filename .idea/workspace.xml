@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="Notebooks">
-      <change afterPath="$PROJECT_DIR$/Notebooks/Julia_template.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/R_template.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/0_docs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/0_docs.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/1_demo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +401,9 @@
       <workItem from="1756569720088" duration="2125000" />
       <workItem from="1756591323001" duration="9903000" />
       <workItem from="1756659787359" duration="2596000" />
-      <workItem from="1756729163336" duration="4110000" />
+      <workItem from="1756729163336" duration="4158000" />
+      <workItem from="1756741156518" duration="705000" />
+      <workItem from="1756750328502" duration="1693000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -633,7 +633,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756601545383</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Notebooks">
+      <option name="closed" value="true" />
+      <created>1756734772049</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1756734772049</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">

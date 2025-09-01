@@ -50,4 +50,5 @@ dependencies = [
     "ursina>=8.1.1",
     "uvicorn>=0.35.0",
     "wxpython>=4.2.3",
+    "seaborn>=0.13.2",
 ]

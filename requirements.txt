@@ -33,9 +33,10 @@ python-dotenv
 numba
 scipy
 matplotlib
+seaborn
 bokeh
 streamlit
-taichi
+#taichi
 scikit-learn
 numpy
 pandas

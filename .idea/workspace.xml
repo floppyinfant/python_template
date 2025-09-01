@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="Notebooks">
+    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/0_docs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/0_docs.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Blender_Python_API/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Blender_Python_API/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +406,9 @@
       <workItem from="1756659787359" duration="2596000" />
       <workItem from="1756729163336" duration="4158000" />
       <workItem from="1756741156518" duration="705000" />
-      <workItem from="1756750328502" duration="1693000" />
+      <workItem from="1756750328502" duration="1783000" />
+      <workItem from="1756752388638" duration="1447000" />
+      <workItem from="1756756295246" duration="728000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -641,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756734772049</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="-">
+      <option name="closed" value="true" />
+      <created>1756752125609</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1756752125609</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -717,7 +730,8 @@
     <MESSAGE value="bl_extension panel demo" />
     <MESSAGE value="_" />
     <MESSAGE value="Notebooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notebooks" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

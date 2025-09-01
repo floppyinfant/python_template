@@ -77,3 +77,68 @@ import bpy
 ### Numpy-STL
 https://numpy-stl.readthedocs.io/en/latest/
 
+---
+
+## bpy.types.Panel
+https://docs.blender.org/api/current/bpy.types.Panel.html
+
+bl_space_type = "VIEW_3D"  
+https://docs.blender.org/api/current/bpy_types_enum_items/space_type_items.html#rna-enum-space-type-items
+
+bl_region_type = "UI"  
+https://docs.blender.org/api/current/bpy_types_enum_items/region_type_items.html#rna-enum-region-type-items
+
+```python
+class VIEW3D_PT_my_custom_panel(bpy.types.Panel):  # class naming convention ‘CATEGORY_PT_name’
+
+    # where to add the panel in the UI
+    bl_space_type = "VIEW_3D"  # 3D Viewport area (find list of values here https://docs.blender.org/api/current/bpy_types_enum_items/space_type_items.html#rna-enum-space-type-items)
+    bl_region_type = "UI"  # Sidebar region (find list of values here https://docs.blender.org/api/current/bpy_types_enum_items/region_type_items.html#rna-enum-region-type-items)
+
+    # add labels
+    bl_category = "My Custom Panel category"  # found in the Sidebar
+    bl_label = "My Custom Panel label"  # found at the top of the Panel
+
+    def draw(self, context):
+        """define the layout of the panel"""
+        row = self.layout.row()
+        row.operator("mesh.primitive_cube_add", text="Add Cube")
+        row = self.layout.row()
+        row.operator("mesh.primitive_ico_sphere_add", text="Add Ico Sphere")
+        row = self.layout.row()
+        row.operator("object.shade_smooth", text="Shade Smooth")
+
+        self.layout.separator()
+
+        row = self.layout.row()
+        row.operator("mesh.add_subdiv_monkey", text="Add Subdivided Monkey")
+```
+
+---
+
+## bpy.types.Operator
+https://docs.blender.org/api/current/bpy.types.Operator.html
+
+```python
+class MESH_OT_add_subdiv_monkey(bpy.types.Operator):
+    """Create a new monkey mesh object with a subdivision surf modifier and shaded smooth"""
+
+    bl_idname = "mesh.add_subdiv_monkey"
+    bl_label = "Add Subdivided Monkey Mesh Object"
+    bl_options = {"REGISTER", "UNDO"}
+
+    mesh_size: bpy.props.FloatProperty(
+        name="Size",
+        default=4.0,
+        description="The size of the monkey",
+    )
+
+    def execute(self, context):
+
+        add_subdiv_monkey_obj(self.mesh_size, self.subdiv_viewport_lvl, self.subdiv_render_lvl, self.shade_smooth)
+
+        return {"FINISHED"}
+```
+
+---
+

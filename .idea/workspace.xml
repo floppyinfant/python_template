@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="_">
+    <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="Notebooks">
+      <change afterPath="$PROJECT_DIR$/Notebooks/Julia_template.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/R_template.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/template.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Blender_Python_API/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Blender_Python_API/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/snippets/hpc/hpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/hpc/fibonacci.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/0_docs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/0_docs.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/1_demo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +42,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
         <option value="TypeScript File" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -396,7 +397,13 @@
       <workItem from="1756308765705" duration="6450000" />
       <workItem from="1756405069869" duration="3116000" />
       <workItem from="1756458459821" duration="5095000" />
-      <workItem from="1756494780441" duration="4196000" />
+      <workItem from="1756494780441" duration="4223000" />
+      <workItem from="1756542802720" duration="2659000" />
+      <workItem from="1756561944922" duration="3814000" />
+      <workItem from="1756569720088" duration="2125000" />
+      <workItem from="1756591323001" duration="9903000" />
+      <workItem from="1756659787359" duration="2596000" />
+      <workItem from="1756729163336" duration="4110000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -594,7 +601,39 @@
       <option name="project" value="LOCAL" />
       <updated>1756321603301</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="_">
+      <option name="closed" value="true" />
+      <created>1756499019271</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1756499019271</updated>
+    </task>
+    <task id="LOCAL-00027" summary="bl_extension panel demo">
+      <option name="closed" value="true" />
+      <created>1756545446611</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1756545446611</updated>
+    </task>
+    <task id="LOCAL-00028" summary="_">
+      <option name="closed" value="true" />
+      <created>1756567589107</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1756567589107</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Notebooks">
+      <option name="closed" value="true" />
+      <created>1756601545383</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1756601545383</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -667,8 +706,20 @@
     <MESSAGE value="MCP" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="RPi" />
+    <MESSAGE value="bl_extension panel demo" />
     <MESSAGE value="_" />
-    <option name="LAST_COMMIT_MESSAGE" value="_" />
+    <MESSAGE value="Notebooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notebooks" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/bl_extension/addon/ui/__init__.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_template$app.coverage" NAME="app Coverage Results" MODIFIED="1754113350211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

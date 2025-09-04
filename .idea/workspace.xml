@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
-      <change afterPath="$PROJECT_DIR$/docs/AI/Libraries.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/TODO.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/0_docs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Jupyter.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Blender_Python_API/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Blender_Python_API/_README_BlenderScripting.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Markdown.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RaspberryPi/_README_RaspberryPi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Robotics/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Robotics/_README_Robotics.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Web/FastAPI/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Web/FastAPI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Web/Flask/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Web/Flask.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/Julia_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Julia_template.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_template.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/R_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/R_template.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AI/Pytorch.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/Pytorch.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +229,7 @@
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.app">
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -466,7 +460,9 @@
       <workItem from="1756750328502" duration="1783000" />
       <workItem from="1756752388638" duration="1447000" />
       <workItem from="1756756295246" duration="814000" />
-      <workItem from="1756926099323" duration="8645000" />
+      <workItem from="1756926099323" duration="8863000" />
+      <workItem from="1756936077234" duration="1244000" />
+      <workItem from="1756938483910" duration="5479000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -720,7 +716,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756757109893</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="-">
+      <option name="closed" value="true" />
+      <created>1756935549839</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1756935549839</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">

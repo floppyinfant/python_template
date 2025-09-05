@@ -1,4 +1,4 @@
-torch
+# --------------------------
 # Web
 requests
 httpx
@@ -7,7 +7,8 @@ bs4
 flask
 fastapi
 uvicorn
-#TUI
+# --------------------------
+# TUI
 termcolor
 colorama
 pyfiglet
@@ -15,15 +16,14 @@ terminaltexteffects
 textual
 rich
 typer
+# --------------------------
 # GUI
 PyQt5
 wxPython
-kivy
+#kivy
 pygame
 arcade
-# CV
-Pillow
-opencv-python
+# --------------------------
 # Deployment, Environment
 pyinstaller
 pynsist
@@ -35,30 +35,42 @@ scipy
 matplotlib
 seaborn
 bokeh
+plotly
 streamlit
 #taichi
 scikit-learn
 numpy
 pandas
-# AI
-# 1. Download CUDA-Toolkit (check supported Version on pytorch website first!)
-# 2. Install torch for your CUDA-Toolkit Version (e.g. 12.9)
-# !uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu129
+# --------------------------
+# CV
+Pillow
+opencv-python
+# ----------------------------------------------------------------------------
+# Deep Learning
+# PyTorch:
+# 1. Download CUDA-Toolkit 12.6 (check supported Version on pytorch website first; check if your GPU Arch is supported)
+# 2. Install torch for your CUDA-Toolkit Version (e.g. 12.6)
+# !uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 jax
 tensorflow
-# Fine-Tuning
+# --------------------------
+# Fine-Tuning LLMs
 unsloth
 trl
 peft
 accelerate
 bitsandbytes
-#
-mcp[cli]
-ollama
 transformers
+# --------------------------
+# GenAI (LLM) application / usage
 huggingface_hub  # Shell: hf auth login # get a read token from hf.co/settings/tokens
+ollama
+# API
+google-genai
+openai
+# Agentic AI
+mcp[cli]
 langchain
 langchain-huggingface
 langchain[google-genai]
-google-genai
-openai
+langchain-openai

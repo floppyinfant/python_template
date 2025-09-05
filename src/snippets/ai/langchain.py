@@ -8,13 +8,15 @@ LangGraph - Gemini Agent Quickstart
 https://github.com/google-gemini/gemini-fullstack-langgraph-quickstart
 """
 
-from langchain.chat_models  import ChatOpenAI
+from langchain_openai  import ChatOpenAI
 import dotenv
 import os
 
-dotenv.load_dotenv
+dotenv.load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise RuntimeError("OPENAI_API_KEY ist nicht gesetzt.")
 
-chat_model = ChatOpenAI(openai_api_key=api_key, temperature=0)
-result = chat_model.predict("Hello World!")
-print(result)
+chat_model = ChatOpenAI(api_key=api_key, temperature=0)
+result = chat_model.invoke("Hello World!")
+print(result.content)

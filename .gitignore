@@ -111,9 +111,10 @@ _bak/
 _local/
 
 # Jetbrains
-.idea/
-*/workspace.xml
+/.idea/
+#*/workspace.xml
 
 #.vscode
 *.code-workspace
 
+/machine-learning-notebooks/

@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
+      <change afterPath="$PROJECT_DIR$/docs/Robotics/Augmented_Reality.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Web/Frameworks.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements_uv-pip-freeze.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/snippets/ai/ml.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/snippets/web/streamlit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Julia_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Julia_template.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Python_libraries_snippets.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_template.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/R_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/R_template.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AI/Pytorch.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/Pytorch.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/Python_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_template.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/langchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/langchain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/pytorch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/robotics/mechanum/mecanum_microbit_makecode.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/embedded/robotics/mechanum/mecanum_microbit_makecode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +52,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="TypeScript File" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -189,6 +199,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.streamlit.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
@@ -223,10 +234,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Web" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets\embedded" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets\robotics\mechanum" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Robotics\Mecanum" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\.log" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets" />
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -462,7 +473,10 @@
       <workItem from="1756756295246" duration="814000" />
       <workItem from="1756926099323" duration="8863000" />
       <workItem from="1756936077234" duration="1244000" />
-      <workItem from="1756938483910" duration="5479000" />
+      <workItem from="1756938483910" duration="5592000" />
+      <workItem from="1756975912004" duration="5329000" />
+      <workItem from="1757015602500" duration="2732000" />
+      <workItem from="1757094185364" duration="9019000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -724,7 +738,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756935549839</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="-">
+      <option name="closed" value="true" />
+      <created>1756949284872</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1756949284872</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -815,6 +837,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_template$app.coverage" NAME="app Coverage Results" MODIFIED="1754113350211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/python_template$streamlit.coverage" NAME="streamlit Coverage Results" MODIFIED="1756976725940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/snippets/web" />
     <SUITE FILE_PATH="coverage/python_template$main.coverage" NAME="main Coverage Results" MODIFIED="1756260032246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/template" />
   </component>
   <component name="editorHistoryManager">

@@ -52,4 +52,5 @@ dependencies = [
     "wxpython>=4.2.3",
     "seaborn>=0.13.2",
     "langchain-openai>=0.3.32",
+    "plotly>=6.3.0",
 ]

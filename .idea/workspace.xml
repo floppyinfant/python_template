@@ -5,20 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
-      <change afterPath="$PROJECT_DIR$/docs/Robotics/Augmented_Reality.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Web/Frameworks.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements_uv-pip-freeze.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/snippets/ai/ml.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/snippets/web/streamlit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/snippets/ai/ai.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Python_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Python_template.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MCU/CircuitPython.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/MCU/CircuitPython.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MCU/MicroPython.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/MCU/MicroPython.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Adafruit_PiGRRL-0.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Adafruit_PiGRRL-0.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Administration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Administration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/HARDWARE.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/HARDWARE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Linux.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Linux.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/MediaCenter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/MediaCenter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/PiBoy_DMG.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/PiBoy_DMG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/PiTFT.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/PiTFT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Pi_Camera.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Pi_Camera.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/Python.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Python.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/WiringPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/WiringPi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RaspberryPi/_README_RaspberryPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/_README_RaspberryPi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Robotics/Adafruit_IO.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Adafruit_IO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Robotics/Android_Sensors.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Android_Sensors.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Robotics/Augmented_Reality.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/Augmented_Reality.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Robotics/Mecanum.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Mecanum.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Robotics/ROS2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/ROS2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Robotics/_README_Robotics.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/_README_Robotics.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/snippets/ai/langchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/langchain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/snippets/ai/pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/pytorch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/snippets/robotics/mechanum/mecanum_microbit_makecode.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/embedded/robotics/mechanum/mecanum_microbit_makecode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/ar_mr_vr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/fine_tuning.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/fine_tuning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/gemini_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/gemini_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/hf.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/hf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/langchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/langchain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/langchain_hf.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/langchain_hf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/mcp_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/mcp_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/ml.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/ml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/ollama_sdk.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/ollama_sdk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/openai.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/openai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/tuts/pytorch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,11 +252,11 @@
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets\ai\tuts" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Embedded_Systems" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Web" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets\embedded" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets\robotics\mechanum" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Robotics\Mecanum" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\.log" />
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -476,7 +495,8 @@
       <workItem from="1756938483910" duration="5592000" />
       <workItem from="1756975912004" duration="5329000" />
       <workItem from="1757015602500" duration="2732000" />
-      <workItem from="1757094185364" duration="9019000" />
+      <workItem from="1757094185364" duration="9279000" />
+      <workItem from="1757148804290" duration="7602000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -746,7 +766,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756949284872</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="-">
+      <option name="closed" value="true" />
+      <created>1757103506513</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1757103506513</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">

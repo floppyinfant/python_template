@@ -2,6 +2,7 @@
 AI - Generative AI
 
 @see Notebooks/Python_template.ipynb
+@see docs/AI/LEARN.md
 
 ---
 

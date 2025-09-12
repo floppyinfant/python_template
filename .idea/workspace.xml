@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
-      <change afterPath="$PROJECT_DIR$/Notebooks/11_ML.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/12_DL.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/13_CV.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/14_PhysicalAI.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/21_AI.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/22_LLM.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/23_Finetuning.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/31_RAG.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/41_Agents.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/51_Diffusion.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/05_Stremlit.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/06_HPC.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/10_ML.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Jupyter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/00_Jupyter.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Python_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/01_ALL_Templates.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/01_ALL_Templates.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/11_ML.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/12_DL.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/20_DL.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/13_CV.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/70_CV.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/14_PhysicalAI.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/80_PhysicalAI.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/21_AI.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/30_AI.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/22_LLM.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/31_LLM.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/23_Finetuning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/32_Finetuning.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/41_Agents.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/40_Agents.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,30 +193,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.app.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.streamlit.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "L:/WORKSPACES/PYTHON_WS/python_template/Notebooks",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2025.1.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.streamlit.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;L:/WORKSPACES/PYTHON_WS/python_template/Notebooks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2025.1.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="python_template" is-module-sdk="true">
@@ -479,7 +479,8 @@
       <workItem from="1757148804290" duration="7624000" />
       <workItem from="1757184377371" duration="9912000" />
       <workItem from="1757360921964" duration="2848000" />
-      <workItem from="1757517292940" duration="6716000" />
+      <workItem from="1757517292940" duration="7322000" />
+      <workItem from="1757667916505" duration="3767000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -773,7 +774,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757365187354</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="-">
+      <option name="closed" value="true" />
+      <created>1757539235753</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1757539235753</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">

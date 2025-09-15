@@ -74,3 +74,4 @@ langchain
 langchain-huggingface
 langchain[google-genai]
 langchain-openai
+genesis-world  # first install CUDA Toolkit, PyTorch

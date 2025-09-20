@@ -53,4 +53,5 @@ dependencies = [
     "seaborn>=0.13.2",
     "langchain-openai>=0.3.32",
     "plotly>=6.3.0",
+    "sympy>=1.14.0",
 ]

@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python_template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_template.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Jetbrains_PyCharm.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Microsoft_VScode.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/00_Jupyter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/00_Jupyter.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Markdown.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -495,7 +493,7 @@
       <workItem from="1758205484217" duration="2515000" />
       <workItem from="1758214244949" duration="2872000" />
       <workItem from="1758220712785" duration="2260000" />
-      <workItem from="1758304411670" duration="16563000" />
+      <workItem from="1758304411670" duration="24597000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -821,7 +819,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758179612463</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="-">
+      <option name="closed" value="true" />
+      <created>1758399813735</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1758399813735</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">

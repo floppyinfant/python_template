@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
+      <change afterPath="$PROJECT_DIR$/docs/Tools/cmake.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/git.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/deploy/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/installer.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/installer.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_py2exe.bat" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/run_py2exe.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_pyinstaller.bat" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/run_pyinstaller.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_pynsist.bat" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/run_pynsist.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,11 +235,11 @@
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\scripts\deploy" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\scripts" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\examples\_my" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\ebooks" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets\ai\tuts" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Embedded_Systems" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Web" />
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -489,7 +497,7 @@
       <workItem from="1758205484217" duration="2515000" />
       <workItem from="1758214244949" duration="2872000" />
       <workItem from="1758220712785" duration="2260000" />
-      <workItem from="1758304411670" duration="28894000" />
+      <workItem from="1758304411670" duration="37205000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -831,7 +839,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758446309587</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="-">
+      <option name="closed" value="true" />
+      <created>1758483786112</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1758483786112</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">

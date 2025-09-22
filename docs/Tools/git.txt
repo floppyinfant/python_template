@@ -1,0 +1,87 @@
+Git
+Version Control System (VCS), Source Code Management (SCM)
+https://git-scm.com/download/win
+https://gitforwindows.org/
+
+https://www.atlassian.com/git/tutorials/git-bash
+https://www.sourcetreeapp.com/
+
+# learn
+https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources
+https://git-scm.com/docs 
+
+https://training.github.com/
+https://training.github.com/downloads/de/github-git-cheat-sheet/
+https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
+https://www.atlassian.com/git/tutorials/syncing 
+
+https://www.youtube.com/watch?v=RGOj5yH7evk
+
+---
+
+git clone –recursive …
+
+git submodule update –init –recursive
+git pull origin master
+
+
+git status
+git add .
+git commit -m “initial commit”
+
+
+.gitignore
+https://github.com/github/gitignore
+https://github.com/github/gitignore/blob/main/CMake.gitignore
+https://github.com/github/gitignore/blob/main/C%2B%2B.gitignore
+https://github.com/github/gitignore/blob/main/C.gitignore 
+https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+https://github.com/github/gitignore/blob/main/KiCad.gitignore 
+
+# from matkatmusic (Learning Modern C++ with JUCE Tutorials)
+
+**/Builds
+**/JuceLibraryCode
+**/.DS_Store
+
+
+
+Git Workflow
+https://musescore.org/en/handbook/developers-handbook/finding-your-way-around/git-workflow 
+https://wiki.diasporafoundation.org/Git_workflow 
+
+#1
+fork on Github
+
+#2
+git clone <repo>
+#3
+cd <repo>
+#4
+git remote add upstream <original repo>
+git checkout develop
+
+#5 create a new branch for every feature or issue you develop
+git fetch upstream
+git checkout -b <branch feature or issue> upstream/develop
+
+#6
+git add changed/file
+git commit -m “”
+#7 run tests and styleguide
+#8
+git push -f origin <branch>
+#9
+git fetch upstream
+#10
+git checkout <branch>
+git rebase upstream/develop
+
+# 11 repeat #6 to #10 until development on the branch is finished
+#12 -i for interactive cleanup the commit history
+git rebase -i upstream/develop
+
+#13
+git push -f origin <branch>
+#14 issue pull request for development branch
+

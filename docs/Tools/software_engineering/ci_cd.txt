@@ -1,0 +1,22 @@
+Continuous Integration/Continuous Delivery / Deployment (CI/CD)
+
+
+Tools:
+- Jenkins
+- GitLab CI/CD
+- GitHub Actions
+- Azure Pipelines
+- AWS CodePipeline
+
+
+https://en.wikipedia.org/wiki/CI/CD
+https://www.jetbrains.com/teamcity/ci-cd-guide/benefits-of-ci-cd/
+https://www.atlassian.com/devops/devops-tools/cicd-tools
+https://about.gitlab.com/topics/ci-cd/
+https://github.com/solutions/use-case/ci-cd
+
+
+more Tools:
+- Jira
+- Bitbucket (Atlassian)
+

@@ -27,6 +27,10 @@ https://developer.hashicorp.com/vagrant/intro
 https://docs.python.org/3/  
 https://docs.python.org/3/howto/index.html  
 
+Python 3.13 @since 2014-10: no GIL  
+https://www.heise.de/news/Python-3-13-Bessere-interaktive-Shell-und-endlich-Multithreading-ohne-GIL-9968435.html  
+https://docs.python.org/3/whatsnew/3.13.html  
+
 ### uv (Project Management)
 https://docs.astral.sh/uv/  
 https://docs.astral.sh/uv/getting-started/installation/    

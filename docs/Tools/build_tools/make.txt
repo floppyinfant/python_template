@@ -1,0 +1,17 @@
+make (build system)
+
+// toolchain platforms:
+Linux
+MinGW / MSYS2
+Cygwin
+WSL2
+Git Bash
+
+
+// commands:
+./configure
+make
+make install
+
+---
+

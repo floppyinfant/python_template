@@ -3,10 +3,10 @@
 
 # you can ignore files
 .DS_Store
-*.log
-*.tmp
+#*.log
+#*.tmp
 
 # or folders
-dist/
-build/
-out/
+#dist/
+#build/
+#out/

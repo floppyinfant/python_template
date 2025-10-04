@@ -1,0 +1,333 @@
+Docker
+Container
+
+Dockerfile
+docker-compose.yml
+
+// commands:
+docker ps
+docker run …
+docker compose up -d
+docker exec -it <container_name> bash
+docker build
+docker cp
+
+---
+
+OS-Level Virtualization
+https://en.wikipedia.org/wiki/OS-level_virtualization
+
+OpenVZ
+https://en.wikipedia.org/wiki/OpenVZ
+
+LXC
+https://en.wikipedia.org/wiki/LXC
+
+Docker
+https://docs.docker.com/desktop/setup/install/windows-install/
+https://docs.docker.com/desktop/features/wsl/
+https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/topics/#virtualization
+
+Docker
+docker-compose.yml
+
+Docker Desktop (Windows) enthält
+Docker Engine
+CLI
+Docker Compose
+Portainer
+Docker Hub
+Docker Scout
+
+Dockerfile
+docker-compose.yml | compose.yaml
+
+image
+container
+build
+volumes:
+	- host_path:container_path
+	Named volumes are managed by Docker:
+	- data:/usr/src/paperless/data
+	# migrate to another computer
+	docker run --rm -v data:/volume -v C:\Users\make\Documents\Backups:/backup \
+alpine tar czf /backup/data.tar.gz -C /volume .
+# restore volume on a new computer
+docker volume create data
+docker run --rm -v data:/volume -v C:\Users\make\Documents\Backups:/backup alpine sh -c "cd /volume && tar xzf /backup/data.tar.gz"
+Bind mounts are mirrored to the project directory (relative path to compose.yaml):
+	- ./inbox:/usr/src/paperless/consume
+
+
+Microsoft Installation
+Docker-Desktop
+uses WSL2 or Hyper-V: Hyper-V turns your computer into a VM; conflicting with VMware, Android Qemu, FPS on Games may drop …
+
+# path on windows
+\\wsl$\docker-desktop-data\mnt\wsl\docker-desktop-data\data
+
+
+Microsoft Windows Containers
+https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/
+https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=dockerce
+https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/container-base-images
+https://github.com/microsoft/Windows-Containers
+https://hub.docker.com/r/microsoft/windows
+Windows Containers vs. Linux Containers
+Windows Pro is needed to use Windows Containers
+Docker Pro is needed to use Docker in VMware
+
+
+Linux Installation
+ct3003: So einfach ist Docker, 2024-10-04
+https://www.youtube.com/watch?v=LBG51Gygg7A
+https://gist.github.com/jamct/2e6c03f60319423bc4bc6c23fc0aa359
+
+
+Installation
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh ./get-docker.sh
+
+# aktuellen Benutzer berechtigen
+sudo usermod -aG docker $USER
+
+
+Docker Usage
+docker version
+
+ls -l /var/lib/docker/volumes
+ls -l /var/lib/docker-desktop/volumes
+
+# alle laufenden Container auflisten
+docker ps -a
+
+# docker images auflisten
+docker images
+
+
+# Dockerfile, .dockerignore, … im Projekt erstellen
+# https://docs.docker.com/reference/cli/docker/init/
+
+
+# Dockerfile benutzen: image erstellen
+docker build --tag my_image .
+docker run -d my_image
+
+# container ausführen:
+# -d (detached),
+# -p (port-mapping host:container),
+# -e FOO=bar (env-vars),
+# -v (volumes: bind mounts, $(pwd))
+docker run -d –name webserver -p 3000:80 \
+-v ./var:/var/share/nginx/html nginx
+# interaktiv bash starten
+docker run -it ubuntu:24:10 bash
+
+# einen Container anhalten
+docker stop <containername>
+docker kill <containername>
+
+# einen gestoppten Container endgültig löschen
+docker rm <containername>
+# VORSICHT: alle gestoppten container werden gelöscht,
+# incl. images, volumes (persistent storage)
+docker system prune –all –volumes
+
+
+Dockerfile
+FROM node:16.13.0-alpine
+USER node
+WORKDIR /home/node
+ADD --chown=node:node . /home/node/
+RUN npm install
+CMD [ "node", "src/main.ts" ]
+docker build -t <name>:latest .
+
+
+Docker Compose
+# Legt euch am besten einen eigenen Ordner für das Docker-Projekt an, um Ordnung zu halten. Die Datei docker-compose.yml enthält die Definition der Container. Bearbeitet wird die Datei mit:
+nano docker-compose.yml    # oder compose.yaml
+
+# Will man die Container updaten, lädt man die neuen Images mit
+docker-compose pull
+
+# Die Compose-Zusammenstellung hochfahren:
+docker-compose up -d
+
+# automatically update changes while developing
+docker compose watch
+
+# open a shell inside the container
+docker compose exec webserver bash
+
+# from paperless-ngx
+docker compose run --rm webserver createsuperuser
+
+# config-files
+docker-compose.yml
+docker-compose.env
+.env
+
+
+docker-compose.yml
+services:
+  <name>:
+    image:
+    ports:
+    environment:
+    volumes:
+    restart: unless-stopped
+
+
+# ##########################################
+# Docker-Compose-Datei für Portainer
+# https://hub.docker.com/r/portainer/portainer-ce
+# antwortet auf Port 9000 des Servers
+services:
+  portainer:
+    image: portainer/portainer-ce
+    ports:
+     - 9000:9000
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - ./portainer_data:/data
+    restart: always
+
+
+# ##########################################
+# Docker-Compose-Datei für Watchtower
+# https://hub.docker.com/r/containrrr/watchtower
+services:
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+
+
+Pi-hole
+# ##########################################
+# Die Docker-Compose-Zusammenstellung für Pihole
+# https://hub.docker.com/r/pihole/pihole
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "80:80/tcp"
+    environment:
+      TZ: 'Europe/Berlin'
+      # WEBPASSWORD: 'set a secure password here or it will be random'
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+
+
+paperless-ngx
+https://docs.paperless-ngx.com/
+https://docs.paperless-ngx.com/setup/
+bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
+
+
+#  Docker Compose file for paperless-ngx
+# https://github.com/paperless-ngx/paperless-ngx/blob/dev/docker/compose/docker-compose.postgres.yml
+# Docker Compose file for running paperless from the Docker Hub.
+# This file contains everything paperless needs to run.
+# Paperless supports amd64, arm and arm64 hardware.
+#
+# All compose files of paperless configure paperless in the following way:
+#
+# - Paperless is (re)started on system boot, if it was running before shutdown.
+# - Docker volumes for storing data are managed by Docker.
+# - Folders for importing and exporting files are created in the same directory
+# as this file and mounted to the correct folders inside the container.
+# - Paperless listens on port 8000.
+#
+# In addition to that, this Docker Compose file adds the following optional
+# configurations:
+#
+# - Instead of SQLite (default), PostgreSQL is used as the database server.
+#
+# To install and update paperless with this file, do the following:
+#
+# - Copy this file as 'docker-compose.yml' and the files 'docker-compose.env'
+# and '.env' into a folder.
+# - Run 'docker compose pull'.
+# - Run 'docker compose run --rm webserver createsuperuser' to create a user.
+# - Run 'docker compose up -d'.
+#
+# For more extensive installation and update instructions, refer to the documentation.
+
+services:
+broker:
+image: docker.io/library/redis:7
+restart: unless-stopped
+volumes:
+- redisdata:/data
+
+
+db:
+image: docker.io/library/postgres:16
+restart: unless-stopped
+volumes:
+- pgdata:/var/lib/postgresql/data
+environment:
+POSTGRES_DB: paperless
+POSTGRES_USER: paperless
+POSTGRES_PASSWORD: paperless
+
+
+webserver:
+image: ghcr.io/paperless-ngx/paperless-ngx:latest
+restart: unless-stopped
+depends_on:
+- db
+- broker
+ports:
+- "8000:8000"
+volumes:
+- data:/usr/src/paperless/data
+- media:/usr/src/paperless/media
+- ./export:/usr/src/paperless/export
+- ./consume:/usr/src/paperless/consume
+env_file: docker-compose.env
+environment:
+PAPERLESS_REDIS: redis://broker:6379
+PAPERLESS_DBHOST: db
+
+
+volumes:
+data:
+media:
+pgdata:
+redisdata:
+
+
+Podman
+https://en.wikipedia.org/wiki/Podman
+
+
+Kubernetes
+https://en.wikipedia.org/wiki/Kubernetes
+
+
+Kasm
+https://kasmweb.com/
+https://kasmweb.com/community-edition
+https://www.kasmweb.com/docs/latest/install/single_server_install.html
+https://kasmweb.com/images
+https://github.com/kasmtech/workspaces-core-images
+https://github.com/kasmtech/workspaces-images
+
+
+Vagrant
+https://www.vagrantup.com/
+https://de.wikipedia.org/wiki/Vagrant_(Software)
+
+---
+

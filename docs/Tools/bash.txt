@@ -1,0 +1,23 @@
+Bash
+Shell
+Linux
+
+WSL2
+Cygwin
+MSYS2
+Git Bash
+
+---
+
+https://en.wikipedia.org/wiki/Bash_(Unix_shell)
+https://wiki.ubuntuusers.de/Bash/
+https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/
+https://wiki.archlinux.org/title/Bash
+https://wiki.archlinux.de/title/Bash
+https://www.w3schools.com/bash/
+
+https://www.gnu.org/software/bash/manual/bash.html
+https://man7.org/linux/man-pages/man1/bash.1.html
+
+---
+

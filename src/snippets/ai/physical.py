@@ -1,4 +1,4 @@
-"""
+r"""
 Genesis for Embodies AI, Physical AI, Robotics
 Physics Engine, Robotics Simulation Platform, Generative Agentic AI Framework, Rendering System
 
@@ -29,17 +29,52 @@ uv pip install genesis-world
 # or
 pip install git+https://github.com/Genesis-Embodied-AI/Genesis.git
 
+---
+
 # or with Ray Tracer:
 # https://genesis-world.readthedocs.io/en/latest/user_guide/getting_started/visualization.html#photo-realistic-ray-tracing-rendering
 git clone https://github.com/Genesis-Embodied-AI/Genesis.git
 cd Genesis
 git submodule update --init --recursive
-# uv pip install -e ".[render]"
+uv pip install -e ".[render]"
+# alternative: pip install "pybind11[global]"
 # install gcc, gxx, cmake, vulkan, x11, libuuid, zlib
 cd genesis/ext/LuisaRender
 # Remember to use the correct cmake. By default, we use OptiX denoiser (For CUDA backend only). If you need OIDN denoiser, append -D LUISA_COMPUTE_DOWNLOAD_OIDN=ON.
-cmake -S . -B build -D CMAKE_BUILD_TYPE=Release -D PYTHON_VERSIONS=3.13 -D LUISA_COMPUTE_DOWNLOAD_NVCOMP=ON -D LUISA_COMPUTE_ENABLE_GUI=OFF -D LUISA_RENDER_BUILD_TESTS=OFF # remember to check python version
+#cmake -S . -B build -D CMAKE_BUILD_TYPE=Release -D PYTHON_VERSIONS=3.13 -D LUISA_COMPUTE_DOWNLOAD_NVCOMP=ON -D LUISA_COMPUTE_ENABLE_GUI=OFF -D LUISA_RENDER_BUILD_TESTS=OFF # remember to check python version
+cmake -S . -B build -D CMAKE_BUILD_TYPE=Release -D PYTHON_VERSIONS=3.13 -D LUISA_COMPUTE_DOWNLOAD_NVCOMP=ON -D LUISA_COMPUTE_ENABLE_GUI=OFF -D LUISA_RENDER_BUILD_TESTS=OFF -D CMAKE_CUDA_COMPILER="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc.exe" -D LUISA_COMPUTE_ENABLE_CUDA=ON -D LUISA_COMPUTE_ENABLE_DX=OFF -D NVTT_DIR="C:\Program Files\NVIDIA Corporation\NVIDIA Texture Tools" -D pybind11_DIR="L:\WORKSPACES\PYTHON_WS\python_template\.venv\Lib\site-packages\pybind11\share\cmake\pybind11"
 cmake --build build -j $(nproc)
+
+---
+
+# build Open3D from Source for Python 3.13 (no wheels on Pypy or releases):
+# https://www.open3d.org/docs/latest/compilation.html#compilation
+git clone https://github.com/isl-org/Open3D
+cd Open3D
+mkdir build
+cd build
+cmake -G "Visual Studio 17 2022" -A x64 -DCMAKE_INSTALL_PREFIX="dist_bin" ..
+cmake --build . --config Release --target ALL_BUILD
+# :: install Open3D C++ library
+#cmake --build . --config Release --target INSTALL
+# :: install Open3D Python library
+cmake --build . --config Release --target install-pip-package
+# :: Create pip package in build/lib
+# :: This creates a .whl file that you can install manually.
+cmake --build . --config Release --target pip-package
+# verify Python installation
+python -c "import open3d; print(open3d)"
+
+---
+
+# get infos on your system:
+# Check the maximum CUDA version supported by the installed NVIDIA driver
+nvidia-smi          # NVIDIA-SMI 576.57, Driver Version: 576.57, CUDA Version: 12.9
+# check your "active" cuda version
+nvcc --version      # Cuda compilation tools, release 12.6, V12.6.85, Build cuda_12.6.r12.6/compiler.35059454_0
+cmake --version     # cmake version 3.27.4
+
+
 """
 
 import numpy as np

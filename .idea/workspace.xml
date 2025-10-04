@@ -5,16 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
-      <change afterPath="$PROJECT_DIR$/docs/Tools/cmake.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/git.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/deploy/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/bash.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/_README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/gradle.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/make.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/maven.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/toolchains.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/docker.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/network.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/package_managers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/software_engineering/_README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/software_engineering/agile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/software_engineering/ci_cd.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/software_engineering/devops.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tools/wsl.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/roadmap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.aiignore" beforeDir="false" afterPath="$PROJECT_DIR$/.aiignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/installer.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/installer.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_py2exe.bat" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/run_py2exe.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_pyinstaller.bat" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/run_pyinstaller.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_pynsist.bat" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/run_pynsist.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Deployment/pip.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/pip.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Tools/cmake.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/build_tools/cmake.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Tools/git.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/git.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts/download_sdks.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts/download_sdks.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts/packages.lua" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts/packages.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/src/backends/dx/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/src/backends/dx/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snippets/ai/physical.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/physical.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +228,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;L:/WORKSPACES/PYTHON_WS/python_template/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;L:/WORKSPACES/PYTHON_WS/python_template/examples/Genesis_LuisaRender_Problems/_logs/_bak&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -229,17 +250,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\examples\Genesis_LuisaRender_Problems\_logs\_bak" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\examples\Genesis\genesis\ext\LuisaRender\src\compute\scripts" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\Notebooks" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\bl_extension\addon" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Tools\build_tools" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Tools\software_engineering" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\scripts\deploy" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\scripts" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\examples\_my" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\ebooks" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src\snippets\ai\tuts" />
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -497,7 +519,15 @@
       <workItem from="1758205484217" duration="2515000" />
       <workItem from="1758214244949" duration="2872000" />
       <workItem from="1758220712785" duration="2260000" />
-      <workItem from="1758304411670" duration="37205000" />
+      <workItem from="1758304411670" duration="43383000" />
+      <workItem from="1758736267474" duration="1206000" />
+      <workItem from="1758967325062" duration="25846000" />
+      <workItem from="1759055917419" duration="8868000" />
+      <workItem from="1759151275501" duration="21010000" />
+      <workItem from="1759328884060" duration="9602000" />
+      <workItem from="1759434499317" duration="9258000" />
+      <workItem from="1759481139535" duration="3295000" />
+      <workItem from="1759578586843" duration="7576000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -847,7 +877,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758483786112</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="-">
+      <option name="closed" value="true" />
+      <created>1758572077716</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1758572077716</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -945,7 +983,7 @@
     <SUITE FILE_PATH="coverage/python_template$app.coverage" NAME="app Coverage Results" MODIFIED="1754113350211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/python_template$streamlit.coverage" NAME="streamlit Coverage Results" MODIFIED="1756976725940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/snippets/web" />
     <SUITE FILE_PATH="coverage/python_template$genesis.coverage" NAME="genesis Coverage Results" MODIFIED="1757861684261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/snippets/ai" />
-    <SUITE FILE_PATH="coverage/python_template$physical.coverage" NAME="physical Coverage Results" MODIFIED="1757957064353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/snippets/ai" />
+    <SUITE FILE_PATH="coverage/python_template$physical.coverage" NAME="physical Coverage Results" MODIFIED="1759444326719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/snippets/ai" />
     <SUITE FILE_PATH="coverage/python_template$demo.coverage" NAME="demo Coverage Results" MODIFIED="1757954932589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/Genesis/examples/rendering" />
     <SUITE FILE_PATH="coverage/python_template$main.coverage" NAME="main Coverage Results" MODIFIED="1756260032246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/template" />
   </component>

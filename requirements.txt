@@ -37,6 +37,7 @@ seaborn
 bokeh
 plotly
 streamlit
+pygwalker
 #taichi
 scikit-learn
 numpy

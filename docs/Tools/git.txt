@@ -1,36 +1,66 @@
-Git
-Version Control System (VCS), Source Code Management (SCM)
-https://git-scm.com/download/win
-https://gitforwindows.org/
+# Git
 
-https://www.atlassian.com/git/tutorials/git-bash
-https://www.sourcetreeapp.com/
+## Docs
+// @see Google Docs/ Development 2025
 
-# learn
+Source Code Management (SCM)
+https://en.wikipedia.org/wiki/Comparison_of_source-code-hosting_facilities
+https://de.wikipedia.org/wiki/Software-Configuration-Management
+
+Version Control System (VCS)
+distributed Version Control System (VCS)
+
+Software Configuration Management
+Revision Control System (Versionsverwaltungssystem)
+Scrum, Agile Software Entwicklung
+
+
+### Git
+https://git-scm.com/
+https://git-scm.com/doc
+Git Bash
+Git GUI
+
+
+### Github
+https://github.com/
 https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources
-https://git-scm.com/docs 
-
 https://training.github.com/
 https://training.github.com/downloads/de/github-git-cheat-sheet/
-https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
-https://www.atlassian.com/git/tutorials/syncing 
 
+
+### Gitlab
+https://about.gitlab.com/
+
+
+### Atlassian
+https://www.atlassian.com/git/tutorials/git-bash
+https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
+https://www.atlassian.com/git/tutorials/syncing
+
+https://bitbucket.org/
+
+https://www.sourcetreeapp.com/
+https://www.sourcetreeapp.com/
+
+
+Jira
+
+
+### Subversion (SVN)
+Tortoise SVN
+
+
+### Mercurial (hg)
+
+
+### Video Tutorials
 https://www.youtube.com/watch?v=RGOj5yH7evk
+
 
 ---
 
-git clone –recursive …
-
-git submodule update –init –recursive
-git pull origin master
-
-
-git status
-git add .
-git commit -m “initial commit”
-
-
-.gitignore
+## .gitignore file
 https://github.com/github/gitignore
 https://github.com/github/gitignore/blob/main/CMake.gitignore
 https://github.com/github/gitignore/blob/main/C%2B%2B.gitignore
@@ -38,50 +68,146 @@ https://github.com/github/gitignore/blob/main/C.gitignore
 https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 https://github.com/github/gitignore/blob/main/KiCad.gitignore 
 
-# from matkatmusic (Learning Modern C++ with JUCE Tutorials)
+### example from matkatmusic (Learning Modern C++ with JUCE Tutorials)
 
 **/Builds
 **/JuceLibraryCode
 **/.DS_Store
 
+---
 
+## Git Commands
 
-Git Workflow
+git clone -–recursive <repository>.git
+
+git submodule update -–init -–recursive
+git pull origin master
+
+git init
+
+git status
+
+git add .
+git add <file>
+
+git commit -m “initial commit”
+git commit -m <”message”>
+
+git branch
+
+[git checkout]
+
+git merge
+
+git diff
+
+git push
+
+git pull
+git pull origin master
+
+git fetch
+
+---
+
+## Git Workflow Example
 https://musescore.org/en/handbook/developers-handbook/finding-your-way-around/git-workflow 
 https://wiki.diasporafoundation.org/Git_workflow 
 
-#1
+1)
 fork on Github
 
-#2
+2)
 git clone <repo>
-#3
+3)
 cd <repo>
-#4
+4)
 git remote add upstream <original repo>
 git checkout develop
 
-#5 create a new branch for every feature or issue you develop
+5) create a new branch for every feature or issue you develop
 git fetch upstream
 git checkout -b <branch feature or issue> upstream/develop
 
-#6
+6)
 git add changed/file
 git commit -m “”
-#7 run tests and styleguide
-#8
+7) run tests and styleguide
+8)
 git push -f origin <branch>
-#9
+9)
 git fetch upstream
-#10
+10)
 git checkout <branch>
 git rebase upstream/develop
 
-# 11 repeat #6 to #10 until development on the branch is finished
-#12 -i for interactive cleanup the commit history
+11) repeat #6 to #10 until development on the branch is finished
+12) -i for interactive cleanup the commit history
 git rebase -i upstream/develop
 
-#13
+13)
 git push -f origin <branch>
-#14 issue pull request for development branch
+14) issue pull request for development branch
+
+
+### Git Workflows
+https://de.wikipedia.org/wiki/Versionsverwaltung#Konzepte
+https://rogerdudler.github.io/git-guide/index.de.html
+https://www.atlassian.com/de/git/glossary#commands
+https://docs.github.com/de/get-started/git-basics/set-up-git
+
+Repository Clonen
+git clone <repository>
+git clone --recursive <repository>
+
+git submodule update --init --recursive
+git pull origin master
+
+Repository anlegen mit Github
+https://de.wikipedia.org/wiki/Repository
+https://github.com/github/gitignore
+
+git init
+nano .gitignore
+git add .
+git commit -m “initial commit”
+git remote add origin <server>
+git push origin master
+
+Arbeiten mit Git
+# update
+git pull
+
+git status
+git add *
+git commit -m “massage”
+
+# lokale Änderungen rückgängig machen
+git checkout -- <filename>
+
+# lokale Änderungen komplett entfernen
+git fetch origin
+git reset --hard origin/master
+
+Branching
+https://de.wikipedia.org/wiki/Merge
+
+git checkout -b feature_x
+
+# branch hochladen
+git push origin <branch>
+
+# zum master zurück wechseln
+git checkout master
+
+# branch löschen
+git branch -d feature_x
+
+# branch mit aktuellem (master) zusammenführen
+git merge <branch>
+
+Pull-Requests
+https://de.wikipedia.org/wiki/Pull_Request
+
+---
 

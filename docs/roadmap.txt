@@ -1,0 +1,76 @@
+Roadmap
+
+
+Python Language, Docs, Tutorials
+    REPL
+    OOP
+    Functional Python
+
+Jupyter
+    Markdown, LaTeX
+    SymPy
+    Linear Algebra (Math)
+CoLab
+ebooks: Notebooks
+
+AI
+    Code Assistants, Agents
+        Gemini
+    Ollama, Docker
+        Gemma, Vision Models, Coding Models
+        Fine Tuning, RAG --> Vector DB, n8n
+    Gemini API
+        speech2txt, txt2speech, Translate, Vision, Chat, ...
+    Hugging Face
+        Learn, Courses, READMEs, Community
+    LangChain, MCP, Agents
+    ComfyUI, Civitai, CV, Pose (Motion Capture)
+
+Libraries
+    NumPy, PyTorch
+    Pandas
+        Explorative Data Analysis
+    Scikit-Learn
+        Machine Learning
+    PyTorch
+        CUDA Toolkit, GPU
+
+Interactive Data Exploration, Storytelling with Data
+    Streamlit
+    PyGWalker
+
+Genesis
+    CMake, Open3D
+
+Blender Python API
+    Scripting WS, YT-Tutorials
+    Extensions, Addons
+
+HPC
+    Numba
+    GIL
+    Cython
+    C++, CMake
+
+PyInstaller
+NSIST
+
+Robotics, Embedded Systems
+    ROS2
+        Router
+        Simulation: Gazebo
+        LiDAR
+        Cameras
+    Picamera
+    Raspberry Pi
+    CircuitPython, MicroPython, MuEditor, Adafruit, uf2, MakeCode Arcade / MicroBit
+        Keyestudio 4WD Mechanum Robot Car: MicroBit Python Code, Android App
+        Waveshare BuildMecar: Picamera Streaming
+        Android Sensors, Actuators ? (ADB --> USB, PuTTY, Wifi / AP/  BT)
+        ESP32CAM, Meowbit, Pi, Nordic Bluefruit ...
+            Stepper, DC, PWM / Servo
+            Adafruit Cloud, IoT, ... Streamlit, PyGWalker.
+        RC Models, FPV, Drone
+
+Open3D is used by Genesis, Blender, ROS2
+

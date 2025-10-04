@@ -1,0 +1,212 @@
+Netzwerk
+@see Google Docs Administration 2025
+@see Google Docs Datenübertragungsraten
+
+OSI
+ARP (Address Resolution Protocol)
+ICMP (Internet Control Message Protocol)
+NetBIOS over TCP/IP (NBT)
+
+Socket = IP + Port
+https://en.wikipedia.org/wiki/0.0.0.0
+https://en.wikipedia.org/wiki/Localhost
+0.0.0.0
+127.0.0.1 # loopback interface
+https://en.wikipedia.org/wiki/Private_network
+https://en.wikipedia.org/wiki/Reserved_IP_addresses
+10.0.0.0/24
+172.16.0.0
+192.168.0.0
+https://en.wikipedia.org/wiki/Port_(computer_networking)
+
+DHCP
+…
+Mesh WLAN / Wifi
+WLAN 6
+
+Windows
+https://www.pcwelt.de/article/1147158/die-wichtigsten-netzwerk-und-internetbefehle-fuer-windows.html
+
+@see wsl2
+
+# Windows Netzwerk-Adressen / Freigaben
+\\localhost
+
+ipconfig /all
+Getmac
+
+# traceroute
+ping <address>
+tracert <address>
+pathping <address
+
+# offene Ports anzeigen
+netstat -ano
+nbtstat
+
+# net
+net /? # Hilfe
+net help <befehl>
+
+net accounts # listet die Benutzerkontenrichtlinien auf
+net localgroup # zeigt die vorhandenen lokalen Benutzergruppen
+
+# Freigaben des lokalen Rechners
+net share
+net share <laufwerk> # details anzeigen lassen
+
+# wer ist mit dem Server verbunden ?
+net session
+
+# netsh
+netsh wlan show profile
+
+route print
+nslookup
+
+ver
+winver
+whoami
+tasklist
+wmic baseboard get product,Manufacturer,version,serialnumber
+path
+set
+cls
+shutdown
+
+# Windows Defender Firewall Regeln (GUI)
+wf
+
+C:\Windows\System32\drivers\etc\hosts
+
+# Daten verstecken (Alternate Data Streams: nur NTFS)
+type daten.txt > bild.jpg:hide
+# Daten wieder herstellen
+more < bild.jpg:hide > daten.txt
+dir /r
+
+Linux
+https://wiki.ubuntuusers.de/Shell/Befehls%C3%BCbersicht/
+https://www.debian.org/doc/manuals/debian-reference/ch05.de.html
+
+ifconfig
+ip addr
+iw
+
+ping
+traceroute
+route
+
+users
+netstat
+ss
+
+hostname
+
+chmod
+chown
+
+ps, pstree
+top, htop
+nmap
+https://nmap.org/
+
+
+Remote Zugriff
+https://youtu.be/EXL8mMUXs88 (NetworkChuck)
+
+Remote Desktop Connection (RDC)
+https://en.wikipedia.org/wiki/Remote_Desktop_Services
+RDP (Windows)
+xrdp (Linux)
+https://en.wikipedia.org/wiki/Xrdp
+vrdp (Virtual Box)
+
+
+VNC
+TightVNC
+RealVNC
+
+
+Linux Seat
+https://wiki.ubuntuusers.de/Gastsitzung/
+
+
+Secure Shell (SSH)
+OpenSSH
+Wireguard
+PuTTY
+Xming
+
+
+SCP
+WinSCP
+
+
+SFTP
+WinSCP, FileZilla
+
+Fernwartung
+Teamviewer
+AnyDesk
+Chrome Remote Desktop
+
+
+Virtual Private Network (VPN)
+OpenVPN
+https://openvpn.net/
+
+Wireguard
+https://www.heise.de/ratgeber/FAQ-VPNs-mit-WireGuard-4494994.html
+https://www.heise.de/ratgeber/Sichere-VPN-Verbindungen-mit-WireGuard-unter-Windows-Linux-und-Android-4308737.html
+https://www.heise.de/ratgeber/WireGuard-VPN-auf-Debian-und-dem-Raspberry-Pi-aktuell-halten-4649994.html
+
+FoxyProxy in Firefox
+
+Free VPNs
+https://www.netzwelt.de/vpn/beste-kostenlose-vpn-dienst-fuenf-anbieter-2025-vpn-vergleich.html
+https://protonvpn.com/de/free-vpn/windows
+https://www.tunnelbear.com/
+https://hide.me/de/
+https://www.hotspotshield.com/de/
+
+Non-free VPNs
+NordVPN
+
+
+DNS
+nginx Reverse Proxy, Trafik
+
+Pi-hole, Adguard
+
+
+DynDNS
+Fritz Box DynDNS
+Duck-DNS
+
+
+Bonjour (Apple)
+Avahi
+Zeroconf
+ mDNS
+https://de.wikipedia.org/wiki/Zeroconf
+https://www.elektronik-kompendium.de/sites/net/1706061.htm
+
+
+Router
+Datenübertragungsraten > Netzwerk
+Switch
+Hotspot
+Access Point (AP)
+
+Ad Hoc Netzwerk
+
+Wifi-Direct
+
+Ports
+
+
+Heimserver
+Heimnetzwerk
+@see Heimserver
+

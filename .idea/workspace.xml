@@ -5,37 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
-      <change afterPath="$PROJECT_DIR$/docs/Tools/bash.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/_README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/gradle.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/make.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/maven.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/build_tools/toolchains.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/docker.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/network.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/package_managers.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/software_engineering/_README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/software_engineering/agile.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/software_engineering/ci_cd.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/software_engineering/devops.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tools/wsl.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/roadmap.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.aiignore" beforeDir="false" afterPath="$PROJECT_DIR$/.aiignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/09_CAS.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/90_Creative_Coding.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/01_DataScience.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Deployment/pip.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/pip.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Tools/cmake.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/build_tools/cmake.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Tools/git.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/git.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/06_HPC.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/19_HPC.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/81_Genesis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/81_Genesis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/roadmap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/roadmap.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts/download_sdks.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts/download_sdks.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts/packages.lua" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/scripts/packages.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/src/backends/dx/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Genesis/genesis/ext/LuisaRender/src/compute/src/backends/dx/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/snippets/ai/physical.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/snippets/ai/physical.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +49,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -527,7 +507,9 @@
       <workItem from="1759328884060" duration="9602000" />
       <workItem from="1759434499317" duration="9258000" />
       <workItem from="1759481139535" duration="3295000" />
-      <workItem from="1759578586843" duration="7576000" />
+      <workItem from="1759578586843" duration="18456000" />
+      <workItem from="1759671887980" duration="757000" />
+      <workItem from="1759692532866" duration="2541000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -885,7 +867,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758572077716</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="-">
+      <option name="closed" value="true" />
+      <created>1759589630973</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1759589630973</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -970,11 +960,6 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/bl_extension/addon/ui/__init__.py</url>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>file://$PROJECT_DIR$/Notebooks/81_Genesis.ipynb</url>
-          <line>35</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -40,7 +40,7 @@ Interactive Data Exploration, Storytelling with Data
     PyGWalker
 
 Genesis
-    CMake, Open3D
+    Open3D
 
 Blender Python API
     Scripting WS, YT-Tutorials
@@ -71,6 +71,4 @@ Robotics, Embedded Systems
             Stepper, DC, PWM / Servo
             Adafruit Cloud, IoT, ... Streamlit, PyGWalker.
         RC Models, FPV, Drone
-
-Open3D is used by Genesis, Blender, ROS2
 

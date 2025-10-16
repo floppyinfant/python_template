@@ -5,10 +5,15 @@ LEARN Python
 Left of (2025-10):
 
 Genesis (physical.py): Render RayTracing, ... AI Generation, Simulation.
-CAS (SymPy in Notebook)
+    """if Render is not working again (moved Genesis to lib from examples):
+         goto lib, execute: uv pip install -e ".[render]"
+    """
 PyGWalker (quickjs compilation)
 Streamlit (local server for Reporting / Graphical GUIs with interactive Graphs)
+
 Creative Coding (with py5)
+
+CAS (SymPy in Notebook)
 
 Notebooks: Keyboard Shortcuts
 ebook's Notebooks

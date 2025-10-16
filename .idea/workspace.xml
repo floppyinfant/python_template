@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Tools/build_tools/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/build_tools/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python_template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_template.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/roadmap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/roadmap.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -503,7 +501,7 @@
       <workItem from="1759578586843" duration="18456000" />
       <workItem from="1759671887980" duration="757000" />
       <workItem from="1759692532866" duration="2800000" />
-      <workItem from="1760601889197" duration="5188000" />
+      <workItem from="1760601889197" duration="5651000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -877,7 +875,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759695520813</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="-">
+      <option name="closed" value="true" />
+      <created>1760607595960</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1760607595960</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">

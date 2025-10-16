@@ -1,30 +1,46 @@
 Roadmap
+LEARN Python
 
+
+Left of (2025-10):
+
+Genesis (physical.py): Render RayTracing, ... AI Generation, Simulation.
+CAS (SymPy in Notebook)
+PyGWalker (quickjs compilation)
+Streamlit (local server for Reporting / Graphical GUIs with interactive Graphs)
+Creative Coding (with py5)
+
+Notebooks: Keyboard Shortcuts
+ebook's Notebooks
+Pandas, Numpy, PyTorch
+Jetbrains Courses
+
+Blender Python API --> VScode Extensions
+Scripting Workspace --> YouTube 'CG Python'
+BlenderMCP with Gemini in VScode
+
+------------------------------------------------------------------------------
 
 Python Language, Docs, Tutorials
     REPL
     OOP
     Functional Python
 
+    Automating Everything
+    HPC: Numba, Cython, GIL / Process, ... CUDA
+
+    PyInstaller
+    NSIST (Installer)
+
+------------------------------------------------------------------------------
+
 Jupyter
     Markdown, LaTeX
     SymPy
     Linear Algebra (Math)
-CoLab
-ebooks: Notebooks
 
-AI
-    Code Assistants, Agents
-        Gemini
-    Ollama, Docker
-        Gemma, Vision Models, Coding Models
-        Fine Tuning, RAG --> Vector DB, n8n
-    Gemini API
-        speech2txt, txt2speech, Translate, Vision, Chat, ...
-    Hugging Face
-        Learn, Courses, READMEs, Community
-    LangChain, MCP, Agents
-    ComfyUI, Civitai, CV, Pose (Motion Capture)
+    CoLab
+    ebooks: Notebooks
 
 Libraries
     NumPy, PyTorch
@@ -39,21 +55,34 @@ Interactive Data Exploration, Storytelling with Data
     Streamlit
     PyGWalker
 
+------------------------------------------------------------------------------
+
+AI
+    Code Assistants, Agents
+        Gemini
+    Ollama, Docker
+        Gemma, Vision Models, Coding Models
+        Fine Tuning, RAG --> Vector DB, n8n
+    Gemini API
+        speech2txt, txt2speech, Translate, Vision, Chat, ...
+    Hugging Face
+        Learn, Courses, READMEs, Community
+    LangChain, MCP, Agents
+    ComfyUI, Civitai, CV, Pose (Motion Capture)
+
+------------------------------------------------------------------------------
+
 Genesis
     Open3D
 
+------------------------------------------------------------------------------
+
 Blender Python API
-    Scripting WS, YT-Tutorials
+    Scripting WS, YT-Tutorials 'CG Python'
     Extensions, Addons
+    VScode Extension, blenderMCP
 
-HPC
-    Numba
-    GIL
-    Cython
-    C++, CMake
-
-PyInstaller
-NSIST
+------------------------------------------------------------------------------
 
 Robotics, Embedded Systems
     ROS2
@@ -61,8 +90,10 @@ Robotics, Embedded Systems
         Simulation: Gazebo
         LiDAR
         Cameras
-    Picamera
+
     Raspberry Pi
+        Picamera Streaming
+
     CircuitPython, MicroPython, MuEditor, Adafruit, uf2, MakeCode Arcade / MicroBit
         Keyestudio 4WD Mechanum Robot Car: MicroBit Python Code, Android App
         Waveshare BuildMecar: Picamera Streaming
@@ -70,5 +101,7 @@ Robotics, Embedded Systems
         ESP32CAM, Meowbit, Pi, Nordic Bluefruit ...
             Stepper, DC, PWM / Servo
             Adafruit Cloud, IoT, ... Streamlit, PyGWalker.
+
         RC Models, FPV, Drone
 
+------------------------------------------------------------------------------

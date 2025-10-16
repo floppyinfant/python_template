@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.18...3.21)           # required
 cmake_policy(VERSION 3.18)
+
+#
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -10,10 +12,13 @@ set(BUILD_SHARED_LIBS ON)
 
 project(LuisaRender LANGUAGES C CXX VERSION 0.1)      # required
 
+# build options: add to cmake command with '-D'; eg. "cmake -S . -B build -D CMAKE_BUILD_TYPE=Release"
 option(LUISA_RENDER_BUILD_TESTS "Build tests for LuisaRender" ON)
 
+# add library
+add_subdirectory(libs/juce)                           # which contains a CMakeLists.txt
+#
 include(src/compute/scripts/setup_output_dirs.cmake)  # cmake-script file *.cmake
-add_subdirectory(src)                                 # which contains a CMakeLists.txt
 
 # create an executable
 add_executable(hello-world hello-world.cpp)
@@ -28,9 +33,23 @@ target_link_libraries(hello-world message)
 # more
 # ----------------------------------------------------------------------------
 
-target_include_directories()
+# source files to be compiled
+target_sources(VJi
+    PRIVATE
+        src/PluginProcessor.cpp
+        src/PluginEditor.cpp
+)
 
-find_package()
+# add include directory
+target_include_directories(myTarget
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+# find library, if it is installed on host computer, else use 'add_subdirectory'
+find_package(JUCE CONFIG REQUIRED)
 
 # set up install directories
 include(GNUInstallDirs)

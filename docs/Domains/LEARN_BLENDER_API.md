@@ -11,7 +11,10 @@ https://docs.blender.org/manual/en/latest/advanced/scripting/addon_tutorial.html
 ---
 
 YouTube Tutorial  
-https://youtu.be/wWTAQP7-ZUQ (Blender)  
+https://youtu.be/GP53gDHGiIQ (Blender 2025)  
+https://youtu.be/wWTAQP7-ZUQ (Blender 2023)  
+
+https://www.youtube.com/@BlenderOfficial/videos  <============
 
 https://www.youtube.com/@CGPython  
 https://youtu.be/YUytEtaVrrc (VScode Setup)  

@@ -2,6 +2,19 @@
 
 @see Google Docs 'AI'  
 
+Interests
+- Code Assistants
+- Coding Agents (Agentic AI): Gemini CLI, Claude, Copilot
+- Agents: MCP, Langchain, n8n .. BlenderMCP, Genesis (3D, Physics Simulation, Robotics), Computer Vision
+- local AI / On-Premise: Ollama, LM Studio, ComfyUI
+- Vision Models
+- Diffusion Models: Stable Diffusion, CivitAI
+- Anatomy of a LLM: Andrej Karpathy, A. Dominik, 3Blue1Brown, HuggingFace
+- Jupyter Notebooks, Libraries: Numpy, Pandas, Scikit-Learn, PyTorch (Machine Learning .. Tensors)
+- ebooks: DevOps / MLOps
+
+https://www.youtube.com/playlist?list=PLssH_Otzm89DR9Tt0rhVWWJQG5RvSnd5D (personal Playlist)
+
 ## Anatomie of a LLM
 https://medium.com/@damianvtran/the-anatomy-of-a-modern-llm-0347afd72514  
 Reasoning LLM, frontier model  
@@ -29,6 +42,9 @@ Convolutional Neural Networks (CNN)
 ## Vorlesungsreihe A. Dominik
 https://www.youtube.com/playlist?list=PLOkN509bK6cHGUm-zEBrFS9sz5pxVKhLi (DeepLearning)  
 https://www.youtube.com/playlist?list=PLOkN509bK6cHfQuKfTkhWItiqCRd8rQq0 (Datamining und Machine Learning)  
+
+## Andrej Karpathy
+https://youtu.be/zjkBMFhNj_g?si=2fwJiwryhdnbI784 (Intro to LLMs, 1h)  
 
 ## 3Blue1Brown
 https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi (Neural Networks)  

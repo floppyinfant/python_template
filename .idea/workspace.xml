@@ -5,8 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
-      <change beforePath="$PROJECT_DIR$/.idea/python_template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_template.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/roadmap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/roadmap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AI/LEARN.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/LEARN_AI.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AI/Libraries.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/AI_Libraries.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AI/Pricing.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/AI_Pricing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Blender_Python_API/_README_BlenderScripting.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/LEARN_BLENDER_API.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Augmented_Reality.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Augmented_Reality.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/MCU/CircuitPython.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/MCU/CircuitPython.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/MCU/MicroPython.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/MCU/MicroPython.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Adafruit_PiGRRL-0.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Adafruit_PiGRRL-0.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Administration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Administration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/HARDWARE.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/HARDWARE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Linux.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Linux.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/MediaCenter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/MediaCenter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/PiBoy_DMG.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/PiBoy_DMG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/PiTFT.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/PiTFT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Pi_Camera.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Pi_Camera.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Python.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Python.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/WiringPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/WiringPi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/_README_RaspberryPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/_README_RaspberryPi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Adafruit_IO.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/Adafruit_IO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Android_Sensors.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/Android_Sensors.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Mecanum.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/Mecanum.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/RC.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/RC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/ROS2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/ROS2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/_README_Robotics.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/_README_Robotics.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Jetbrains_PyCharm.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/Jetbrains_PyCharm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LEARN_Markdown.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Microsoft_VScode.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/Microsoft_VScode.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Python_Music.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Python_Music.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Web/FastAPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Web/FastAPI.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Web/Flask.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Web/Flask.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Web/Frameworks.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Web/Frameworks.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,34 +213,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.app.executor": "Run",
-    "Python.demo.executor": "Run",
-    "Python.genesis.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.physical.executor": "Run",
-    "Python.streamlit.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "bazel.project.detector.is.bazel.project": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "L:/WORKSPACES/PYTHON_WS/python_template/examples/Genesis_LuisaRender_Problems/_logs/_bak",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2025.1.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.demo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.genesis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.physical.executor&quot;: &quot;Run&quot;,
+    &quot;Python.streamlit.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;bazel.project.detector.is.bazel.project&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;L:/WORKSPACES/PYTHON_WS/python_template/examples/Genesis_LuisaRender_Problems/_logs/_bak&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2025.1.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="python_template" is-module-sdk="true">
@@ -228,11 +258,11 @@
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Domains" />
+      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Tools" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\lib\_Problems" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\lib" />
       <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Tools\build_tools" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\docs\Tools\software_engineering" />
-      <recent name="L:\WORKSPACES\PYTHON_WS\python_template\scripts\deploy" />
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -501,7 +531,10 @@
       <workItem from="1759578586843" duration="18456000" />
       <workItem from="1759671887980" duration="757000" />
       <workItem from="1759692532866" duration="2800000" />
-      <workItem from="1760601889197" duration="5651000" />
+      <workItem from="1760601889197" duration="5699000" />
+      <workItem from="1760991599224" duration="212000" />
+      <workItem from="1761149812867" duration="790000" />
+      <workItem from="1766131571611" duration="2404000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -883,7 +916,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760607595960</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="-">
+      <option name="closed" value="true" />
+      <created>1760608042046</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1760608042047</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">

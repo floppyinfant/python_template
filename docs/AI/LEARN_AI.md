@@ -127,3 +127,34 @@ https://aistudio.google.com/apikey
 https://ai.google.dev/gemini-api/docs  
 https://github.com/google-gemini/cookbook  
 
+## ollama
+oterm
+
+new models:
+- qwen-coder:30b  // tools
+- gemma4:e4b      // vision, multimodal
+
+## Continue.dev
+VScode Extension for AI-Assisted Development
+
+## Coding Agents
+- OpenCode
+- Hermes
+- Claude Code
+- Gemini CLI
+
+allow using tools (MCP)
+
+## API
+
+Google AI Studio: generate Key for Gemini API
+
+Google Antigravity: Abos
+
+- OpenRouter.ai
+- TogetherAI
+- DeepSeek API
+
+Claude: Abo
+Claude Design ?
+

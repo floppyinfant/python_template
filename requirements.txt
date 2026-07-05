@@ -77,3 +77,8 @@ langchain-huggingface
 langchain[google-genai]
 langchain-openai
 genesis-world  # first install CUDA Toolkit, PyTorch
+# --------------------------
+# Astronomy
+astropy
+starplot
+ipyaladin

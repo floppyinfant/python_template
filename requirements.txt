@@ -82,3 +82,4 @@ genesis-world  # first install CUDA Toolkit, PyTorch
 astropy
 starplot
 ipyaladin
+regions

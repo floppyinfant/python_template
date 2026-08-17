@@ -64,6 +64,7 @@ wsl --shutdown
 wsl --update
 wsl --export Ubuntu <pfad\ubuntu.tar.gz>
 
+---
 
 Linux Systeminformationen
 https://wiki.ubuntuusers.de/Systeminformationen_ermitteln/
@@ -125,6 +126,9 @@ sudo dmesg | tail
 watch 'sudo dmesg | tail'
 sudo dmesg -w
 
+---
+
+# Alternative Virtualisierung, Compatibility Layers, Shells
 
 Cygwin
 busybox

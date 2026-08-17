@@ -5,38 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1773e6e3-4f36-48af-8733-0bf1dbf32e38" name="Default" comment="-">
+      <change afterPath="$PROJECT_DIR$/docs/Tools/virtualization.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AI/LEARN.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/LEARN_AI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AI/Libraries.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/AI_Libraries.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AI/Pricing.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AI/AI_Pricing.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Blender_Python_API/_README_BlenderScripting.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/LEARN_BLENDER_API.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Augmented_Reality.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Augmented_Reality.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/MCU/CircuitPython.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/MCU/CircuitPython.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/MCU/MicroPython.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/MCU/MicroPython.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Adafruit_PiGRRL-0.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Adafruit_PiGRRL-0.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Administration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Administration.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/HARDWARE.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/HARDWARE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Linux.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Linux.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/MediaCenter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/MediaCenter.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/PiBoy_DMG.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/PiBoy_DMG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/PiTFT.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/PiTFT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Pi_Camera.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Pi_Camera.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/Python.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/Python.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/WiringPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/WiringPi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/RaspberryPi/_README_RaspberryPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/RaspberryPi/_README_RaspberryPi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Adafruit_IO.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/Adafruit_IO.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Android_Sensors.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/Android_Sensors.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/Mecanum.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/Mecanum.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/RC.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/RC.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/ROS2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/ROS2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Embedded_Systems/Robotics/_README_Robotics.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Embedded_Systems/Robotics/_README_Robotics.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Jetbrains_PyCharm.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/Jetbrains_PyCharm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LEARN_Markdown.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Microsoft_VScode.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/Microsoft_VScode.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Python_Music.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Python_Music.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Web/FastAPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Web/FastAPI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Web/Flask.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Web/Flask.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Web/Frameworks.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Domains/Web/Frameworks.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/00_Jupyter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/00_Jupyter.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Deployment/conda.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/conda.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Deployment/pip.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/pip.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Deployment/uv.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/uv.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Deployment/venv.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment/venv.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Tools/wsl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Tools/wsl.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +211,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2025.1.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -310,6 +286,15 @@
       <option name="docutils_params" value="" />
       <option name="docutils_task" value="" />
       <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
       <method v="2" />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp">
@@ -409,15 +394,6 @@
       <option name="docutils_open_in_browser" value="false" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.app" />
@@ -431,7 +407,6 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.515" />
         <option value="bundled-python-sdk-7e47963ff851-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.515" />
       </set>
     </attachedChunks>
@@ -534,7 +509,10 @@
       <workItem from="1760601889197" duration="5699000" />
       <workItem from="1760991599224" duration="212000" />
       <workItem from="1761149812867" duration="790000" />
-      <workItem from="1766131571611" duration="2404000" />
+      <workItem from="1766131571611" duration="2456000" />
+      <workItem from="1783255406144" duration="4448000" />
+      <workItem from="1783263732594" duration="20216000" />
+      <workItem from="1786207471894" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="cui(), banner() uses pyfiglet and termcolor, colorama">
       <created>1506896647386</created>
@@ -563,46 +541,6 @@
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1544267016174</updated>
-    </task>
-    <task id="LOCAL-00005" summary="more comments, refactored">
-      <option name="closed" value="true" />
-      <created>1754074703931</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1754074703931</updated>
-    </task>
-    <task id="LOCAL-00006" summary="cv snippets">
-      <option name="closed" value="true" />
-      <created>1754086930193</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1754086930193</updated>
-    </task>
-    <task id="LOCAL-00007" summary="test function calls to CUI">
-      <option name="closed" value="true" />
-      <created>1754088496887</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1754088496887</updated>
-    </task>
-    <task id="LOCAL-00008" summary="changed order of topics">
-      <option name="closed" value="true" />
-      <created>1754165532160</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1754165532160</updated>
-    </task>
-    <task id="LOCAL-00009" summary="comments">
-      <option name="closed" value="true" />
-      <created>1754216713570</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1754216713570</updated>
     </task>
     <task id="LOCAL-00010" summary="comments">
       <option name="closed" value="true" />
@@ -924,7 +862,47 @@
       <option name="project" value="LOCAL" />
       <updated>1760608042047</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="-">
+      <option name="closed" value="true" />
+      <created>1766136734553</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1766136734553</updated>
+    </task>
+    <task id="LOCAL-00051" summary="added astronomy">
+      <option name="closed" value="true" />
+      <created>1783261573420</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1783261573420</updated>
+    </task>
+    <task id="LOCAL-00052" summary="-">
+      <option name="closed" value="true" />
+      <created>1783280665818</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1783280665818</updated>
+    </task>
+    <task id="LOCAL-00053" summary="-">
+      <option name="closed" value="true" />
+      <created>1783281303238</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1783281303238</updated>
+    </task>
+    <task id="LOCAL-00054" summary="-">
+      <option name="closed" value="true" />
+      <created>1783285168913</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1783285168913</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1000,6 +978,7 @@
     <MESSAGE value="bl_extension panel demo" />
     <MESSAGE value="_" />
     <MESSAGE value="Notebooks" />
+    <MESSAGE value="added astronomy" />
     <MESSAGE value="-" />
     <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>

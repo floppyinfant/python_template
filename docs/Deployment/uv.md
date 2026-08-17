@@ -1,7 +1,8 @@
 # uv
-https://docs.astral.sh/uv/  
-https://docs.astral.sh/uv/getting-started/features/  
-```
+- https://docs.astral.sh/uv/  
+- https://docs.astral.sh/uv/getting-started/features/  
+
+```bash
 # Python Versions
 uv python list
 
@@ -12,7 +13,8 @@ uv run <script_name>
 ## Projects
 https://docs.astral.sh/uv/guides/projects/  
 https://docs.astral.sh/uv/guides/migration/pip-to-project/#requirements-files  
-```
+
+```bash
 uv init .
 
 uv init <project_name>  # pyproject.toml
@@ -27,7 +29,8 @@ uv publish              # publish package to a package index
 
 ## Tools
 https://docs.astral.sh/uv/guides/tools/  
-```
+
+```bash
 uvx <package_name>      # run in a temporary environment
 uv tool run <package>   # run in a temporary environment (=uvx)
 uv tool install <package_name>
@@ -37,7 +40,8 @@ uv tool update-shell
 
 ## Pip Interface
 https://docs.astral.sh/uv/pip/environments/  
-```
+
+```bash
 # create virtual environment .venv
 uv venv
 
@@ -50,7 +54,8 @@ deactivate
 
 ### Package Management
 https://docs.astral.sh/uv/pip/packages/  
-```
+
+```bash
 # install package in .venv
 uv pip install <package_name>
 
@@ -68,16 +73,21 @@ uv pip check
 
 ### compile
 https://docs.astral.sh/uv/pip/compile/  
-```
+
+```bash
 uv pip compile pyproject.toml -o requirements.txt
 uv pip sync requirements.txt
 ```
 
 ## Utility
-```
+
+```bash
 uv cache dir
 uv cache clear
 uv tool dir
 uv python dir
 uv self update
 ```
+
+---
+

@@ -6,7 +6,7 @@ https://packaging.python.org/tutorials/packaging-projects/
 
 Commands and options
 
-```
+```bash
 pip install <package>
 pip install --upgrade $PACKAGE_NAME
 pip uninstall $PACKAGE_NAME
@@ -25,7 +25,7 @@ pip search $SEARCH_TERM
 
 Update pip
 
-```
+```bash
 python.exe -m pip install --upgrade pip
 ```
 

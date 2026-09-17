@@ -31,7 +31,9 @@ uv add -r requirements.txt
 uv export --format requirements-txt > requirements.txt
 ```
 
-[@see uv](Deployment/uv.md)
+[@see uv.md](Deployment/uv.md)
+
+[@see hf.md](Tools/hf.md)
 
 Problem bei wxPython installation (compilation from source):
 

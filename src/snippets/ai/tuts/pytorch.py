@@ -28,7 +28,7 @@ https://github.com/keras-team/keras
 """
 
 import torch
-from transformers import pipeline
+from transformers_pipeline import pipeline
 
 import jax
 import numpy as np

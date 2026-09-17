@@ -1,32 +1,37 @@
-Windows Subsystem for Linux (WSL2)
+# Windows Subsystem for Linux (WSL2)
 
 WSL2 uses Hyper-V
-https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/
-https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container
-https://learn.microsoft.com/en-us/virtualization/api/
-https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-architecture
-https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v?source=recommendations&tabs=hyper-v-manager
+- https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/
+- https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container
+- https://learn.microsoft.com/en-us/virtualization/api/
+- https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-architecture
+- https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v?source=recommendations&tabs=hyper-v-manager
 
-// commands:
+```bash
 wsl
 wsl -l -v
+```
 
 ---
 
-Compatibility Layer
+## Compatibility Layer
+
 https://en.wikipedia.org/wiki/Compatibility_layer
 
-WSL2
+## WSL2
+
 Windows Subsystem for Linux Version 2 (WSL2)
+
 https://learn.microsoft.com/de-de/windows/wsl/faq
 
+```bash
 # Voraussetzungen:
 # BIOS/UEFI Settings: Intel VT-x, VT-d, AMD-V
 # Windows Features:
 # - Virtual Machine Platform
 # - Windows Subsystem for Linux
 
-# installation in Administrator PowerShell [?]
+# installation in Administrator PowerShell
 wsl --install -d Ubuntu
 wsl --install Ubuntu-22.04 --web-download
 wsl --distribution Ubuntu-22.04
@@ -63,18 +68,24 @@ wsl --terminate
 wsl --shutdown
 wsl --update
 wsl --export Ubuntu <pfad\ubuntu.tar.gz>
+```
 
 ---
 
-Linux Systeminformationen
-https://wiki.ubuntuusers.de/Systeminformationen_ermitteln/
-https://wiki.ubuntuusers.de/Skripte/Basheinzeiler/
-https://wiki.ubuntuusers.de/Shell/Befehls%C3%BCbersicht/
-https://wiki.ubuntuusers.de/Shell/
-https://wiki.ubuntuusers.de/Programmierung/ (awk, etc.)
+## Linux Systeminformationen
+- https://wiki.ubuntuusers.de/Systeminformationen_ermitteln/
+- https://wiki.ubuntuusers.de/Skripte/Basheinzeiler/
+- https://wiki.ubuntuusers.de/Shell/Befehls%C3%BCbersicht/
+- https://wiki.ubuntuusers.de/Shell/
+- https://wiki.ubuntuusers.de/Programmierung/ (awk, etc.)
 
+```bash
 neofetch
+fastfetch
+
 htop
+btop
+
 sudo lshw -short
 lscpu
 cat /proc/cpuinfo
@@ -83,21 +94,25 @@ cat /proc/meminfo
 sudo dmidecode -t memory
 sudo dmidecode -t bios
 sudo dmidecode -t system
+
 lsblk
 df -h
 sudo fdisk -l
 mount
 du -hs .		# belegter Festplattenplatz
 du -hT		# freier Festplattenplatz
+
 lspci			# sudo apt install pciutils
 lspci -t		# tree view
 lspci -v		# verbose
 lspci -vv
 lspci | grep -i 'eth'
+
 ip addr
 ethtool ens33
 ifconfig -a
 netstat -a
+
 lsusb			# sudo apt install usbutils
 lsusb -v
 cat /etc/os-release
@@ -105,51 +120,46 @@ lsb_release -a
 cat /etc/lsb-release
 cat /etc/issue
 cat /proc/version
+
 uname -a
 uname -r
 ps -ef
+
 top
 htop
+btop
+
 sudo lshw
 sudo lshw -short
 sudo lshw -html > lshw-info.html
+
 hostname
 date
 whoami
 id -u			# user-id; default 1000
 id -g			# group-id
 # cat /sys/class/...
+
 hwinfo
 cpu-x			# GUI-Tool
 lsmod			# geladene Kernel Module
 sudo dmesg | tail
 watch 'sudo dmesg | tail'
 sudo dmesg -w
+```
 
 ---
 
-# Alternative Virtualisierung, Compatibility Layers, Shells
+# Alternative Virtualization, Compatibility Layers, Shells
 
-Cygwin
-busybox
-
-
-Git Bash
-
-
-MSYS2 + MinGW
-use MSYS2 Installer to get MinGW-w64 (Minimal GNU for Windows) Toolchain
-
-
-Wine
-Crossover
-
-
-Steam Proton
-
-
-Rosetta 2
-Apple translation layer to execute x86-64 code on ARM hardware
+- Cygwin
+- busybox
+- Git Bash
+- MSYS2 + MinGW: use MSYS2 Installer to get MinGW-w64 (Minimal GNU for Windows) Toolchain
+- wine
+- Crossover
+- Steam Proton
+- Rosetta 2: Apple translation layer to execute x86-64 code on ARM hardware
 
 ---
 

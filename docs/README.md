@@ -6,6 +6,45 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 example: Kivy, https://raw.githubusercontent.com/kivy/kivy/master/README.md
 -->
 
+## IMPORTANT NOTICE
+
+```bash
+# uv vs. pip
+
+uv add requests
+uv remove requests
+# vs.
+pip install requests
+pip uninstall requests
+
+uv run python main.py
+# vs.
+python main.py
+
+uv sync
+# vs. 
+pip install -r requirements.txt
+
+# do once
+uv add -r requirements.txt
+# export from uv.lock
+uv export --format requirements-txt > requirements.txt
+```
+
+[@see uv](Deployment/uv.md)
+
+Problem bei wxPython installation (compilation from source):
+
+```bash
+# 1. Kompatibles setuptools in die venv installieren
+uv pip install "setuptools<75"
+
+# 2. wxPython ohne Build-Isolation hinzufügen
+uv add wxpython --no-build-isolation   
+```
+
+---
+
 ## Environments
 IDEs, Code Editors, Python Execution Environments  
 

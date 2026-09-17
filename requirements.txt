@@ -1,3 +1,6 @@
+# uv nutzt pyproject.toml, uv.lock
+# neue libraries hinzufügen:
+# uv add <library>
 # --------------------------
 # Web
 requests
@@ -52,7 +55,12 @@ opencv-python
 # PyTorch:
 # 1. Download CUDA-Toolkit 12.6 (check supported Version on pytorch website first; check if your GPU Arch is supported)
 # 2. Install torch for your CUDA-Toolkit Version (e.g. 12.6)
+# nvcc --version  # Check for installed version: e.g. on OP26 it is 13.3, but newest pytorch is for 13.2; CP3.12 max. supported version
 # !uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+torch
+torchvision
+torchaudio
+#
 jax
 tensorflow
 # --------------------------

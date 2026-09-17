@@ -6,8 +6,8 @@ https://youtu.be/1h6lfzJ0wZw
 import os
 from dotenv import load_dotenv
 
-from transformers import pipeline
-from transformers.utils.logging import set_verbosity_error
+from transformers_pipeline import pipeline
+from transformers_pipeline.utils.logging import set_verbosity_error
 from langchain_huggingface import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
 
